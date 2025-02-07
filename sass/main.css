@@ -1,0 +1,40 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f5f5f5;
+  scroll-behavior: smooth;
+}
+
+section {
+  height: 920px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  width: 100%;
+}
+
+#contacto {
+  height: 920px; /* Mantiene la altura total */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Empuja el contenido hacia arriba y el footer hacia abajo */
+  align-items: center;
+  padding-bottom: 0;
+}
+
+footer {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+  margin-top: auto; /* Empuja el footer al final de la sección */
+}/*# sourceMappingURL=main.css.map */

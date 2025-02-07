@@ -1,0 +1,14 @@
+# Ignorar archivos CSS generados por SASS
+css/*.css
+css/*.css.map
+
+# Evitar archivos innecesarios de Visual Studio Code
+.vscode/
+
+# Evitar archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Evitar dependencias de Node.js (si en algún momento las agregaste)
+node_modules/
+package-lock.json
