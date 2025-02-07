@@ -1,7 +1,7 @@
 # Ignorar archivos CSS generados por SASS
-css/*.css
-css/*.css.map
 
+css/*.css.map
+sass
 # Evitar archivos innecesarios de Visual Studio Code
 .vscode/
 
