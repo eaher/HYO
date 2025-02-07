@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("JavaScript cargado correctamente");
 
     const sections = document.querySelectorAll("section"); // Selecciona todas las secciones
-    const navbar = document.querySelector("nav"); // Selecciona el navbar
+    const navbar = document.querySelector("nav"); // Navbar
+    const footer = document.querySelector("footer"); // Footer dentro de "Contacto"
     let currentIndex = 0; // Índice de la sección actual
     let isScrolling = false;
     let lastScrollTime = 0;
@@ -20,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Ocultar navbar después de 2 segundos sin movimiento
     function handleScrollVisibility() {
-        navbar.style.opacity = "1"; // Hace visible el navbar
+        navbar.style.opacity = "1"; // Muestra el navbar
 
         clearTimeout(lastScrollTime);
         lastScrollTime = setTimeout(() => {
@@ -39,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Scroll automático entre secciones (incluyendo "Contacto")
+    // Scroll automático entre secciones (incluye "Contacto" y el footer correctamente)
     window.addEventListener("wheel", (event) => {
         if (isScrolling) return;
 
@@ -59,8 +60,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Funcionalidad en dispositivos móviles (touch scroll)
+    let touchStartY = 0;
+
     window.addEventListener("touchstart", (event) => {
-        this.touchStartY = event.touches[0].clientY;
+        touchStartY = event.touches[0].clientY;
         handleScrollVisibility();
     });
 
@@ -83,4 +86,17 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollToSection(currentIndex);
         handleScrollVisibility();
     });
+
+    // Verificar si estamos en "Contacto" para ajustar el footer
+    function checkFooterVisibility() {
+        if (currentIndex === sections.length - 1) { 
+            footer.style.display = "flex"; // Muestra el footer en la sección "Contacto"
+        } else {
+            footer.style.display = "none"; // Oculta el footer en otras secciones
+        }
+    }
+
+    // Ejecutar la verificación en cada cambio de sección
+    window.addEventListener("wheel", checkFooterVisibility);
+    window.addEventListener("touchend", checkFooterVisibility);
 });

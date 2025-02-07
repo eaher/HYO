@@ -1,5 +1,5 @@
 section {
-    height: 920px;
+    height: 100vh; /* Ocupa toda la altura del viewport */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,8 +7,9 @@ section {
     width: 100%;
 }
 
+/* Asegurar que la sección "Contacto" mantenga el footer en la parte inferior */
 #contacto {
-    height: 920px; /* Mantiene la altura total */
+    height: 100vh; /* Mantiene la altura total */
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Empuja el contenido hacia arriba y el footer hacia abajo */
@@ -16,6 +17,7 @@ section {
     padding-bottom: 0;
 }
 
+/* Footer fijo en la parte inferior de "Contacto" */
 footer {
     height: 150px;
     width: 100%;
@@ -23,5 +25,6 @@ footer {
     align-items: center;
     justify-content: center;
     font-size: 1.2em;
-    margin-top: auto; /* Empuja el footer al final de la sección */
+    position: relative;
+    bottom: 0;
 }
