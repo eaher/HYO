@@ -341,3 +341,119 @@ body {
       max-width: 300px;
   }
 }
+
+
+/*P debajo de cards*/
+.productos-texto{
+  text-align: center;
+  font-size: 1.2rem; /* Ajuste de tamaño de fuente */
+  color: #333; /* Color de texto */
+  max-width: 80%;
+  margin: 40px auto 0; /* Aumentar el margen superior */
+
+}
+
+
+/*----------------------------------------*/
+
+/* Sección Clientes */
+.clientes-section {
+  width: 1320px;
+  height: 920px;
+  margin: 0 auto;
+  background-color: #f0f0f0; /* Color de fondo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 50px;
+}
+
+/* Contenedor de imágenes */
+.clientes-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1320px;
+  margin-top: 30px;
+  gap: 20px; /* Espaciado entre elementos */
+}
+
+/* Contenedor izquierdo para A y B */
+.clientes-columna-izq {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaciado entre A y B */
+  margin-right: 50px ;
+}
+
+/* Contenedor central para C */
+.cliente-img.img-c {
+  align-self: center; /* Centra C entre A y B */
+  margin-right: 50px;
+}
+
+/* Contenedor derecho para D */
+.cliente-img.img-d {
+  align-self: center;
+}
+
+/* Contenedores de imágenes (simulación) */
+.cliente-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Definición de tamaños y colores */
+.img-a {
+  width: 485px;
+  height: 168px;
+  background-color: #3498db;
+}
+
+.img-b {
+  width: 485px;
+  height: 168px;
+  background-color: #e74c3c;
+}
+
+.img-c {
+  width: 305px;
+  height: 216px;
+  background-color: #2ecc71;
+}
+
+.img-d {
+  width: 260px;
+  height: 555px;
+  background-color: #f39c12;
+}
+
+/* RESPONSIVIDAD */
+
+/* Ajuste en pantallas menores a 1200px */
+@media (max-width: 1200px) {
+  .clientes-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .clientes-columna-izq {
+    align-items: center; /* Centra A y B en pantallas pequeñas */
+  }
+}
+
+/* Ajuste en pantallas menores a 768px */
+@media (max-width: 768px) {
+  .clientes-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
