@@ -155,67 +155,87 @@ body {
   background-color: lightgreen;
 }
 
-/* Contenedor flexible para distribuir el contenido */
+/* Contenedor principal en pantallas grandes */
 .empresa-flex {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-/* Por defecto, cada columna ocupa el 100% (se apilan) */
-.empresa-left,
-.empresa-right {
-  flex: 1 1 100%;
+/* 
+  Manejo de márgenes de cada contenedor de forma separada:
+  - .div-imagen1-2: Pegado al borde izquierdo (margen izquierdo 0)
+  - .div-imagen3: Centrado mediante márgenes automáticos
+  - .div-imagen4: Pegado al borde derecho (margen derecho 0)
+*/
+
+/* Contenedor izquierdo: Imágenes 1 y 2 */
+.div-imagen1-2 {
+  margin-left: 0;
+  margin-right: 10px; /* Ajusta este valor para controlar la separación con el contenedor central */
+}
+
+/* Contenedor central: Imagen 3 */
+.div-imagen3 {
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 
-/* En pantallas medianas y superiores, se muestran en dos columnas (50% cada una) */
-@media (min-width: 768px) {
-  .empresa-left,
-  .empresa-right {
-    flex: 1 1 50%;
-  }
+/* Contenedor derecho: Imagen 4 */
+.div-imagen4 {
+  margin-left: 10px; /* Ajusta este valor para controlar la separación con el contenedor central */
+  margin-right: 0;
 }
 
-/* Estilos comunes para las imágenes simuladas */
-.custom-img {
-  width: 300px;           /* Ancho fijo */
-  max-width: 100%;        /* Responsividad en pantallas chicas */
-  object-fit: cover;      /* Recorta sin distorsión */
-  margin: 0 auto;         /* Centrado horizontal */
-}
-
-/* Placeholders existentes: altura de 150px */
+/* --- Imágenes con dimensiones fijas --- */
+/* Imágenes 1 y 2 (Placeholders) */
 .placeholder-img1,
 .placeholder-img2 {
+  width: 300px;
   height: 150px;
+  margin: 10px 0;
 }
 
-/* Colores para cada placeholder */
 .placeholder-img1 {
-  background-color: #c9c9c9;
+  background-color: #c38585;
 }
 
 .placeholder-img2 {
   background-color: #b3b3b3;
 }
 
-/* Nueva imagen simulada: altura de 216px */
+/* Imagen 3 */
 .custom-img-new {
+  width: 300px;
   height: 216px;
   background-color: #e0e0e0;
+  margin: 10px;
 }
 
-/* En pantallas chicas, agregar margen superior a la nueva imagen */
+/* Imagen 4 */
+.custom-img-extra {
+  width: 260px;
+  height: 555px;
+  background-color: #dcdcdc;
+  margin: 10px;
+}
+
+/* Disposición en dispositivos móviles:
+   Los tres contenedores se apilan en columna y se centran */
 @media (max-width: 767.98px) {
-  .custom-img-new {
-    margin-top: 20px;
+  .empresa-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .div-imagen1-2,
+  .div-imagen3,
+  .div-imagen4 {
+    margin: 10px auto;
   }
 }
-
 
 /* ======================
        Sección CONTACTO
@@ -228,5 +248,6 @@ body {
        Footer
     ====================== */
 footer {
+  
   /* El footer se muestra al interior de la última sección */
 }
