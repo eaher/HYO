@@ -1,108 +1,130 @@
 /* ======================
    Estilos Globales
    ====================== */
-   body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  @font-face {
-    font-family: 'Ubuntu';
-    src: url('../fonts/Ubuntu-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-  }
-  
-  .custom-container {
-    width: 100%;
-    max-width: 1320px;
-    margin: 0 auto;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-  
-  /* ======================
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.custom-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* ======================
        Navbar
     ====================== */
-  /* Logo: contenedor gris de 120px x 55px */
-  .logo-container {
-    width: 120px;
-    height: 55px;
-    background-color: #ccc;
-  }
-  
-  /* Opcional: personaliza los enlaces del navbar */
-  .navbar .nav-link {
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  /* ======================
+/* Logo: contenedor gris de 120px x 55px */
+.logo-container {
+  width: 120px;
+  height: 55px;
+  background-color: #ccc;
+}
+
+/* Opcional: personaliza los enlaces del navbar */
+.navbar .nav-link {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* ======================
        Secciones
     ====================== */
-  .section {
-    width: 100%;
-    max-width: 1320px;
-    margin: 0 auto;
+.section {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767.98px) {
+  /* En pantallas pequeñas, reducimos la altura de la sección de contacto para que se vea el footer */
+  #inicio {
+    /* Resta la altura del footer (70px en este ejemplo) */
+    height: 50%;
   }
-  
-  @media (max-width: 767.98px) {
-    /* En pantallas pequeñas, reducimos la altura de la sección de contacto para que se vea el footer */
-    #inicio {
-      /* Resta la altura del footer (70px en este ejemplo) */
-      height: 50%;
-    }
-  }
+}
 
 /* ======================
      Sección INICIO
   ====================== */
-  #inicio {
-    text-align: center;
-    padding-top: 81px; /* Ajusta este valor si tu navbar tapara parte de la imagen */
-    background-color: antiquewhite; /* Color de fondo opcional */
-    padding-bottom: 20px;
-  }
-  
-  #inicio .img-inicio {
-    max-width: 1320px;
-    max-height: 660px;
-    width: 100%;
-    height: auto;
-    /* Con estas propiedades la imagen no excederá 1320px de ancho ni 660px de alto, manteniendo su proporción */
-  }
-  #inicio .text-container {
-    margin-top: 20px; /* Ajusta este valor según la separación que desees */
-    margin-bottom: 20px;
-  }
+#inicio {
+  text-align: center;
+  padding-top: 81px; /* Ajusta este valor si tu navbar tapara parte de la imagen */
+  background-color: antiquewhite; /* Color de fondo opcional */
+  padding-bottom: 20px;
+}
 
-  .custom-title {
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: bold;
-    font-size: clamp(32px, 5vw, 49px); /* Mínimo 32px, escala con 5vw y máximo 75px */
-  }
-  
-  .custom-subtitle {
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: bold;
-    font-size: clamp(20px, 3vw, 25px); /* Mínimo 20px, escala con 3vw y máximo 40px */
-  }
+#inicio .img-inicio {
+  max-width: 1320px;
+  max-height: 660px;
+  width: 100%;
+  height: auto;
+  /* Con estas propiedades la imagen no excederá 1320px de ancho ni 660px de alto, manteniendo su proporción */
+}
+#inicio .text-container {
+  margin-top: 20px; /* Ajusta este valor según la separación que desees */
+  margin-bottom: 20px;
+}
+
+.custom-title {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: clamp(
+    32px,
+    5vw,
+    49px
+  ); /* Mínimo 32px, escala con 5vw y máximo 75px */
+}
+
+.custom-subtitle {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: clamp(
+    20px,
+    3vw,
+    25px
+  ); /* Mínimo 20px, escala con 3vw y máximo 40px */
+}
+.custom-subtitle2 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: clamp(
+    20px,
+    3vw,
+    25px
+  ); /* Mínimo 20px, escala con 3vw y máximo 40px */
+  margin-bottom: 0px;
+}
+
+@media (max-width: 767.98px) {
   .custom-subtitle2 {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-weight: bold;
-    font-size: clamp(20px, 3vw, 25px); /* Mínimo 20px, escala con 3vw y máximo 40px */
-    margin-bottom: 0px;
+    font-size: clamp(
+      20px,
+      3vw,
+      25px
+    ); /* Mínimo 20px, escala con 3vw y máximo 40px */
+    margin-bottom: 10px;
   }
+}
 
-
-  
-  /* ======================
+/* ======================
        Sección PRODUCTOS
     ====================== */
 /* Ajuste de columnas: En pantallas grandes, cada card ocupará el 20% del ancho */
 @media (min-width: 992px) {
-
   .card-column {
     margin-bottom: 20px;
   }
@@ -110,9 +132,9 @@
 
 /* Estilo para la imagen de las cards */
 .card-img-custom {
-  width: 247px;         /* Ancho fijo */
-  height: 378px;        /* Altura fija */
-  object-fit: cover;    /* Recorta la imagen sin distorsión */
+  width: 247px; /* Ancho fijo */
+  height: 378px; /* Altura fija */
+  object-fit: cover; /* Recorta la imagen sin distorsión */
   display: block;
   margin: 0 auto;
 }
@@ -121,32 +143,90 @@
 .card-custom {
   width: 247px;
   margin: 0 auto;
-  flex: 0 0 247px;  /* Evita que el contenedor flexible la estire o reduzca */
+  flex: 0 0 247px; /* Evita que el contenedor flexible la estire o reduzca */
   margin-bottom: 20px;
 }
 
 
-
-
-
-  /* ======================
+/* ======================
        Sección EMPRESA
-    ====================== */
-  #empresa {
-    background-color: lightgreen;
+====================== */
+#empresa {
+  background-color: lightgreen;
+}
+
+/* Contenedor flexible para distribuir el contenido */
+.empresa-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Por defecto, cada columna ocupa el 100% (se apilan) */
+.empresa-left,
+.empresa-right {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* En pantallas medianas y superiores, se muestran en dos columnas (50% cada una) */
+@media (min-width: 768px) {
+  .empresa-left,
+  .empresa-right {
+    flex: 1 1 50%;
   }
-  
-  /* ======================
+}
+
+/* Estilos comunes para las imágenes simuladas */
+.custom-img {
+  width: 300px;           /* Ancho fijo */
+  max-width: 100%;        /* Responsividad en pantallas chicas */
+  object-fit: cover;      /* Recorta sin distorsión */
+  margin: 0 auto;         /* Centrado horizontal */
+}
+
+/* Placeholders existentes: altura de 150px */
+.placeholder-img1,
+.placeholder-img2 {
+  height: 150px;
+}
+
+/* Colores para cada placeholder */
+.placeholder-img1 {
+  background-color: #c9c9c9;
+}
+
+.placeholder-img2 {
+  background-color: #b3b3b3;
+}
+
+/* Nueva imagen simulada: altura de 216px */
+.custom-img-new {
+  height: 216px;
+  background-color: #e0e0e0;
+}
+
+/* En pantallas chicas, agregar margen superior a la nueva imagen */
+@media (max-width: 767.98px) {
+  .custom-img-new {
+    margin-top: 20px;
+  }
+}
+
+
+/* ======================
        Sección CONTACTO
     ====================== */
-  #contacto {
-    background-color: lavender;
-  }
-  
-  /* ======================
+#contacto {
+  background-color: lavender;
+}
+
+/* ======================
        Footer
     ====================== */
-  footer {
-    /* El footer se muestra al interior de la última sección */
-  }
-  
+footer {
+  /* El footer se muestra al interior de la última sección */
+}
