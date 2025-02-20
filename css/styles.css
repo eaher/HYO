@@ -197,6 +197,7 @@ body {
   width: 300px;
   height: 150px;
   margin: 10px 0;
+  margin-left: 40px;
 }
 
 .placeholder-img1 {
@@ -221,6 +222,7 @@ body {
   height: 555px;
   background-color: #dcdcdc;
   margin: 10px;
+  margin-right: 40px;
 }
 
 /* Disposición en dispositivos móviles:
@@ -235,6 +237,22 @@ body {
   .div-imagen4 {
     margin: 10px auto;
   }
+
+
+  .placeholder-img1,
+.placeholder-img2 {
+  width: 300px;
+  height: 150px;
+  margin: 10px 0;
+ }
+
+.custom-img-extra {
+  width: 260px;
+  height: 555px;
+  background-color: #dcdcdc;
+  margin: 10px;
+
+}
 }
 
 /* ======================
