@@ -207,22 +207,87 @@
         </div>
     </section>
 
+    <!-- Sección CONTACTO -->
+    <section id="contacto" class="container py-5">
+        <h1 class="text-center mb-4">NOS PONEMOS EN CONTACTO</h1>
+        <div class="row d-flex justify-content-center align-items-center">
+            
+            <!-- Redes Sociales -->
+            <div class="text-center rrss-container">
 
-
-
-
-
-
-
-
-    <section id="contacto" class="section vh-100 d-flex flex-column justify-content-between">
-        <div class="container custom-container text-center pt-5">
-            <h1>CONTACTO</h1>
-            <!-- Aquí podrías agregar el contenido propio de la sección CONTACTO -->
+                <h4>SEGUINOS EN NUESTRAS REDES SOCIALES</h4>
+                <div class="d-flex flex-column align-items-center gap-3 mt-3">
+                    <a href="#" target="_blank"><img src="img/icon-facebook.png" alt="Facebook" width="90" height="90"></a>
+                    <a href="#" target="_blank"><img src="img/icon-instagram.png" alt="Instagram" width="90" height="90"></a>
+                    <a href="#" target="_blank"><img src="img/icon-mail.png" alt="Mail" width="90" height="90"></a>
+                    <a href="#" target="_blank"><img src="img/icon-linkedin.png" alt="LinkedIn" width="90" height="90"></a>
+                </div>
+            </div>
+            
+            <!-- Formulario -->
+            <div class="col-md-4 bg-white p-4 shadow-sm">
+                <h4 class="text-center">DEJANOS TUS DATOS Y NOS COMUNICAREMOS A LA BREVEDAD</h4>
+                <form id="contact-form" class="mt-3">
+                    <div class="mb-2">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" id="nombre" class="form-control" required>
+                    </div>
+                    <div class="mb-2">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" id="apellido" class="form-control" required>
+                    </div>
+                    <div class="mb-2">
+                        <label class="form-label">¿Cómo querés que te contactemos?</label>
+                        <div class="d-flex gap-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="contacto" id="whatsapp" value="whatsapp" required>
+                                <label class="form-check-label" for="whatsapp">WhatsApp</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="contacto" id="telefono" value="telefono" required>
+                                <label class="form-check-label" for="telefono">Teléfono</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="contacto" id="email" value="email" required>
+                                <label class="form-check-label" for="email">Email</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <label for="celular" class="form-label">Celular</label>
+                        <input type="tel" id="celular" class="form-control" pattern="[0-9]{10}" required>
+                    </div>
+                    <div class="mb-2">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="mb-2">
+                        <label for="provincia" class="form-label">Provincia</label>
+                        <select id="provincia" class="form-select" required>
+                            <option value="">Seleccionar...</option>
+                            <option value="Buenos Aires">Buenos Aires</option>
+                            <option value="Córdoba">Córdoba</option>
+                            <option value="Santa Fe">Santa Fe</option>
+                        </select>
+                    </div>
+                    <div class="mb-2">
+                        <label for="ciudad" class="form-label">Ciudad</label>
+                        <input type="text" id="ciudad" class="form-control" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                </form>
+                <p class="text-muted text-sm">(*) Nos tomamos muy en serio el SPAM, solo utilizaremos la información brindada para realizar el contacto que nos indiques. Luego eliminamos la misma.</p>
+            </div>
+            
+            <!-- Mapa -->
+            <div class="col-md-4 position-relative">
+                <div class="position-absolute w-100 text-center text-black p-2 bg-white bg-opacity-75" style="top: 10px;">ACERCATE A NUESTRA EMPRESA Y VISITANOS PERSONALMENTE</div>
+                <iframe class="w-100" height="640" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509371!2d144.95592511531632!3d-37.81720917975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df63f7f41%3A0x5045675218cee40!2sMelbourne%20Central!5e0!3m2!1sen!2sau!4v1602569630245!5m2!1sen!2sau" allowfullscreen></iframe>
+            </div>
         </div>
-
-
     </section>
+    
 
     <!-- FOOTER DENTRO DE LA ÚLTIMA SECCIÓN -->
     <footer class="bg-dark text-white py-3">

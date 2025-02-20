@@ -262,6 +262,57 @@ body {
   background-color: lavender;
 }
 
+
+
+.rrss-container {
+  width: 255px; /* Ancho exacto */
+  margin-right: 100px;
+  height: 640px;
+  padding: 20px;
+}
+
+
+#contacto {
+    padding: 50px 0;
+}
+
+#contacto h1 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#contacto h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#contacto .form-control,
+#contacto .form-select {
+    height: 40px;
+    font-size: 16px;
+}
+
+#contacto .btn-primary {
+    background-color: #004aad;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#contacto .btn-primary:hover {
+    background-color: #00378a;
+}
+
+#contacto iframe {
+    border-radius: 10px;
+}
+
+#contacto .bg-opacity-75 {
+    border-radius: 10px;
+}
+
+
 /* ======================
        Footer
     ====================== */
