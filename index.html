@@ -48,10 +48,10 @@
                 </ul>
                 <!-- Íconos de redes sociales (solo en pantallas grandes) -->
                 <div class="d-flex gap-2">
-                    <a href="#"><img src="img/icon-facebook.png" alt="Facebook" width="30" height="30"></a>
-                    <a href="#"><img src="img/icon-instagram.png" alt="Instagram" width="30" height="30"></a>
-                    <a href="#"><img src="img/icon-mail.png" alt="Mail" width="30" height="30"></a>
-                    <a href="#"><img src="img/icon-linkedin.png" alt="LinkedIn" width="30" height="30"></a>
+                    <a href="#"><img src="img/ICONOS REDES-FB.png" alt="Facebook" width="30" height="30"></a>
+                    <a href="#"><img src="img/ICONOS REDES-IG.png" alt="Instagram" width="30" height="30"></a>
+                    <a href="#"><img src="img/ICONOS REDES-mail.png" alt="Mail" width="30" height="30"></a>
+                    <a href="#"><img src="img/ICONOS REDES-IN.png" alt="LinkedIn" width="30" height="30"></a>
                 </div>
             </div>
 
@@ -207,89 +207,127 @@
         </div>
     </section>
 
+
+
     <!-- Sección CONTACTO -->
     <section id="contacto" class="container py-5">
         <h1 class="text-center mb-4">NOS PONEMOS EN CONTACTO</h1>
-        <div class="row d-flex justify-content-center align-items-center">
-            
-            <!-- Redes Sociales -->
-            <div class="text-center rrss-container">
-
-                <h4>SEGUINOS EN NUESTRAS REDES SOCIALES</h4>
-                <div class="d-flex flex-column align-items-center gap-3 mt-3">
-                    <a href="#" target="_blank"><img src="img/icon-facebook.png" alt="Facebook" width="90" height="90"></a>
-                    <a href="#" target="_blank"><img src="img/icon-instagram.png" alt="Instagram" width="90" height="90"></a>
-                    <a href="#" target="_blank"><img src="img/icon-mail.png" alt="Mail" width="90" height="90"></a>
-                    <a href="#" target="_blank"><img src="img/icon-linkedin.png" alt="LinkedIn" width="90" height="90"></a>
+        <div class="row justify-content-start align-items-start">
+            <!-- Columna para Redes Sociales (izquierda) -->
+            <div class="col-auto social-container me-3">
+                <div class="social-content">
+                    <h2 class="social-title text-center">
+                        SEGUINOS EN NUESTRAS<br>REDES SOCIALES
+                    </h2>
+                    <div class="social-icons d-flex flex-column align-items-center">
+                        <a href="#"><img src="img/ICONOS REDES-FB.png" alt="Facebook" class="social-icon"></a>
+                        <a href="#"><img src="img/ICONOS REDES-IG.png" alt="Instagram" class="social-icon"></a>
+                        <a href="#"><img src="img/ICONOS REDES-mail.png" alt="Mail" class="social-icon"></a>
+                        <a href="#"><img src="img/ICONOS REDES-IN.png" alt="LinkedIn" class="social-icon"></a>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Formulario -->
-            <div class="col-md-4 bg-white p-4 shadow-sm">
-                <h4 class="text-center">DEJANOS TUS DATOS Y NOS COMUNICAREMOS A LA BREVEDAD</h4>
-                <form id="contact-form" class="mt-3">
-                    <div class="mb-2">
-                        <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text" id="nombre" class="form-control" required>
-                    </div>
-                    <div class="mb-2">
-                        <label for="apellido" class="form-label">Apellido</label>
-                        <input type="text" id="apellido" class="form-control" required>
-                    </div>
-                    <div class="mb-2">
-                        <label class="form-label">¿Cómo querés que te contactemos?</label>
-                        <div class="d-flex gap-3">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="contacto" id="whatsapp" value="whatsapp" required>
-                                <label class="form-check-label" for="whatsapp">WhatsApp</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="contacto" id="telefono" value="telefono" required>
-                                <label class="form-check-label" for="telefono">Teléfono</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="contacto" id="email" value="email" required>
-                                <label class="form-check-label" for="email">Email</label>
-                            </div>
+
+            <!-- Columna para el Formulario (centro) -->
+            <div class="col-auto form-container me-3">
+                <!-- Contenedor del formulario -->
+                <form id="contact-form" class="contact-form-fixed" method="post" action="#">
+                    <!-- Título del formulario -->
+                    <h2 class="form-title text-center">
+                        DEJANOS TUS DATOS Y NOS COMUNICAREMOS A LA BREVEDAD
+                    </h2>
+
+                    <!-- Fila: Nombre y Apellido -->
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control form-control-sm" id="name" name="name"
+                                placeholder="Tu nombre" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="surname" class="form-label">Apellido</label>
+                            <input type="text" class="form-control form-control-sm" id="surname" name="surname"
+                                placeholder="Tu apellido" required>
                         </div>
                     </div>
-                    <div class="mb-2">
+
+                    <!-- Campo: ¿Cómo querés que te contactemos? -->
+                    <div class="mt-2">
+                        <label class="form-label d-block">¿Cómo querés que te contactemos?</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="contactMethod" id="contactWhatsApp"
+                                value="WhatsApp" required>
+                            <label class="form-check-label" for="contactWhatsApp">WhatsApp</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="contactMethod" id="contactTelefono"
+                                value="Telefono">
+                            <label class="form-check-label" for="contactTelefono">Teléfono</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="contactMethod" id="contactEmail"
+                                value="Email">
+                            <label class="form-check-label" for="contactEmail">Email</label>
+                        </div>
+                    </div>
+
+                    <!-- Campo: Celular -->
+                    <div class="mt-2">
                         <label for="celular" class="form-label">Celular</label>
-                        <input type="tel" id="celular" class="form-control" pattern="[0-9]{10}" required>
+                        <input type="tel" class="form-control form-control-sm" id="celular" name="celular"
+                            placeholder="Ej: +54 9 ..." required>
                     </div>
-                    <div class="mb-2">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" class="form-control" required>
+
+                    <!-- Campo: Correo Electrónico -->
+                    <div class="mt-2">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control form-control-sm" id="email" name="email"
+                            placeholder="nombre@ejemplo.com" required>
                     </div>
-                    <div class="mb-2">
+
+                    <!-- Campo: Provincia -->
+                    <div class="mt-2">
                         <label for="provincia" class="form-label">Provincia</label>
-                        <select id="provincia" class="form-select" required>
-                            <option value="">Seleccionar...</option>
-                            <option value="Buenos Aires">Buenos Aires</option>
-                            <option value="Córdoba">Córdoba</option>
-                            <option value="Santa Fe">Santa Fe</option>
-                        </select>
+                        <input type="text" class="form-control form-control-sm" id="provincia" name="provincia"
+                            placeholder="Tu provincia" required>
                     </div>
-                    <div class="mb-2">
+
+                    <!-- Campo: Ciudad -->
+                    <div class="mt-2">
                         <label for="ciudad" class="form-label">Ciudad</label>
-                        <input type="text" id="ciudad" class="form-control" required>
+                        <input type="text" class="form-control form-control-sm" id="ciudad" name="ciudad"
+                            placeholder="Tu ciudad" required>
                     </div>
-                    
-                    <button type="submit" class="btn btn-primary w-100">Enviar</button>
+
+                    <!-- Botón Enviar -->
+                    <div class="text-center mt-3">
+                        <button type="submit" class="btn btn-custom">Enviar</button>
+                    </div>
                 </form>
-                <p class="text-muted text-sm">(*) Nos tomamos muy en serio el SPAM, solo utilizaremos la información brindada para realizar el contacto que nos indiques. Luego eliminamos la misma.</p>
+
+                <!-- Texto informativo debajo del formulario -->
+                <p class="mt-2 text-center" style="max-width: 534px; font-size: 12px;">
+                    (*) Nos tomamos muy en serio el SPAM, solo utilizamos la información brindada para realizar el
+                    contacto que nos indiques. Luego eliminamos la misma.
+                </p>
             </div>
-            
-            <!-- Mapa -->
-            <div class="col-md-4 position-relative">
-                <div class="position-absolute w-100 text-center text-black p-2 bg-white bg-opacity-75" style="top: 10px;">ACERCATE A NUESTRA EMPRESA Y VISITANOS PERSONALMENTE</div>
-                <iframe class="w-100" height="640" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509371!2d144.95592511531632!3d-37.81720917975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5df63f7f41%3A0x5045675218cee40!2sMelbourne%20Central!5e0!3m2!1sen!2sau!4v1602569630245!5m2!1sen!2sau" allowfullscreen></iframe>
+
+            <!-- Columna para el Mapa de Google (derecha) -->
+            <div class="col map-container">
+                <div class="map-content">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0168881863146!2d-58.384145323530895!3d-34.603734457500295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4aa9f0a6da5edb%3A0x11bead4e234e558b!2sObelisco!5e0!3m2!1ses!2sar!4v1740524048296!5m2!1ses!2sar" style="border:0;"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
             </div>
         </div>
     </section>
+
     
 
-    <!-- FOOTER DENTRO DE LA ÚLTIMA SECCIÓN -->
+
+
+    <!-- FOOTER  -->
     <footer class="bg-dark text-white py-3">
         <div class="container custom-container text-center">
             <p class="mb-2">Todos los derechos reservados HYO SA</p>

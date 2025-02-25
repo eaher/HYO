@@ -29,13 +29,19 @@ body {
 .logo-container {
   width: 120px;
   height: 55px;
-  background-color: #ccc;
+  background-color: #0988b2;
 }
 
 /* Opcional: personaliza los enlaces del navbar */
 .navbar .nav-link {
   font-weight: bold;
   text-transform: uppercase;
+}
+
+
+
+.navbar .d-flex.gap-2 a img {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(30%) saturate(500%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }
 
 /* ======================
@@ -151,167 +157,226 @@ body {
 /* ======================
        Sección EMPRESA
 ====================== */
+/* Sección EMPRESA */
 #empresa {
   background-color: lightgreen;
+  padding: 20px 0;
 }
 
-/* Contenedor principal en pantallas grandes */
+/* Contenedor principal flexible */
 .empresa-flex {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra los elementos en pantallas pequeñas */
+  gap: 20px; /* Espacio uniforme entre elementos */
 }
 
-/* 
-  Manejo de márgenes de cada contenedor de forma separada:
-  - .div-imagen1-2: Pegado al borde izquierdo (margen izquierdo 0)
-  - .div-imagen3: Centrado mediante márgenes automáticos
-  - .div-imagen4: Pegado al borde derecho (margen derecho 0)
-*/
-
-/* Contenedor izquierdo: Imágenes 1 y 2 */
-.div-imagen1-2 {
-  margin-left: 0;
-  margin-right: 10px; /* Ajusta este valor para controlar la separación con el contenedor central */
-}
-
-/* Contenedor central: Imagen 3 */
-.div-imagen3 {
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: center;
-}
-
-/* Contenedor derecho: Imagen 4 */
+/* Cada contenedor de imagen se comporta como un ítem flexible */
+.div-imagen1-2,
+.div-imagen3,
 .div-imagen4 {
-  margin-left: 10px; /* Ajusta este valor para controlar la separación con el contenedor central */
-  margin-right: 0;
+  flex: 1 1 300px;  /* Tamaño base adaptable */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* --- Imágenes con dimensiones fijas --- */
-/* Imágenes 1 y 2 (Placeholders) */
+/* Espaciado interno para cada imagen */
+.custom-img {
+  margin: 10px 0;
+}
+
+/* Tamaños para pantallas grandes */
 .placeholder-img1,
 .placeholder-img2 {
   width: 300px;
   height: 150px;
-  margin: 10px 0;
-  margin-left: 40px;
+  background-color: #c38585; /* Placeholder 1 */
 }
-
-.placeholder-img1 {
-  background-color: #c38585;
-}
-
 .placeholder-img2 {
   background-color: #b3b3b3;
 }
 
-/* Imagen 3 */
 .custom-img-new {
   width: 300px;
   height: 216px;
   background-color: #e0e0e0;
-  margin: 10px;
 }
 
-/* Imagen 4 */
 .custom-img-extra {
   width: 260px;
   height: 555px;
   background-color: #dcdcdc;
-  margin: 10px;
-  margin-right: 40px;
 }
 
-/* Disposición en dispositivos móviles:
-   Los tres contenedores se apilan en columna y se centran */
+/* Media Query para pantallas medianas (tablets) y menores */
+@media (max-width: 992px) {
+  .placeholder-img1,
+  .placeholder-img2,
+  .custom-img-new,
+  .custom-img-extra {
+    width: 90%;  /* Se ajusta al 90% del contenedor */
+    /* Usamos aspect-ratio para preservar la proporción original */
+  }
+  
+  .placeholder-img1,
+  .placeholder-img2 {
+    aspect-ratio: 2 / 1; /* 300:150 */
+  }
+  
+  .custom-img-new {
+    aspect-ratio: 300 / 216;
+  }
+  
+  .custom-img-extra {
+    aspect-ratio: 260 / 555;
+  }
+}
+
+/* Media Query para dispositivos móviles */
 @media (max-width: 767.98px) {
   .empresa-flex {
-    flex-direction: column;
+    flex-direction: column; /* Se apilan los elementos en columna */
     align-items: center;
   }
-  .div-imagen1-2,
-  .div-imagen3,
-  .div-imagen4 {
-    margin: 10px auto;
+}
+
+/* Contenedor principal flexible para pantallas grandes */
+@media (min-width: 992px) {
+  .empresa-flex {
+    flex-wrap: nowrap;         /* Forzamos que los elementos se mantengan en una sola fila */
+    align-items: center;        /* Centra verticalmente los elementos */
+    justify-content: space-between;
   }
 
-
-  .placeholder-img1,
-.placeholder-img2 {
-  width: 300px;
-  height: 150px;
-  margin: 10px 0;
- }
-
-.custom-img-extra {
-  width: 260px;
-  height: 555px;
-  background-color: #dcdcdc;
-  margin: 10px;
-
+  /* Para que solo el div 1 y el div 2 queden centrados verticalmente,
+     forzamos al tercer div a alinearse al inicio (parte superior) */
+  .div-imagen4 {
+    align-self: flex-start;
+  }
 }
+
+
+/* ======================
+   Sección CONTACTO
+====================== */
+#contacto {
+  background-color: lavender;
+  padding: 20px 0;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* Contenedor del formulario con dimensiones fijas */
+.contact-form-fixed {
+  width: 534px;
+  height: 640px;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* Título del formulario con fuente Ubuntu Bold */
+.form-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Botón de envío con estilo armónico */
+.btn-custom {
+  background: linear-gradient(45deg, #4da3ff, #1a73e8);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 20px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-custom:hover {
+  background: linear-gradient(45deg, #1a73e8, #4da3ff);
+}
+
+/* Responsividad para el formulario en pantallas pequeñas */
+@media (max-width: 540px) {
+  .contact-form-fixed {
+    width: 100%;
+    height: auto;
+    margin-left: 10px;
+  }
 }
 
 /* ======================
-       Sección CONTACTO
-    ====================== */
-#contacto {
-  background-color: lavender;
+   Contenedor Social
+====================== */
+.social-container {
+  width: 250px;
 }
 
+.social-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
 
+.social-title {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: center;
+}
 
-.rrss-container {
-  width: 255px; /* Ancho exacto */
-  margin-right: 100px;
+.social-icons a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.social-icon {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+/* ======================
+   Contenedor del Mapa
+====================== */
+.map-container {
+  /* El mapa ocupa el espacio restante a la derecha */
+  flex: 1;
   height: 640px;
-  padding: 20px;
+}
+
+.map-content iframe {
+  width: 100%;
+  height: 640px;
+  border: 0;
 }
 
 
-#contacto {
-    padding: 50px 0;
+/* Responsividad para contenedores en pantallas medianas */
+@media (max-width: 768px) {
+  .social-container,
+  .contact-form-fixed,
+  .map-container {
+    width: 100%;
+    max-width: 534px;
+    margin-bottom: 20px;
+  }
+  
+  /* Apilamos las columnas verticalmente */
+  .row.justify-content-start {
+    flex-direction: column;
+    align-items: center;
+  }
 }
-
-#contacto h1 {
-    font-size: 32px;
-    font-weight: bold;
-}
-
-#contacto h4 {
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-
-#contacto .form-control,
-#contacto .form-select {
-    height: 40px;
-    font-size: 16px;
-}
-
-#contacto .btn-primary {
-    background-color: #004aad;
-    border: none;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px;
-}
-
-#contacto .btn-primary:hover {
-    background-color: #00378a;
-}
-
-#contacto iframe {
-    border-radius: 10px;
-}
-
-#contacto .bg-opacity-75 {
-    border-radius: 10px;
-}
-
 
 /* ======================
        Footer
