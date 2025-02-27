@@ -22,6 +22,7 @@ body {
   padding-right: 0 !important;
 }
 
+
 /* ======================
        Navbar
     ====================== */
@@ -44,6 +45,7 @@ body {
   filter: brightness(0) saturate(100%) invert(75%) sepia(30%) saturate(500%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }
 
+
 /* ======================
        Secciones
     ====================== */
@@ -54,6 +56,7 @@ body {
 }
 
 @media (max-width: 767.98px) {
+
   /* En pantallas pequeñas, reducimos la altura de la sección de contacto para que se vea el footer */
   #inicio {
     /* Resta la altura del footer (70px en este ejemplo) */
@@ -66,8 +69,10 @@ body {
   ====================== */
 #inicio {
   text-align: center;
-  padding-top: 81px; /* Ajusta este valor si tu navbar tapara parte de la imagen */
-  background-color: antiquewhite; /* Color de fondo opcional */
+  padding-top: 81px;
+  /* Ajusta este valor si tu navbar tapara parte de la imagen */
+  background-color: antiquewhite;
+  /* Color de fondo opcional */
   padding-bottom: 20px;
 }
 
@@ -78,38 +83,38 @@ body {
   height: auto;
   /* Con estas propiedades la imagen no excederá 1320px de ancho ni 660px de alto, manteniendo su proporción */
 }
+
 #inicio .text-container {
-  margin-top: 20px; /* Ajusta este valor según la separación que desees */
+  margin-top: 20px;
+  /* Ajusta este valor según la separación que desees */
   margin-bottom: 20px;
 }
 
 .custom-title {
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
-  font-size: clamp(
-    32px,
-    5vw,
-    49px
-  ); /* Mínimo 32px, escala con 5vw y máximo 75px */
+  font-size: clamp(32px,
+      5vw,
+      49px);
+  /* Mínimo 32px, escala con 5vw y máximo 75px */
 }
 
 .custom-subtitle {
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
-  font-size: clamp(
-    20px,
-    3vw,
-    25px
-  ); /* Mínimo 20px, escala con 3vw y máximo 40px */
+  font-size: clamp(20px,
+      3vw,
+      25px);
+  /* Mínimo 20px, escala con 3vw y máximo 40px */
 }
+
 .custom-subtitle2 {
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
-  font-size: clamp(
-    20px,
-    3vw,
-    25px
-  ); /* Mínimo 20px, escala con 3vw y máximo 40px */
+  font-size: clamp(20px,
+      3vw,
+      25px);
+  /* Mínimo 20px, escala con 3vw y máximo 40px */
   margin-bottom: 0px;
 }
 
@@ -117,11 +122,10 @@ body {
   .custom-subtitle2 {
     font-family: "Ubuntu", sans-serif;
     font-weight: bold;
-    font-size: clamp(
-      20px,
-      3vw,
-      25px
-    ); /* Mínimo 20px, escala con 3vw y máximo 40px */
+    font-size: clamp(20px,
+        3vw,
+        25px);
+    /* Mínimo 20px, escala con 3vw y máximo 40px */
     margin-bottom: 10px;
   }
 }
@@ -138,9 +142,12 @@ body {
 
 /* Estilo para la imagen de las cards */
 .card-img-custom {
-  width: 247px; /* Ancho fijo */
-  height: 378px; /* Altura fija */
-  object-fit: cover; /* Recorta la imagen sin distorsión */
+  width: 247px;
+  /* Ancho fijo */
+  height: 378px;
+  /* Altura fija */
+  object-fit: cover;
+  /* Recorta la imagen sin distorsión */
   display: block;
   margin: 0 auto;
 }
@@ -149,7 +156,8 @@ body {
 .card-custom {
   width: 247px;
   margin: 0 auto;
-  flex: 0 0 247px; /* Evita que el contenedor flexible la estire o reduzca */
+  flex: 0 0 247px;
+  /* Evita que el contenedor flexible la estire o reduzca */
   margin-bottom: 20px;
 }
 
@@ -167,15 +175,18 @@ body {
 .empresa-flex {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centra los elementos en pantallas pequeñas */
-  gap: 20px; /* Espacio uniforme entre elementos */
+  justify-content: center;
+  /* Centra los elementos en pantallas pequeñas */
+  gap: 20px;
+  /* Espacio uniforme entre elementos */
 }
 
 /* Cada contenedor de imagen se comporta como un ítem flexible */
 .div-imagen1-2,
 .div-imagen3,
 .div-imagen4 {
-  flex: 1 1 300px;  /* Tamaño base adaptable */
+  flex: 1 1 300px;
+  /* Tamaño base adaptable */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -191,8 +202,10 @@ body {
 .placeholder-img2 {
   width: 300px;
   height: 150px;
-  background-color: #c38585; /* Placeholder 1 */
+  background-color: #c38585;
+  /* Placeholder 1 */
 }
+
 .placeholder-img2 {
   background-color: #b3b3b3;
 }
@@ -211,23 +224,26 @@ body {
 
 /* Media Query para pantallas medianas (tablets) y menores */
 @media (max-width: 992px) {
+
   .placeholder-img1,
   .placeholder-img2,
   .custom-img-new,
   .custom-img-extra {
-    width: 90%;  /* Se ajusta al 90% del contenedor */
+    width: 90%;
+    /* Se ajusta al 90% del contenedor */
     /* Usamos aspect-ratio para preservar la proporción original */
   }
-  
+
   .placeholder-img1,
   .placeholder-img2 {
-    aspect-ratio: 2 / 1; /* 300:150 */
+    aspect-ratio: 2 / 1;
+    /* 300:150 */
   }
-  
+
   .custom-img-new {
     aspect-ratio: 300 / 216;
   }
-  
+
   .custom-img-extra {
     aspect-ratio: 260 / 555;
   }
@@ -236,7 +252,8 @@ body {
 /* Media Query para dispositivos móviles */
 @media (max-width: 767.98px) {
   .empresa-flex {
-    flex-direction: column; /* Se apilan los elementos en columna */
+    flex-direction: column;
+    /* Se apilan los elementos en columna */
     align-items: center;
   }
 }
@@ -244,8 +261,10 @@ body {
 /* Contenedor principal flexible para pantallas grandes */
 @media (min-width: 992px) {
   .empresa-flex {
-    flex-wrap: nowrap;         /* Forzamos que los elementos se mantengan en una sola fila */
-    align-items: center;        /* Centra verticalmente los elementos */
+    flex-wrap: nowrap;
+    /* Forzamos que los elementos se mantengan en una sola fila */
+    align-items: center;
+    /* Centra verticalmente los elementos */
     justify-content: space-between;
   }
 
@@ -256,10 +275,9 @@ body {
   }
 }
 
-
 /* ======================
    Sección CONTACTO
-====================== */
+======================= */
 #contacto {
   background-color: lavender;
   padding: 20px 0;
@@ -267,121 +285,62 @@ body {
   margin: 0 auto;
 }
 
-/* Contenedor del formulario con dimensiones fijas */
-.contact-form-fixed {
+.contacto-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0px;
+}
+
+/* Espaciado interno para cada imagen */
+.custom-element {
+  margin: 0px;
+}
+
+/* Tamaños para pantallas grandes */
+.placeholder-element1 {
+  width: 250px;
+  height: 640px;
+  background-color: #c38585;
+}
+
+.placeholder-element2 {
   width: 534px;
   height: 640px;
-  background-color: #fff;
-  padding: 10px 15px;
-  border-radius: 8px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  background-color: #1f752f;
 }
 
-/* Título del formulario con fuente Ubuntu Bold */
-.form-title {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-/* Botón de envío con estilo armónico */
-.btn-custom {
-  background: linear-gradient(45deg, #4da3ff, #1a73e8);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 8px 20px;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
-
-.btn-custom:hover {
-  background: linear-gradient(45deg, #1a73e8, #4da3ff);
-}
-
-/* Responsividad para el formulario en pantallas pequeñas */
-@media (max-width: 540px) {
-  .contact-form-fixed {
-    width: 100%;
-    height: auto;
-    margin-left: 10px;
-  }
-}
-
-/* ======================
-   Contenedor Social
-====================== */
-.social-container {
-  width: 250px;
-}
-
-.social-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-}
-
-.social-title {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.social-icons a {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.social-icon {
-  width: 90px;
-  height: 90px;
-  object-fit: contain;
-}
-
-/* ======================
-   Contenedor del Mapa
-====================== */
-.map-container {
-  /* El mapa ocupa el espacio restante a la derecha */
-  flex: 1;
+.placeholder-element3 {
+  width: 534px;
   height: 640px;
+  background-color: #dcdcdc;
 }
 
-.map-content iframe {
-  width: 100%;
-  height: 640px;
-  border: 0;
-}
-
-
-/* Responsividad para contenedores en pantallas medianas */
+/* Media Query para dispositivos pequeños */
 @media (max-width: 768px) {
-  .social-container,
-  .contact-form-fixed,
-  .map-container {
-    width: 100%;
-    max-width: 534px;
-    margin-bottom: 20px;
-  }
-  
-  /* Apilamos las columnas verticalmente */
-  .row.justify-content-start {
+  .contacto-flex {
     flex-direction: column;
     align-items: center;
   }
+  .div-element1,
+  .div-element2,
+  .div-element3 {
+    width: 100%;
+  }
+  .placeholder-element1,
+  .placeholder-element2,
+  .placeholder-element3 {
+    width: 100%;
+   
+  }
 }
+
+
 
 /* ======================
        Footer
     ====================== */
 footer {
-  
+
   /* El footer se muestra al interior de la última sección */
 }
