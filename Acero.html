@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HYO</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+ <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container custom-container">
+        <!-- Logo a la izquierda -->
+        <a class="navbar-brand" href="index.html#inicio">
+            <div class="logo-container"></div>
+        </a>
+
+        <!-- Botón para offcanvas (solo se muestra en pantallas pequeñas) -->
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menú de navegación para pantallas grandes -->
+        <div class="d-none d-lg-flex w-100 justify-content-between align-items-center">
+            <ul class="navbar-nav mx-auto mb-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#inicio">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#productos">PRODUCTOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#empresa">EMPRESA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#contacto">CONTACTO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="descargas.html">DESCARGAS</a>
+                </li>
+            </ul>
+            <!-- Íconos de redes sociales (solo en pantallas grandes) -->
+            <div class="d-flex gap-2">
+                <a href="#"><img src="img/ICONOS REDES-FB.png" alt="Facebook" width="30" height="30"></a>
+                <a href="#"><img src="img/ICONOS REDES-IG.png" alt="Instagram" width="30" height="30"></a>
+                <a href="#"><img src="img/ICONOS REDES-mail.png" alt="Mail" width="30" height="30"></a>
+                <a href="#"><img src="img/ICONOS REDES-IN.png" alt="LinkedIn" width="30" height="30"></a>
+            </div>
+        </div>
+
+        <!-- Offcanvas para pantallas pequeñas (sin iconos de RRSS) -->
+        <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#inicio">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#productos">PRODUCTOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#empresa">EMPRESA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contacto">CONTACTO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="descargas.html">DESCARGAS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <!-- Sección INICIO: Imagen con dimensiones máximas -->
+    <section id="inicio" class="section text-center">
+        <div class="container custom-container">
+            <img src="img/img-ini.png" alt="Imagen de Inicio" class="img-inicio img-fluid">
+        </div>
+        <div class="text-container container custom-container text-center mt-4">
+            <h1 class="custom-title">FABRICANTES Y DISTRIBUIDORES A NIVEL NACIONAL</h1>
+            <p class="custom-subtitle">
+                DE PERFILES Y LISTELES DE ACERO Y ALUMINIO, PISOS Y REVESTIMIENTOS NACIONALES E IMPORTADOS
+            </p>
+        </div>
+
+
+    </section>
+
+
+
+
+
+    <!-- FOOTER  -->
+    <footer class="bg-dark text-white py-3">
+        <div class="container custom-container text-center">
+            <p class="mb-2">Todos los derechos reservados HYO SA</p>
+            <div class="d-flex justify-content-center gap-2">
+                <a href="#"><img src="img/ICONOS REDES-FB.png" alt="Facebook" width="30" height="30"></a>
+                <a href="#"><img src="img/ICONOS REDES-IG.png" alt="Instagram" width="30" height="30"></a>
+                <a href="#"><img src="img/ICONOS REDES-mail.png" alt="Mail" width="30" height="30"></a>
+                <a href="#"><img src="img/ICONOS REDES-IN.png" alt="LinkedIn" width="30" height="30"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS y nuestro script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
