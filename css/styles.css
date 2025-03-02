@@ -108,7 +108,7 @@ body {
 /* ======================
        Sección PRODUCTOS
 ======================== */
-@media (min-width: 992px) {
+@media (min-width: 1320px) {
   .card-column {
     margin-bottom: 20px;
   }
@@ -189,7 +189,7 @@ body {
   background-color: #dcdcdc;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1320px) {
   .placeholder-img1,
   .placeholder-img2,
   .custom-img-new,
@@ -215,7 +215,7 @@ body {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1320px) {
   .empresa-flex {
     flex-wrap: nowrap;
     align-items: center;
@@ -321,7 +321,7 @@ footer {
   gap: 20px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1320px) {
   .cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -438,7 +438,7 @@ footer {
   padding: 0 15px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1320px) {
   .marcas-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -506,7 +506,7 @@ footer {
   color: #333;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1320px) {
   .linea-titulo {
     max-width: 100%;
   }
@@ -541,7 +541,7 @@ footer {
   color: #333;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1320px) {
   .titulo-comercializados {
     margin-left: 10px;
     font-size: 1.8rem;
@@ -698,7 +698,7 @@ footer {
   padding: 0 15px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1320px) {
   .marcas-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -715,45 +715,70 @@ footer {
 /* ======================
    Bloque de Texto de Consulta
 ======================== */
+/* ======================
+   Sección Consulta y Catálogo
+======================== */
+.consulta-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px; /* Espacio entre este bloque y el contenido anterior */
+  margin-left: 75px; /* Para mantener la coherencia con el margen izquierdo */
+  margin-right: 50px; /* Margen derecho solicitado */
+}
+
 .consulta-text {
-  margin-top: 20px;
-    text-align: left;
+  text-align: left;
 }
 
 .consulta-el {
-  font-size: 2.5rem;  /* Fuente más grande para "CONSULTA EL" */
+  font-size: 2.5rem; /* Fuente mayor para "CONSULTA EL" */
   font-weight: bold;
   margin: 0;
 }
 
 .catalogo-completo {
-  font-size: 1.8rem;  /* Fuente menor para "CATALOGO COMPLETO" */
+  font-size: 1.8rem; /* Fuente menor para "CATALOGO COMPLETO" */
   margin: 0;
-  margin-top: 5px;
+
 }
-/* ======================
-   Contenedor para la imagen adicional a la derecha
-======================== */
-.imagen-derecha-extra {
+
+/* Contenedor placeholder para la imagen */
+.imagen-consulta {
   width: 699px;
   height: 136px;
-  background-color: #888; /* Color de fondo para el placeholder, ajustable */
-  margin-left: auto; /* Lo empuja al extremo derecho */
-  margin-right: 50px; /* Margen derecho solicitado */
+  background-color: #888; /* Color de fondo para el placeholder */
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-size: 1rem;
   text-transform: uppercase;
-  margin-top: 20px; /* Opcional, para separar del grupo superior */
 }
 
-/* ======================
-   Responsividad para la imagen adicional
-======================== */
+/* Responsividad: ocultar la imagen si el viewport es menor que 699px */
 @media (max-width: 699px) {
-  .imagen-derecha-extra {
+  .imagen-consulta {
     display: none;
+  }
+
+  .consulta-el {
+    font-size: 1.5rem; /* Fuente mayor para "CONSULTA EL" */
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .catalogo-completo {
+    font-size: 1rem; /* Fuente menor para "CATALOGO COMPLETO" */
+    margin: 0;
+    
+  }
+
+  
+  /* Opcional: centrar el texto en dispositivos pequeños */
+  .consulta-section {
+    justify-content: center;
+    margin: 0px;
+    margin-left: 20px;
   }
 }
