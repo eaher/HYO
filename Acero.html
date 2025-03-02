@@ -2,124 +2,863 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HYO</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HYO</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome (se mantiene por si se requiere en otros elementos) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pap2yLQf5g80NPI+Oi6gMZq+PGtwUrBe4g9cYdA5wTuyW5vTfpRJrHP5y8Zc/ewHRCjcO5G7xT4bBkH/Kj6fFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
- <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container custom-container">
-        <!-- Logo a la izquierda -->
-        <a class="navbar-brand" href="index.html#inicio">
-            <div class="logo-container"></div>
-        </a>
-
-        <!-- Botón para offcanvas (solo se muestra en pantallas pequeñas) -->
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Menú de navegación para pantallas grandes -->
-        <div class="d-none d-lg-flex w-100 justify-content-between align-items-center">
-            <ul class="navbar-nav mx-auto mb-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#inicio">INICIO</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#productos">PRODUCTOS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#empresa">EMPRESA</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#contacto">CONTACTO</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="descargas.html">DESCARGAS</a>
-                </li>
-            </ul>
-            <!-- Íconos de redes sociales (solo en pantallas grandes) -->
-            <div class="d-flex gap-2">
-                <a href="#"><img src="img/ICONOS REDES-FB.png" alt="Facebook" width="30" height="30"></a>
-                <a href="#"><img src="img/ICONOS REDES-IG.png" alt="Instagram" width="30" height="30"></a>
-                <a href="#"><img src="img/ICONOS REDES-mail.png" alt="Mail" width="30" height="30"></a>
-                <a href="#"><img src="img/ICONOS REDES-IN.png" alt="LinkedIn" width="30" height="30"></a>
-            </div>
+      <!-- Logo a la izquierda -->
+      <a class="navbar-brand" href="index.html#inicio">
+        <div class="logo-container"></div>
+      </a>
+      <!-- Botón para offcanvas (solo en pantallas pequeñas) -->
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Menú de navegación para pantallas grandes -->
+      <div class="d-none d-lg-flex w-100 justify-content-between align-items-center">
+        <ul class="navbar-nav mx-auto mb-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#inicio">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#productos">PRODUCTOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#empresa">EMPRESA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contacto">CONTACTO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="descargas.html">DESCARGAS</a>
+          </li>
+        </ul>
+        <!-- Íconos de redes sociales (solo en pantallas grandes) -->
+        <div class="d-flex gap-2">
+          <a href="#"><img src="img/ICONOS REDES-FB.png" alt="Facebook" width="30" height="30"></a>
+          <a href="#"><img src="img/ICONOS REDES-IG.png" alt="Instagram" width="30" height="30"></a>
+          <a href="#"><img src="img/ICONOS REDES-mail.png" alt="Mail" width="30" height="30"></a>
+          <a href="#"><img src="img/ICONOS REDES-IN.png" alt="LinkedIn" width="30" height="30"></a>
         </div>
-
-        <!-- Offcanvas para pantallas pequeñas (sin iconos de RRSS) -->
-        <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#inicio">INICIO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#productos">PRODUCTOS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#empresa">EMPRESA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#contacto">CONTACTO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="descargas.html">DESCARGAS</a>
-                    </li>
-                </ul>
-            </div>
+      </div>
+      <!-- Offcanvas para pantallas pequeñas (sin iconos de RRSS) -->
+      <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
         </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#inicio">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#productos">PRODUCTOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#empresa">EMPRESA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contacto">CONTACTO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="descargas.html">DESCARGAS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-</nav>
+  </nav>
 
-    <!-- Sección INICIO: Imagen con dimensiones máximas -->
-    <section id="inicio" class="section text-center">
-        <div class="container custom-container">
-            <img src="img/img-ini.png" alt="Imagen de Inicio" class="img-inicio img-fluid">
-        </div>
-        <div class="text-container container custom-container text-center mt-4">
-            <h1 class="custom-title">FABRICANTES Y DISTRIBUIDORES A NIVEL NACIONAL</h1>
-            <p class="custom-subtitle">
-                DE PERFILES Y LISTELES DE ACERO Y ALUMINIO, PISOS Y REVESTIMIENTOS NACIONALES E IMPORTADOS
-            </p>
-        </div>
+  <!-- Sección INICIO para la página Acero -->
+  <section id="inicio-aceros" class="section text-center">
+    <div class="container custom-container">
+      <img src="img/img-ini.png" alt="Imagen de Inicio" class="img-inicio-aceros img-fluid">
+      <p class="hero-text">
+        Todos nuestros productos son fabricados con aluminio importado de alta calidad, estando presentes en cada parte del proceso
+        mantenemos altos estandares de calidad y terminaciones. Un poco más de texto para dar cuerpo al mensaje y listo por aquí.
+      </p>
+    </div>
+  </section>
 
-
-    </section>
-
-
-
-
-
-    <!-- FOOTER  -->
-    <footer class="bg-dark text-white py-3">
-        <div class="container custom-container text-center">
-            <p class="mb-2">Todos los derechos reservados HYO SA</p>
-            <div class="d-flex justify-content-center gap-2">
-                <a href="#"><img src="img/ICONOS REDES-FB.png" alt="Facebook" width="30" height="30"></a>
-                <a href="#"><img src="img/ICONOS REDES-IG.png" alt="Instagram" width="30" height="30"></a>
-                <a href="#"><img src="img/ICONOS REDES-mail.png" alt="Mail" width="30" height="30"></a>
-                <a href="#"><img src="img/ICONOS REDES-IN.png" alt="LinkedIn" width="30" height="30"></a>
+  <!-- Sección Fichas Técnicas -->
+  <section id="fichas-tecnicas" class="section">
+    <div class="container custom-container">
+      <div class="cards-grid">
+        <!-- Generamos 18 cards -->
+        <!-- Card 1 -->
+        <div class="card-tech">
+          <div class="card-image">
+            <img src="img/acero/card1.jpg" alt="Imagen Card 1" class="img-card">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Título 1</h3>
+            <p class="card-subtitle">Subtítulo 1</p>
+            <div class="card-icon">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica1">
+                <img src="img/file.png" alt="Ficha técnica icon" class="icon-ficha">
+              </a>
+              Ficha técnica
             </div>
+          </div>
         </div>
-    </footer>
+        <!-- Card 2 -->
+        <div class="card-tech">
+          <div class="card-image">
+            <img src="img/acero/card2.jpg" alt="Imagen Card 2" class="img-card">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Título 2</h3>
+            <p class="card-subtitle">Subtítulo 2</p>
+            <div class="card-icon">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica2">
+                <img src="img/file.png" alt="Ficha técnica icon" class="icon-ficha">
+              </a>
+              Ficha técnica
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card-tech">
+          <div class="card-image">
+            <img src="img/acero/card3.jpg" alt="Imagen Card 3" class="img-card">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Título 3</h3>
+            <p class="card-subtitle">Subtítulo 3</p>
+            <div class="card-icon">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica3">
+                <img src="img/file.png" alt="Ficha técnica icon" class="icon-ficha">
+              </a>
+              Ficha técnica
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="card-tech">
+          <div class="card-image">
+            <img src="img/acero/card4.jpg" alt="Imagen Card 4" class="img-card">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Título 4</h3>
+            <p class="card-subtitle">Subtítulo 4</p>
+            <div class="card-icon">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica4">
+                <img src="img/file.png" alt="Ficha técnica icon" class="icon-ficha">
+              </a>
+              Ficha técnica
+            </div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="card-tech">
+          <div class="card-image">
+            <img src="img/acero/card5.jpg" alt="Imagen Card 5" class="img-card">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Título 5</h3>
+            <p class="card-subtitle">Subtítulo 5</p>
+            <div class="card-icon">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica5">
+                <img src="img/file.png" alt="Ficha técnica icon" class="icon-ficha">
+              </a>
+              Ficha técnica
+            </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="card-tech">
+          <div class="card-image">
+            <img src="img/acero/card6.jpg" alt="Imagen Card 6" class="img-card">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Título 6</h3>
+            <p class="card-subtitle">Subtítulo 6</p>
+            <div class="card-icon">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica6">
+                <img src="img/file.png" alt="Ficha técnica icon" class="icon-ficha">
+              </a>
+              Ficha técnica
+            </div>
+          </div>
+        </div>
+        <!-- Card 7 -->
+        <div class="card-tech">
+          <div class="card-image">
+            <img src="img/acero/card7.jpg" alt="Imagen Card 7" class="img-card">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Título 7</h3>
+            <p class="card-subtitle">Subtítulo 7</p>
+            <div class="card-icon">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica7">
+                <img src="img/file.png" alt="Ficha técnica icon" class="icon-ficha">
+              </a>
+              Ficha técnica
+            </div>
+          </div>
+        </div>
+        <!-- Card 8 -->
+        <div class="card-tech">
+          <div class="card-image">
+            <img src="img/acero/card8.jpg" alt="Imagen Card 8" class="img-card">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Título 8</h3>
+            <p class="card-subtitle">Subtítulo 8</p>
+            <div class="card-icon">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica8">
+                <img src="img/file.png" alt="Ficha técnica icon" class="icon-ficha">
+              </a>
+              Ficha técnica
+            </div>
+          </div>
+        </div>
+        <!-- Card 9 -->
+        <div class="card-tech">
+          <div class="card-image">
+            <img src="img/acero/card9.jpg" alt="Imagen Card 9" class="img-card">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Título 9</h3>
+            <p class="card-subtitle">Subtítulo 9</p>
+            <div class="card-icon">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica9">
+                <img src="img/file.png" alt="Ficha técnica icon" class="icon-ficha">
+              </a>
+              Ficha técnica
+            </div>
+          </div>
+        </div>
+        <!-- Card 10 -->
+        <div class="card-tech">
+          <div class="card-image">
+            <img src="img/acero/card10.jpg" alt="Imagen Card 10" class="img-card">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Título 10</h3>
+            <p class="card-subtitle">Subtítulo 10</p>
+            <div class="card-icon">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica10">
+                <img src="img/file.png" alt="Ficha técnica icon" class="icon-ficha">
+              </a>
+              Ficha técnica
+            </div>
+          </div>
+        </div>
+        <!-- Card 11 -->
+        <div class="card-tech">
+          <div class="card-image">
+            <img src="img/acero/card11.jpg" alt="Imagen Card 11" class="img-card">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Título 11</h3>
+            <p class="card-subtitle">Subtítulo 11</p>
+            <div class="card-icon">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica11">
+                <img src="img/file.png" alt="Ficha técnica icon" class="icon-ficha">
+              </a>
+              Ficha técnica
+            </div>
+          </div>
+        </div>
+        <!-- Card 12 -->
+        <div class="card-tech">
+          <div class="card-image">
+            <img src="img/acero/card12.jpg" alt="Imagen Card 12" class="img-card">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Título 12</h3>
+            <p class="card-subtitle">Subtítulo 12</p>
+            <div class="card-icon">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica12">
+                <img src="img/file.png" alt="Ficha técnica icon" class="icon-ficha">
+              </a>
+              Ficha técnica
+            </div>
+          </div>
+        </div>
+        <!-- Card 13 -->
+        <div class="card-tech">
+          <div class="card-image">
+            <img src="img/acero/card13.jpg" alt="Imagen Card 13" class="img-card">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Título 13</h3>
+            <p class="card-subtitle">Subtítulo 13</p>
+            <div class="card-icon">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica13">
+                <img src="img/file.png" alt="Ficha técnica icon" class="icon-ficha">
+              </a>
+              Ficha técnica
+            </div>
+          </div>
+        </div>
+        <!-- Card 14 -->
+        <div class="card-tech">
+          <div class="card-image">
+            <img src="img/acero/card14.jpg" alt="Imagen Card 14" class="img-card">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Título 14</h3>
+            <p class="card-subtitle">Subtítulo 14</p>
+            <div class="card-icon">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica14">
+                <img src="img/file.png" alt="Ficha técnica icon" class="icon-ficha">
+              </a>
+              Ficha técnica
+            </div>
+          </div>
+        </div>
+        <!-- Card 15 -->
+        <div class="card-tech">
+          <div class="card-image">
+            <img src="img/acero/card15.jpg" alt="Imagen Card 15" class="img-card">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Título 15</h3>
+            <p class="card-subtitle">Subtítulo 15</p>
+            <div class="card-icon">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica15">
+                <img src="img/file.png" alt="Ficha técnica icon" class="icon-ficha">
+              </a>
+              Ficha técnica
+            </div>
+          </div>
+        </div>
+        <!-- Card 16 -->
+        <div class="card-tech">
+          <div class="card-image">
+            <img src="img/acero/card16.jpg" alt="Imagen Card 16" class="img-card">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Título 16</h3>
+            <p class="card-subtitle">Subtítulo 16</p>
+            <div class="card-icon">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica16">
+                <img src="img/file.png" alt="Ficha técnica icon" class="icon-ficha">
+              </a>
+              Ficha técnica
+            </div>
+          </div>
+        </div>
+        <!-- Card 17 -->
+        <div class="card-tech">
+          <div class="card-image">
+            <img src="img/acero/card17.jpg" alt="Imagen Card 17" class="img-card">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Título 17</h3>
+            <p class="card-subtitle">Subtítulo 17</p>
+            <div class="card-icon">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica17">
+                <img src="img/file.png" alt="Ficha técnica icon" class="icon-ficha">
+              </a>
+              Ficha técnica
+            </div>
+          </div>
+        </div>
+        <!-- Card 18 -->
+        <div class="card-tech">
+          <div class="card-image">
+            <img src="img/acero/card18.jpg" alt="Imagen Card 18" class="img-card">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Título 18</h3>
+            <p class="card-subtitle">Subtítulo 18</p>
+            <div class="card-icon">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica18">
+                <img src="img/file.png" alt="Ficha técnica icon" class="icon-ficha">
+              </a>
+              Ficha técnica
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Bootstrap JS y nuestro script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/index.js"></script>
+  <!-- Modales de Ficha Técnica para cada Card -->
+  <!-- Modal 1 -->
+  <div class="modal fade" id="modalFichaTecnica1" tabindex="-1" aria-labelledby="modalFichaTecnicaLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFichaTecnicaLabel1">Ficha Técnica - Título 1</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ficha-container">
+            <div class="ficha-image">
+              <img src="img/acero/fichaTecnica/fichaTecnica1.jpg" alt="Ficha Técnica 1" class="img-fluid">
+            </div>
+            <div class="ficha-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio consectetur consequat. Nullam convallis laoreet nisi, in efficitur lorem condimentum at.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2 -->
+  <div class="modal fade" id="modalFichaTecnica2" tabindex="-1" aria-labelledby="modalFichaTecnicaLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFichaTecnicaLabel2">Ficha Técnica - Título 2</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ficha-container">
+            <div class="ficha-image">
+              <img src="img/acero/fichaTecnica/fichaTecnica2.jpg" alt="Ficha Técnica 2" class="img-fluid">
+            </div>
+            <div class="ficha-text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius nulla eu risus consequat, non congue justo dictum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3 -->
+  <div class="modal fade" id="modalFichaTecnica3" tabindex="-1" aria-labelledby="modalFichaTecnicaLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFichaTecnicaLabel3">Ficha Técnica - Título 3</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ficha-container">
+            <div class="ficha-image">
+              <img src="img/acero/fichaTecnica/fichaTecnica3.jpg" alt="Ficha Técnica 3" class="img-fluid">
+            </div>
+            <div class="ficha-text">
+              <p>Nulla facilisi. Morbi vestibulum, leo vitae commodo lobortis, augue enim porta sapien, at tempus nibh felis eget urna.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4 -->
+  <div class="modal fade" id="modalFichaTecnica4" tabindex="-1" aria-labelledby="modalFichaTecnicaLabel4" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFichaTecnicaLabel4">Ficha Técnica - Título 4</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ficha-container">
+            <div class="ficha-image">
+              <img src="img/acero/fichaTecnica/fichaTecnica4.jpg" alt="Ficha Técnica 4" class="img-fluid">
+            </div>
+            <div class="ficha-text">
+              <p>Sed in urna sed massa blandit lobortis. Donec ultricies, est nec tincidunt vulputate, purus nunc convallis odio, non tempus nulla elit vitae arcu.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5 -->
+  <div class="modal fade" id="modalFichaTecnica5" tabindex="-1" aria-labelledby="modalFichaTecnicaLabel5" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFichaTecnicaLabel5">Ficha Técnica - Título 5</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ficha-container">
+            <div class="ficha-image">
+              <img src="img/acero/fichaTecnica/fichaTecnica5.jpg" alt="Ficha Técnica 5" class="img-fluid">
+            </div>
+            <div class="ficha-text">
+              <p>Praesent nec diam vel mauris tempus convallis. Fusce interdum nisi id quam tempus, nec molestie ipsum pulvinar.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 6 -->
+  <div class="modal fade" id="modalFichaTecnica6" tabindex="-1" aria-labelledby="modalFichaTecnicaLabel6" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFichaTecnicaLabel6">Ficha Técnica - Título 6</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ficha-container">
+            <div class="ficha-image">
+              <img src="img/acero/fichaTecnica/fichaTecnica6.jpg" alt="Ficha Técnica 6" class="img-fluid">
+            </div>
+            <div class="ficha-text">
+              <p>Curabitur sed tellus et nulla elementum consectetur. Aliquam erat volutpat. Proin imperdiet, justo nec tristique dignissim, dolor dui dapibus dolor.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 7 -->
+  <div class="modal fade" id="modalFichaTecnica7" tabindex="-1" aria-labelledby="modalFichaTecnicaLabel7" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFichaTecnicaLabel7">Ficha Técnica - Título 7</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ficha-container">
+            <div class="ficha-image">
+              <img src="img/acero/fichaTecnica/fichaTecnica7.jpg" alt="Ficha Técnica 7" class="img-fluid">
+            </div>
+            <div class="ficha-text">
+              <p>Vivamus tincidunt, justo nec congue commodo, arcu ligula fermentum purus, ac sagittis mi augue a odio.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 8 -->
+  <div class="modal fade" id="modalFichaTecnica8" tabindex="-1" aria-labelledby="modalFichaTecnicaLabel8" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFichaTecnicaLabel8">Ficha Técnica - Título 8</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ficha-container">
+            <div class="ficha-image">
+              <img src="img/acero/fichaTecnica/fichaTecnica8.jpg" alt="Ficha Técnica 8" class="img-fluid">
+            </div>
+            <div class="ficha-text">
+              <p>Suspendisse potenti. Nam tincidunt, turpis id vestibulum condimentum, justo nisi egestas lectus, vitae facilisis lacus justo non enim.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 9 -->
+  <div class="modal fade" id="modalFichaTecnica9" tabindex="-1" aria-labelledby="modalFichaTecnicaLabel9" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFichaTecnicaLabel9">Ficha Técnica - Título 9</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ficha-container">
+            <div class="ficha-image">
+              <img src="img/acero/fichaTecnica/fichaTecnica9.jpg" alt="Ficha Técnica 9" class="img-fluid">
+            </div>
+            <div class="ficha-text">
+              <p>Integer maximus sapien in massa faucibus, ut egestas ligula luctus. Phasellus nec dui a nisi pharetra facilisis.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 10 -->
+  <div class="modal fade" id="modalFichaTecnica10" tabindex="-1" aria-labelledby="modalFichaTecnicaLabel10" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFichaTecnicaLabel10">Ficha Técnica - Título 10</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ficha-container">
+            <div class="ficha-image">
+              <img src="img/acero/fichaTecnica/fichaTecnica10.jpg" alt="Ficha Técnica 10" class="img-fluid">
+            </div>
+            <div class="ficha-text">
+              <p>Etiam sit amet ex in tellus tincidunt mollis. Morbi ut dui vitae risus fermentum condimentum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 11 -->
+  <div class="modal fade" id="modalFichaTecnica11" tabindex="-1" aria-labelledby="modalFichaTecnicaLabel11" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFichaTecnicaLabel11">Ficha Técnica - Título 11</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ficha-container">
+            <div class="ficha-image">
+              <img src="img/acero/fichaTecnica/fichaTecnica11.jpg" alt="Ficha Técnica 11" class="img-fluid">
+            </div>
+            <div class="ficha-text">
+              <p>Curabitur posuere justo vel sem interdum, ac mollis metus tincidunt. Pellentesque habitant morbi tristique senectus et netus.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 12 -->
+  <div class="modal fade" id="modalFichaTecnica12" tabindex="-1" aria-labelledby="modalFichaTecnicaLabel12" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFichaTecnicaLabel12">Ficha Técnica - Título 12</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ficha-container">
+            <div class="ficha-image">
+              <img src="img/acero/fichaTecnica/fichaTecnica12.jpg" alt="Ficha Técnica 12" class="img-fluid">
+            </div>
+            <div class="ficha-text">
+              <p>Sed non justo vitae mi condimentum varius. Integer porttitor nisl nec dolor vulputate, sed interdum nulla dapibus.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 13 -->
+  <div class="modal fade" id="modalFichaTecnica13" tabindex="-1" aria-labelledby="modalFichaTecnicaLabel13" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFichaTecnicaLabel13">Ficha Técnica - Título 13</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ficha-container">
+            <div class="ficha-image">
+              <img src="img/acero/fichaTecnica/fichaTecnica13.jpg" alt="Ficha Técnica 13" class="img-fluid">
+            </div>
+            <div class="ficha-text">
+              <p>Maecenas vestibulum, nisi non interdum ullamcorper, ipsum erat vestibulum nisl, non feugiat nisl orci ac dui.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 14 -->
+  <div class="modal fade" id="modalFichaTecnica14" tabindex="-1" aria-labelledby="modalFichaTecnicaLabel14" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFichaTecnicaLabel14">Ficha Técnica - Título 14</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ficha-container">
+            <div class="ficha-image">
+              <img src="img/acero/fichaTecnica/fichaTecnica14.jpg" alt="Ficha Técnica 14" class="img-fluid">
+            </div>
+            <div class="ficha-text">
+              <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla facilisi.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 15 -->
+  <div class="modal fade" id="modalFichaTecnica15" tabindex="-1" aria-labelledby="modalFichaTecnicaLabel15" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFichaTecnicaLabel15">Ficha Técnica - Título 15</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ficha-container">
+            <div class="ficha-image">
+              <img src="img/acero/fichaTecnica/fichaTecnica15.jpg" alt="Ficha Técnica 15" class="img-fluid">
+            </div>
+            <div class="ficha-text">
+              <p>Aliquam in quam consequat, dignissim neque a, molestie sapien. Integer lacinia, magna sit amet blandit vestibulum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 16 -->
+  <div class="modal fade" id="modalFichaTecnica16" tabindex="-1" aria-labelledby="modalFichaTecnicaLabel16" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFichaTecnicaLabel16">Ficha Técnica - Título 16</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ficha-container">
+            <div class="ficha-image">
+              <img src="img/acero/fichaTecnica/fichaTecnica16.jpg" alt="Ficha Técnica 16" class="img-fluid">
+            </div>
+            <div class="ficha-text">
+              <p>Phasellus eget felis vitae nisl fermentum commodo. Nulla facilisi. Morbi non lectus id sapien cursus interdum.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 17 -->
+  <div class="modal fade" id="modalFichaTecnica17" tabindex="-1" aria-labelledby="modalFichaTecnicaLabel17" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFichaTecnicaLabel17">Ficha Técnica - Título 17</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ficha-container">
+            <div class="ficha-image">
+              <img src="img/acero/fichaTecnica/fichaTecnica17.jpg" alt="Ficha Técnica 17" class="img-fluid">
+            </div>
+            <div class="ficha-text">
+              <p>Donec in neque a magna porttitor molestie. Pellentesque sit amet justo vel urna pretium finibus a quis lorem.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 18 -->
+  <div class="modal fade" id="modalFichaTecnica18" tabindex="-1" aria-labelledby="modalFichaTecnicaLabel18" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFichaTecnicaLabel18">Ficha Técnica - Título 18</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ficha-container">
+            <div class="ficha-image">
+              <img src="img/acero/fichaTecnica/fichaTecnica18.jpg" alt="Ficha Técnica 18" class="img-fluid">
+            </div>
+            <div class="ficha-text">
+              <p>Morbi ut libero nec magna interdum laoreet. Cras ut velit non sapien fermentum ultricies sed eget sapien.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white py-3">
+    <div class="container custom-container text-center">
+      <p class="mb-2">Todos los derechos reservados HYO SA</p>
+      <div class="d-flex justify-content-center gap-2">
+        <a href="#"><img src="img/ICONOS REDES-FB.png" alt="Facebook" width="30" height="30"></a>
+        <a href="#"><img src="img/ICONOS REDES-IG.png" alt="Instagram" width="30" height="30"></a>
+        <a href="#"><img src="img/ICONOS REDES-mail.png" alt="Mail" width="30" height="30"></a>
+        <a href="#"><img src="img/ICONOS REDES-IN.png" alt="LinkedIn" width="30" height="30"></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS y nuestro script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>

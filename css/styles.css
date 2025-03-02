@@ -1,6 +1,6 @@
 /* ======================
    Estilos Globales
-   ====================== */
+======================= */
 body {
   margin: 0;
   padding: 0;
@@ -22,33 +22,27 @@ body {
   padding-right: 0 !important;
 }
 
-
 /* ======================
        Navbar
-    ====================== */
-/* Logo: contenedor gris de 120px x 55px */
+======================== */
 .logo-container {
   width: 120px;
   height: 55px;
   background-color: #0988b2;
 }
 
-/* Opcional: personaliza los enlaces del navbar */
 .navbar .nav-link {
   font-weight: bold;
   text-transform: uppercase;
 }
 
-
-
 .navbar .d-flex.gap-2 a img {
   filter: brightness(0) saturate(100%) invert(75%) sepia(30%) saturate(500%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }
 
-
 /* ======================
        Secciones
-    ====================== */
+======================== */
 .section {
   width: 100%;
   max-width: 1320px;
@@ -56,23 +50,18 @@ body {
 }
 
 @media (max-width: 767.98px) {
-
-  /* En pantallas pequeñas, reducimos la altura de la sección de contacto para que se vea el footer */
   #inicio {
-    /* Resta la altura del footer (70px en este ejemplo) */
     height: 50%;
   }
 }
 
 /* ======================
      Sección INICIO
-  ====================== */
+======================== */
 #inicio {
   text-align: center;
   padding-top: 81px;
-  /* Ajusta este valor si tu navbar tapara parte de la imagen */
   background-color: antiquewhite;
-  /* Color de fondo opcional */
   padding-bottom: 20px;
 }
 
@@ -81,40 +70,29 @@ body {
   max-height: 660px;
   width: 100%;
   height: auto;
-  /* Con estas propiedades la imagen no excederá 1320px de ancho ni 660px de alto, manteniendo su proporción */
 }
 
 #inicio .text-container {
   margin-top: 20px;
-  /* Ajusta este valor según la separación que desees */
   margin-bottom: 20px;
 }
 
 .custom-title {
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
-  font-size: clamp(32px,
-      5vw,
-      49px);
-  /* Mínimo 32px, escala con 5vw y máximo 75px */
+  font-size: clamp(32px, 5vw, 49px);
 }
 
 .custom-subtitle {
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
-  font-size: clamp(20px,
-      3vw,
-      25px);
-  /* Mínimo 20px, escala con 3vw y máximo 40px */
+  font-size: clamp(20px, 3vw, 25px);
 }
 
 .custom-subtitle2 {
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
-  font-size: clamp(20px,
-      3vw,
-      25px);
-  /* Mínimo 20px, escala con 3vw y máximo 40px */
+  font-size: clamp(20px, 3vw, 25px);
   margin-bottom: 0px;
 }
 
@@ -122,24 +100,20 @@ body {
   .custom-subtitle2 {
     font-family: "Ubuntu", sans-serif;
     font-weight: bold;
-    font-size: clamp(20px,
-        3vw,
-        25px);
-    /* Mínimo 20px, escala con 3vw y máximo 40px */
+    font-size: clamp(20px, 3vw, 25px);
     margin-bottom: 10px;
   }
 }
 
 /* ======================
        Sección PRODUCTOS
-    ====================== */
-/* Ajuste de columnas: En pantallas grandes, cada card ocupará el 20% del ancho */
+======================== */
 @media (min-width: 992px) {
   .card-column {
     margin-bottom: 20px;
   }
 }
-/* Efecto hover para las cards */
+
 .card-custom {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -149,71 +123,54 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-/* Estilo para la imagen de las cards */
 .card-img-custom {
   width: 247px;
-  /* Ancho fijo */
   height: 378px;
-  /* Altura fija */
   object-fit: cover;
-  /* Recorta la imagen sin distorsión */
   display: block;
   margin: 0 auto;
 }
 
-/* Forzamos la card a tener un ancho fijo de 247px para que coincida con la imagen */
 .card-custom {
   width: 247px;
   margin: 0 auto;
   flex: 0 0 247px;
-  /* Evita que el contenedor flexible la estire o reduzca */
   margin-bottom: 20px;
 }
 
-
 /* ======================
        Sección EMPRESA
-====================== */
-/* Sección EMPRESA */
+======================== */
 #empresa {
   background-color: lightgreen;
   padding: 20px 0;
 }
 
-/* Contenedor principal flexible */
 .empresa-flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* Centra los elementos en pantallas pequeñas */
   gap: 20px;
-  /* Espacio uniforme entre elementos */
 }
 
-/* Cada contenedor de imagen se comporta como un ítem flexible */
 .div-imagen1-2,
 .div-imagen3,
 .div-imagen4 {
   flex: 1 1 300px;
-  /* Tamaño base adaptable */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Espaciado interno para cada imagen */
 .custom-img {
   margin: 10px 0;
 }
 
-/* Tamaños para pantallas grandes */
 .placeholder-img1,
 .placeholder-img2 {
   width: 300px;
   height: 150px;
   background-color: #c38585;
-  /* Placeholder 1 */
 }
 
 .placeholder-img2 {
@@ -232,62 +189,46 @@ body {
   background-color: #dcdcdc;
 }
 
-/* Media Query para pantallas medianas (tablets) y menores */
 @media (max-width: 992px) {
-
   .placeholder-img1,
   .placeholder-img2,
   .custom-img-new,
   .custom-img-extra {
     width: 90%;
-    /* Se ajusta al 90% del contenedor */
-    /* Usamos aspect-ratio para preservar la proporción original */
   }
-
   .placeholder-img1,
   .placeholder-img2 {
     aspect-ratio: 2 / 1;
-    /* 300:150 */
   }
-
   .custom-img-new {
     aspect-ratio: 300 / 216;
   }
-
   .custom-img-extra {
     aspect-ratio: 260 / 555;
   }
 }
 
-/* Media Query para dispositivos móviles */
 @media (max-width: 767.98px) {
   .empresa-flex {
     flex-direction: column;
-    /* Se apilan los elementos en columna */
     align-items: center;
   }
 }
 
-/* Contenedor principal flexible para pantallas grandes */
 @media (min-width: 992px) {
   .empresa-flex {
     flex-wrap: nowrap;
-    /* Forzamos que los elementos se mantengan en una sola fila */
     align-items: center;
-    /* Centra verticalmente los elementos */
     justify-content: space-between;
   }
-
-  /* Para que solo el div 1 y el div 2 queden centrados verticalmente,
-     forzamos al tercer div a alinearse al inicio (parte superior) */
   .div-imagen4 {
     align-self: flex-start;
   }
 }
 
 /* ======================
-   Sección CONTACTO
-======================= */
+       Sección CONTACTO
+======================== */
 #contacto {
   background-color: lavender;
   padding: 20px 0;
@@ -302,12 +243,10 @@ body {
   gap: 0px;
 }
 
-/* Espaciado interno para cada imagen */
 .custom-element {
   margin: 0px;
 }
 
-/* Tamaños para pantallas grandes */
 .placeholder-element1 {
   width: 250px;
   height: 640px;
@@ -326,7 +265,6 @@ body {
   background-color: #dcdcdc;
 }
 
-/* Media Query para dispositivos pequeños */
 @media (max-width: 768px) {
   .contacto-flex {
     flex-direction: column;
@@ -341,16 +279,481 @@ body {
   .placeholder-element2,
   .placeholder-element3 {
     width: 100%;
-   
   }
 }
 
-
-
 /* ======================
        Footer
-    ====================== */
+======================== */
 footer {
+  /* Footer interno */
+}
 
-  /* El footer se muestra al interior de la última sección */
+/* ======================
+       Aceros
+======================== */
+#inicio-aceros .img-inicio-aceros {
+  width: 100%;
+  max-width: 1320px;
+  height: 260px;
+  object-fit: cover;
+}
+
+.hero-text {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  padding: 0 15px;
+}
+
+/* ======================
+       Sección Fichas Técnicas
+======================== */
+#fichas-tecnicas {
+  padding: 40px 0;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 992px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card-tech {
+  display: flex;
+  background: #f9f9f9;
+  padding: 15px;
+  border: 1px solid #ddd;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-image {
+  width: 200px;
+  height: 200px;
+  background-color: #e0e0e0;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.card-subtitle {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.card-icon {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 576px) {
+  .card-tech {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .card-image {
+    margin-bottom: 10px;
+  }
+}
+
+/* ======================
+       Sección Fichas Técnicas - Icono personalizado
+======================== */
+.icon-ficha {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+/* ======================
+       Pisos
+======================== */
+#inicio-pisos .img-inicio-pisos {
+  width: 100%;
+  max-width: 1320px;
+  height: 260px;
+  object-fit: cover;
+}
+
+.hero-text-pisos {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  padding: 0 15px;
+}
+
+/* ======================
+       Sección Marcas - Pisos (Placeholder)
+======================== */
+.marca-placeholder {
+  width: 310px;
+  height: 310px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+  border: 2px solid #999;
+}
+
+.marcas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.marcas-text {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  padding: 0 15px;
+}
+
+@media (max-width: 992px) {
+  .marcas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .marca-placeholder {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .marcas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======================
+       Contenedor pisos  
+======================== */
+#contenedor-pisos {
+  padding: 40px 0;
+}
+
+.contenedor-pisos {
+  width: 100%;
+  max-width: 1320px;
+  min-height: 780px; /* Garantiza un alto mínimo, pero permite que crezca */
+  border: 1px solid grey;
+  margin: 0 auto;
+  padding: 20px; /* Opcional, para que el contenido no esté pegado a los bordes */
+}
+
+@media (max-width: 768px) {
+  .contenedor-pisos {
+    min-height: auto; /* Permite que la altura se ajuste al contenido */
+    padding: 10px;
+  }
+}
+
+/* ======================
+   Elementos de la Sección Pisos
+======================== */
+.elementos-pisos {
+  text-align: left;
+}
+
+.titulo-piscinas {
+  margin-left: 75px;
+  margin-top: 30px;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.linea-titulo {
+  margin-left: 75px;
+  width: 100%;
+  max-width: 790px;
+  height: 2pt;
+  background-color: grey;
+  margin-bottom: 20px;
+}
+
+.descripcion-piscinas {
+  margin-left: 75px;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  color: #333;
+}
+
+@media (max-width: 992px) {
+  .linea-titulo {
+    max-width: 100%;
+  }
+  .titulo-piscinas {
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .linea-titulo {
+    margin-left: 10px;
+    width: 100%;
+    max-width: 70%;
+    height: 2pt;
+    background-color: grey;
+    margin-bottom: 20px;
+  }
+  .descripcion-piscinas {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+  }
+}
+
+.titulo-comercializados {
+  margin-left: 75px;
+  margin-top: 30px;
+  font-size: 2rem;
+  text-align: left;
+  color: #333;
+}
+
+@media (max-width: 992px) {
+  .titulo-comercializados {
+    margin-left: 10px;
+    font-size: 1.8rem;
+  }
+}
+
+/* ======================
+       Card Pisos
+======================== */
+.card-pisos {
+  width: 172px;
+  text-align: left;
+}
+
+.card-img-placeholder {
+  width: 172px;
+  height: 172px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.card-title-pisos {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.card-text-pisos {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* ======================
+   Contenedor Card e Imagen (Pisos)
+======================== */
+.card-and-extra {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* Contenedor placeholder para la imagen a la derecha */
+.image-derecha {
+  width: 292px;
+  height: 292px;
+  background-color: #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/* ======================
+   Agrupación de Grupos de Cards
+======================== */
+/* Contenedor para agrupar dos grupos en una misma fila */
+.card-groups {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.left-group {
+  margin-left: 75px;
+}
+
+.right-group {
+  margin-right: 50px;
+}
+
+/* ======================
+   Responsividad para Contenedor Card e Imagen
+======================== */
+@media (max-width: 768px) {
+  .card-and-extra {
+    flex-direction: column;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  .image-derecha {
+    width: 100%;
+    max-width: 292px;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+  .card-groups {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .left-group,
+  .right-group {
+    margin: 0;
+  }
+}
+
+/* ======================
+       Pisos
+======================== */
+#inicio-pisos .img-inicio-pisos {
+  width: 100%;
+  max-width: 1320px;
+  height: 260px;
+  object-fit: cover;
+}
+
+.hero-text-pisos {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  padding: 0 15px;
+}
+
+/* ======================
+       Sección Marcas - Pisos (Placeholder)
+======================== */
+.marca-placeholder {
+  width: 310px;
+  height: 310px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+  border: 2px solid #999;
+}
+
+.marcas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.marcas-text {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  padding: 0 15px;
+}
+
+@media (max-width: 992px) {
+  .marcas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .marca-placeholder {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .marcas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ======================
+   Bloque de Texto de Consulta
+======================== */
+.consulta-text {
+  margin-top: 20px;
+    text-align: left;
+}
+
+.consulta-el {
+  font-size: 2.5rem;  /* Fuente más grande para "CONSULTA EL" */
+  font-weight: bold;
+  margin: 0;
+}
+
+.catalogo-completo {
+  font-size: 1.8rem;  /* Fuente menor para "CATALOGO COMPLETO" */
+  margin: 0;
+  margin-top: 5px;
+}
+/* ======================
+   Contenedor para la imagen adicional a la derecha
+======================== */
+.imagen-derecha-extra {
+  width: 699px;
+  height: 136px;
+  background-color: #888; /* Color de fondo para el placeholder, ajustable */
+  margin-left: auto; /* Lo empuja al extremo derecho */
+  margin-right: 50px; /* Margen derecho solicitado */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-top: 20px; /* Opcional, para separar del grupo superior */
+}
+
+/* ======================
+   Responsividad para la imagen adicional
+======================== */
+@media (max-width: 699px) {
+  .imagen-derecha-extra {
+    display: none;
+  }
 }
