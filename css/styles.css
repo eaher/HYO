@@ -299,11 +299,60 @@ body {
        Sección CONTACTO
 ======================== */
 #contacto {
-  background-color: lavender;
-  padding: 20px 0;
-  max-width: 1320px;
-  margin: 0 auto;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
 }
+
+/* Contenedor interno para las redes */
+.redes-container {
+  background-color: transparent;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column; /* Para apilar el título y los íconos verticalmente */
+  align-items: center;    /* Centra horizontalmente el contenido */
+  justify-content: start;
+}
+
+/* Título de Redes Sociales - Ubuntu Medium 20pt */
+.redes-title {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  /* Resto de propiedades */
+  font-family: "Ubuntu Medium", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+
+/* Contenedor de íconos en una sola fila */
+.redes-icons {
+  display: flex;
+  flex-direction: column; /* Columna para apilar iconos verticalmente */
+  align-items: center;    /* Centra horizontalmente */
+  gap: 40px;             /* Espacio vertical entre íconos */
+}
+
+/* Cada ícono de red social */
+.icon-redes {
+  width: 90px;
+  height: 90px;
+  object-fit: contain; /* Ajusta si lo deseas, p.e. cover, fill, etc. */
+  background-color: #333;
+}
+
+/* Ajustes responsivos opcionales */
+@media (max-width: 576px) {
+  .redes-title {
+    font-size: 18px; /* Ajusta para pantallas muy pequeñas */
+  }
+  .icon-redes {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 
 .contacto-flex {
   display: flex;
@@ -319,13 +368,12 @@ body {
 .placeholder-element1 {
   width: 250px;
   height: 640px;
-  background-color: #c38585;
 }
 
 .placeholder-element2 {
   width: 534px;
-  height: 640px;
-  background-color: #1f752f;
+  height: 880px;
+
 }
 
 .placeholder-element3 {
@@ -351,6 +399,164 @@ body {
   }
 }
 
+/* Utiliza el espacio definido por .placeholder-element2 para el formulario,
+   pero dentro se crea un contenedor con fondo blanco */
+   .form-container {
+    background-color: #fff;
+    width: 100%;      /* Ajusta el ancho interno según prefieras */
+    margin: 0 auto;  /* Centra el formulario dentro del placeholder */
+    padding: 20px;   /* Espaciado interno */
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 0px; /* Opcional */
+   
+  }
+  
+  /* Título del formulario */
+  .form-title {
+    font-family: "Ubuntu", sans-serif; /* Ubuntu Bold se asume definido en @font-face */
+    font-size: 20px;  /* 20px para el título */
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
+  
+  /* Estilos para el formulario */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row label {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .form-row input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+  }
+  
+/* Estilos para el campo "¿CÓMO QUERÉS QUE TE CONTACTEMOS?" */
+.contact-method {
+  display: flex;
+  flex-direction: column;
+  align-items:baseline;
+  margin-bottom: 15px;
+}
+
+.contact-question {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px; /* Ubuntu Regular 15px */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.contact-options {
+  display: flex;
+  flex-direction: row;  /* Los íconos en una fila */
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;      /* En caso de espacios reducidos */
+}
+
+.contact-options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px; /* Opcional, para el texto al lado del círculo */
+  cursor: pointer;
+}
+
+/* Ocultar el radio predeterminado */
+.contact-options input[type="radio"] {
+  display: none;
+}
+
+/* Círculo personalizado para el radio */
+.option-circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+/* Mostrar un círculo interno cuando el radio está seleccionado */
+.contact-options input[type="radio"]:checked + .option-circle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+  
+  /* Botón del formulario */
+  .form-button {
+    background-color: #0988b2;
+    color: #fff;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+  }
+  
+  .form-button:hover {
+    background-color: #07779d;
+  }
+  
+  /* Nota final debajo del formulario */
+  .form-note {
+    font-family: "Ubuntu Light", sans-serif;
+    font-size: 15px;
+    margin-top: 20px;
+    text-align: center;
+    color: #555;
+  }
+  
+  /* Ajustes responsivos para el formulario (opcional) */
+  @media (max-width: 576px) {
+    .form-title {
+      font-size: 18px;
+    }
+    .form-row label {
+      font-size: 18px;
+    }
+    .form-row input {
+      font-size: 14px;
+    }
+    .contact-method p,
+    .contact-method label {
+      font-size: 14px;
+    }
+    .form-button {
+      font-size: 18px;
+    }
+    .form-note {
+      font-size: 14px;
+    }
+  }
+  
 /* ======================
        Footer
 ======================== */
