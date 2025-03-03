@@ -396,6 +396,8 @@ body {
   .placeholder-element2,
   .placeholder-element3 {
     width: 100%;
+    height: auto;
+
   }
 }
 
@@ -555,6 +557,14 @@ body {
     .form-note {
       font-size: 14px;
     }
+
+    .form-container {
+padding-left: 5px;
+padding-right: 5px;
+     
+    }
+
+
   }
   
 /* ======================
