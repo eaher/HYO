@@ -150,6 +150,7 @@ margin-bottom: 20px
 
 .card.card-custom {
   border-radius: 0 !important;
+  
 }
 
 .custom-title-prod {
@@ -618,6 +619,13 @@ padding-right: 5px;
   display: none; /* Ocultar por defecto */
   z-index: 10;
 }
+
+.card-tech {
+  background-color: transparent !important; /* Elimina el color de fondo */
+  border: none !important;  /* Elimina el borde */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Efecto de transición suave */
+}
+
 .card-image {
   position: relative; /* Para poder posicionar el ícono de lupa */
   width: 200px; /* Limitar el tamaño de la imagen a 200px */
