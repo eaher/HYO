@@ -43,9 +43,12 @@ body {
 }
 
 .navbar .nav-link {
+  font-family: "Ubuntu", sans-serif; /* Cambiado para usar la fuente Ubuntu */
   font-weight: bold;
+  font-size: 15px; /* Tamaño de la fuente ajustado a 20px */
   text-transform: uppercase;
 }
+
 
 .navbar .d-flex.gap-2 a img {
   filter: brightness(0) saturate(100%) invert(75%) sepia(30%) saturate(500%) hue-rotate(180deg) brightness(95%) contrast(90%);
@@ -61,6 +64,7 @@ body {
   width: 100%;
   max-width: 1320px;
   margin: 0 auto;
+  height: auto;
 }
 
 @media (max-width: 767.98px) {
@@ -211,7 +215,7 @@ body {
        Sección EMPRESA
 ======================== */
 #empresa {
-  background-color: lightgreen;
+
   padding: 20px 0;
 }
 
@@ -567,12 +571,6 @@ padding-right: 5px;
 
   }
   
-/* ======================
-       Footer
-======================== */
-footer {
-  /* Footer interno */
-}
 
 /* ======================
        Aceros
@@ -582,6 +580,52 @@ footer {
   max-width: 1320px;
   height: 260px;
   object-fit: cover;
+}
+
+
+/* Icono de lupa sobre la imagen */
+.icon-lupa {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  color: white;
+  padding: 10px;
+
+  font-size: 20px;
+  display: none; /* Ocultar por defecto */
+  z-index: 10;
+}
+.card-image {
+  position: relative; /* Para poder posicionar el ícono de lupa */
+  width: 200px; /* Limitar el tamaño de la imagen a 200px */
+  height: 200px; /* Limitar el tamaño de la imagen a 200px */
+  overflow: hidden; /* Asegura que la imagen no sobresalga */
+}
+
+.card-image img {
+  width: 100%; /* La imagen ocupa todo el espacio del contenedor */
+  height: 100%; /* La imagen ocupa todo el espacio del contenedor */
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+  border-radius: 7px;
+}
+
+.card-image:hover .icon-lupa {
+  display: block; /* Mostrar el ícono cuando el ratón pase por encima */
+}
+
+/* Estilos del modal */
+.modal-img {
+  width: 100%;
+  max-width: 400px; /* Tamaño máximo de la imagen */
+  height: auto;
+}
+
+/* Responsividad para la imagen en el modal */
+@media (max-width: 768px) {
+  .modal-img {
+    max-width: 300px; /* Ajuste para pantallas más pequeñas */
+  }
 }
 
 .hero-text {
@@ -625,12 +669,6 @@ footer {
   border: 1px solid #ddd;
   align-items: center;
   gap: 15px;
-}
-
-.card-image {
-  width: 200px;
-  height: 200px;
-  background-color: #e0e0e0;
 }
 
 .card-content {
