@@ -45,8 +45,9 @@ body {
 .navbar .nav-link {
   font-family: "Ubuntu", sans-serif; /* Cambiado para usar la fuente Ubuntu */
   font-weight: bold;
-  font-size: 15px; /* Tamaño de la fuente ajustado a 20px */
+  font-size: 18px; /* Tamaño de la fuente ajustado a 20px */
   text-transform: uppercase;
+  color: #000;
 }
 
 
@@ -99,13 +100,13 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
   font-size: clamp(32px, 5vw, 49px);
-
 }
 
 .custom-subtitle {
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
   font-size: clamp(20px, 3vw, 25px);
+  
 }
 
 .custom-subtitle2 {
@@ -121,6 +122,9 @@ body {
     font-weight: bold;
     font-size: clamp(20px, 3vw, 25px);
     margin-bottom: 10px;
+  }
+  .custom-title {
+margin-bottom: 20px
   }
 }
 
@@ -159,6 +163,7 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
   font-size: clamp(20px, 3vw, 25px);
+  margin-bottom: 20px;
 }
 .custom-subtitle2-prod {
   font-family: "Ubuntu", sans-serif;
@@ -307,6 +312,14 @@ body {
   padding-top: 0 !important;
 }
 
+.custom-title-contact {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: clamp(32px, 5vw, 49px);
+  padding-top: 30px;
+
+}
+
 /* Contenedor interno para las redes */
 .redes-container {
   background-color: transparent;
@@ -380,9 +393,11 @@ body {
 
 }
 
+
+
 .placeholder-element3 {
   width: 534px;
-  height: 640px;
+  height: 757px;
   background-color: #dcdcdc;
 }
 
@@ -401,6 +416,13 @@ body {
   .placeholder-element3 {
     width: 100%;
     height: auto;
+    margin-bottom: 30px;
+
+  }
+
+  .placeholder-element3 {
+    width: 100%;
+    height: 350px;
 
   }
 }
@@ -629,12 +651,14 @@ padding-right: 5px;
 }
 
 .hero-text {
+  font-family: "Ubuntu Medium";
+  font-size: 15pt;
   margin-bottom: 30px;
   margin-top: 30px;
-  font-size: 1rem;
   color: #333;
   text-align: center;
   padding: 0 15px;
+  line-height: 1;
 }
 
 /* ======================
