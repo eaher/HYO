@@ -37,9 +37,9 @@ body {
   margin-left: 20px; /* Ajusta según necesites */
 }
 .logo-container {
-  width: 120px;
-  height: 55px;
-  background-color: #0988b2;
+  width: 100%;
+  height: 100%;
+  
 }
 
 .navbar .nav-link {
@@ -51,9 +51,7 @@ body {
 }
 
 
-.navbar .d-flex.gap-2 a img {
-  filter: brightness(0) saturate(100%) invert(75%) sepia(30%) saturate(500%) hue-rotate(180deg) brightness(95%) contrast(90%);
-}
+
 .navbar .d-flex.gap-2 {
   margin-right: 20px; /* Ajusta según necesites */
 }
@@ -357,7 +355,7 @@ margin-bottom: 20px
   width: 90px;
   height: 90px;
   object-fit: contain; /* Ajusta si lo deseas, p.e. cover, fill, etc. */
-  background-color: #333;
+  
 }
 
 /* Ajustes responsivos opcionales */
