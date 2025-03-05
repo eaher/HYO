@@ -13,95 +13,3020 @@
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container custom-container">
-        <!-- Logo a la izquierda -->
-        <a class="navbar-brand" href="index.html#inicio">
-            <div class="logo-container"></div>
-        </a>
-
-        <!-- Botón para offcanvas (solo se muestra en pantallas pequeñas) -->
-        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Menú de navegación para pantallas grandes -->
-        <div class="d-none d-lg-flex w-100 justify-content-between align-items-center">
-            <ul class="navbar-nav mx-auto mb-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#inicio">INICIO</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#productos">PRODUCTOS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#empresa">EMPRESA</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#contacto">CONTACTO</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="descargas.html">DESCARGAS</a>
-                </li>
-            </ul>
-            <!-- Íconos de redes sociales (solo en pantallas grandes) -->
-            <div class="d-flex gap-2">
-                <a href="#"><img src="img/ICONOS REDES-FB.png" alt="Facebook" width="30" height="30"></a>
-                <a href="#"><img src="img/ICONOS REDES-IG.png" alt="Instagram" width="30" height="30"></a>
-                <a href="#"><img src="img/ICONOS REDES-mail.png" alt="Mail" width="30" height="30"></a>
-                <a href="#"><img src="img/ICONOS REDES-IN.png" alt="LinkedIn" width="30" height="30"></a>
-            </div>
+      <!-- Logo a la izquierda -->
+      <a class="navbar-brand" href="index.html#inicio">
+        <div class="logo-container"></div>
+      </a>
+      <!-- Botón para offcanvas (solo en pantallas pequeñas) -->
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Menú de navegación para pantallas grandes -->
+      <div class="d-none d-lg-flex w-100 justify-content-between align-items-center">
+        <ul class="navbar-nav mx-auto mb-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#inicio">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#productos">PRODUCTOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#empresa">EMPRESA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contacto">CONTACTO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="descargas.html">DESCARGAS</a>
+          </li>
+        </ul>
+        <!-- Íconos de redes sociales (solo en pantallas grandes) -->
+        <div class="d-flex gap-2">
+          <a href="#"><img src="img/ICONOS REDES-FB.png" alt="Facebook" width="30" height="30"></a>
+          <a href="#"><img src="img/ICONOS REDES-IG.png" alt="Instagram" width="30" height="30"></a>
+          <a href="#"><img src="img/ICONOS REDES-mail.png" alt="Mail" width="30" height="30"></a>
+          <a href="#"><img src="img/ICONOS REDES-IN.png" alt="LinkedIn" width="30" height="30"></a>
         </div>
-
-        <!-- Offcanvas para pantallas pequeñas (sin iconos de RRSS) -->
-        <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#inicio">INICIO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#productos">PRODUCTOS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#empresa">EMPRESA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#contacto">CONTACTO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="descargas.html">DESCARGAS</a>
-                    </li>
-                </ul>
-            </div>
+      </div>
+      <!-- Offcanvas para pantallas pequeñas (sin iconos de RRSS) -->
+      <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
         </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#inicio">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#productos">PRODUCTOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#empresa">EMPRESA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contacto">CONTACTO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="descargas.html">DESCARGAS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-</nav>
+  </nav>
 
 
-    <!-- Sección INICIO: Imagen con dimensiones máximas -->
-    <section id="inicio" class="section text-center">
+
+  <!-- Sección INICIO para la página Acero -->
+  <section id="inicio-aceros" class="section text-center">
+    <div class="container custom-container">
+      <img src="img/img-ini.png" alt="Imagen de Inicio" class="img-inicio-aceros img-fluid">
+      <p class="hero-text">
+        Todos nuestros productos son fabricados con aluminio importado de alta calidad, estando presentes en <br>
+        cada parte del proceso mantenemos altos estandares de calidad y terminaciones.  <br> Un poco más de texto para dar cuerpo al mensaje y listo por aquí.
+      </p>
+    </div>
+  </section>>
+
+    <!-- Sección Fichas Técnicas -->
+    <section id="fichas-tecnicas" class="section-acero">
         <div class="container custom-container">
-            <img src="img/img-ini.png" alt="Imagen de Inicio" class="img-inicio img-fluid">
-        </div>
-        <div class="text-container container custom-container text-center mt-4">
-            <h1 class="custom-title">FABRICANTES Y DISTRIBUIDORES A NIVEL NACIONAL</h1>
-            <p class="custom-subtitle">
-                DE PERFILES Y LISTELES DE ACERO Y ALUMINIO, PISOS Y REVESTIMIENTOS NACIONALES E IMPORTADOS
-            </p>
-        </div>
+            <div class="cards-grid">
+                <!-- Card 1 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0000_ALUMINIO-(74).png" alt="Imagen Card 1" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage1">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage1" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 1</h3>
+                        <p class="card-subtitle">Subtitulo 1</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica1">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 1 -->
+                <div class="modal fade" id="modalImage1" tabindex="-1" aria-labelledby="modalImage1Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage1Label">Imagen Ampliada - Titulo 1</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0000_ALUMINIO-(74).png" alt="Imagen Card 1 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 1 -->
+                <div class="modal fade" id="modalFichaTecnica1" tabindex="-1" aria-labelledby="modalFichaTecnica1Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica1Label">Ficha Tecnica - Titulo 1</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica1.jpg" alt="Ficha Tecnica 1"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0001_QUADRA10X10M.png" alt="Imagen Card 2" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage2">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage2" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 2</h3>
+                        <p class="card-subtitle">Subtitulo 2</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica2">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 2 -->
+                <div class="modal fade" id="modalImage2" tabindex="-1" aria-labelledby="modalImage2Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage2Label">Imagen Ampliada - Titulo 2</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0001_QUADRA10X10M.png" alt="Imagen Card 2 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 2 -->
+                <div class="modal fade" id="modalFichaTecnica2" tabindex="-1" aria-labelledby="modalFichaTecnica2Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica2Label">Ficha Tecnica - Titulo 2</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica2.jpg" alt="Ficha Tecnica 2"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0002_DESNPM.png" alt="Imagen Card 3" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage3">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage3" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 3</h3>
+                        <p class="card-subtitle">Subtitulo 3</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica3">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 3 -->
+                <div class="modal fade" id="modalImage3" tabindex="-1" aria-labelledby="modalImage3Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage3Label">Imagen Ampliada - Titulo 3</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0002_DESNPM.png" alt="Imagen Card 3 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 3 -->
+                <div class="modal fade" id="modalFichaTecnica3" tabindex="-1" aria-labelledby="modalFichaTecnica3Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica3Label">Ficha Tecnica - Titulo 3</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica3.jpg" alt="Ficha Tecnica 3"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0003_TAPAC16M.png" alt="Imagen Card 4" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage4">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage4" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 4</h3>
+                        <p class="card-subtitle">Subtitulo 4</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica4">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 4 -->
+                <div class="modal fade" id="modalImage4" tabindex="-1" aria-labelledby="modalImage4Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage4Label">Imagen Ampliada - Titulo 4</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0003_TAPAC16M.png" alt="Imagen Card 4 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 4 -->
+                <div class="modal fade" id="modalFichaTecnica4" tabindex="-1" aria-labelledby="modalFichaTecnica4Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica4Label">Ficha Tecnica - Titulo 4</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica4.jpg" alt="Ficha Tecnica 4"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0004_TAPAC16B.png" alt="Imagen Card 5" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage5">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage5" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 5</h3>
+                        <p class="card-subtitle">Subtitulo 5</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica5">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 5 -->
+                <div class="modal fade" id="modalImage5" tabindex="-1" aria-labelledby="modalImage5Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage5Label">Imagen Ampliada - Titulo 5</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0004_TAPAC16B.png" alt="Imagen Card 5 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 5 -->
+                <div class="modal fade" id="modalFichaTecnica5" tabindex="-1" aria-labelledby="modalFichaTecnica5Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica5Label">Ficha Tecnica - Titulo 5</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica5.jpg" alt="Ficha Tecnica 5"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0005_LISTELO29B.png" alt="Imagen Card 6" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage6">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage6" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 6</h3>
+                        <p class="card-subtitle">Subtitulo 6</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica6">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 6 -->
+                <div class="modal fade" id="modalImage6" tabindex="-1" aria-labelledby="modalImage6Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage6Label">Imagen Ampliada - Titulo 6</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0005_LISTELO29B.png" alt="Imagen Card 6 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 6 -->
+                <div class="modal fade" id="modalFichaTecnica6" tabindex="-1" aria-labelledby="modalFichaTecnica6Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica6Label">Ficha Tecnica - Titulo 6</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica6.jpg" alt="Ficha Tecnica 6"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0006_LISTELO29M.png" alt="Imagen Card 7" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage7">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage7" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 7</h3>
+                        <p class="card-subtitle">Subtitulo 7</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica7">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 7 -->
+                <div class="modal fade" id="modalImage7" tabindex="-1" aria-labelledby="modalImage7Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage7Label">Imagen Ampliada - Titulo 7</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0006_LISTELO29M.png" alt="Imagen Card 7 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 7 -->
+                <div class="modal fade" id="modalFichaTecnica7" tabindex="-1" aria-labelledby="modalFichaTecnica7Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica7Label">Ficha Tecnica - Titulo 7</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica7.jpg" alt="Ficha Tecnica 7"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 8 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0007_L11ST.png" alt="Imagen Card 8" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage8">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage8" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 8</h3>
+                        <p class="card-subtitle">Subtitulo 8</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica8">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 8 -->
+                <div class="modal fade" id="modalImage8" tabindex="-1" aria-labelledby="modalImage8Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage8Label">Imagen Ampliada - Titulo 8</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0007_L11ST.png" alt="Imagen Card 8 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 8 -->
+                <div class="modal fade" id="modalFichaTecnica8" tabindex="-1" aria-labelledby="modalFichaTecnica8Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica8Label">Ficha Tecnica - Titulo 8</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica8.jpg" alt="Ficha Tecnica 8"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 9 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0008_L11B.png" alt="Imagen Card 9" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage9">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage9" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 9</h3>
+                        <p class="card-subtitle">Subtitulo 9</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica9">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 9 -->
+                <div class="modal fade" id="modalImage9" tabindex="-1" aria-labelledby="modalImage9Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage9Label">Imagen Ampliada - Titulo 9</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0008_L11B.png" alt="Imagen Card 9 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 9 -->
+                <div class="modal fade" id="modalFichaTecnica9" tabindex="-1" aria-labelledby="modalFichaTecnica9Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica9Label">Ficha Tecnica - Titulo 9</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica9.jpg" alt="Ficha Tecnica 9"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 10 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0009_L11M.png" alt="Imagen Card 10" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage10">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage10" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 10</h3>
+                        <p class="card-subtitle">Subtitulo 10</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica10">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 10 -->
+                <div class="modal fade" id="modalImage10" tabindex="-1" aria-labelledby="modalImage10Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage10Label">Imagen Ampliada - Titulo 10</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0009_L11M.png" alt="Imagen Card 10 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 10 -->
+                <div class="modal fade" id="modalFichaTecnica10" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica10Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica10Label">Ficha Tecnica - Titulo 10</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica10.jpg" alt="Ficha Tecnica 10"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 11 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0010_LAB10X10.png" alt="Imagen Card 11" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage11">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage11" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 11</h3>
+                        <p class="card-subtitle">Subtitulo 11</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica11">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 11 -->
+                <div class="modal fade" id="modalImage11" tabindex="-1" aria-labelledby="modalImage11Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage11Label">Imagen Ampliada - Titulo 11</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0010_LAB10X10.png" alt="Imagen Card 11 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 11 -->
+                <div class="modal fade" id="modalFichaTecnica11" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica11Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica11Label">Ficha Tecnica - Titulo 11</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica11.jpg" alt="Ficha Tecnica 11"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 12 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0011_LAM10X10.png" alt="Imagen Card 12" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage12">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage12" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 12</h3>
+                        <p class="card-subtitle">Subtitulo 12</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica12">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 12 -->
+                <div class="modal fade" id="modalImage12" tabindex="-1" aria-labelledby="modalImage12Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage12Label">Imagen Ampliada - Titulo 12</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0011_LAM10X10.png" alt="Imagen Card 12 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 12 -->
+                <div class="modal fade" id="modalFichaTecnica12" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica12Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica12Label">Ficha Tecnica - Titulo 12</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica12.jpg" alt="Ficha Tecnica 12"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 13 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0012_LAB10X20.png" alt="Imagen Card 13" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage13">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage13" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 13</h3>
+                        <p class="card-subtitle">Subtitulo 13</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica13">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 13 -->
+                <div class="modal fade" id="modalImage13" tabindex="-1" aria-labelledby="modalImage13Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage13Label">Imagen Ampliada - Titulo 13</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0012_LAB10X20.png" alt="Imagen Card 13 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 13 -->
+                <div class="modal fade" id="modalFichaTecnica13" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica13Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica13Label">Ficha Tecnica - Titulo 13</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica13.jpg" alt="Ficha Tecnica 13"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 14 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0013_LAM10X20.png" alt="Imagen Card 14" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage14">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage14" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 14</h3>
+                        <p class="card-subtitle">Subtitulo 14</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica14">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 14 -->
+                <div class="modal fade" id="modalImage14" tabindex="-1" aria-labelledby="modalImage14Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage14Label">Imagen Ampliada - Titulo 14</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0013_LAM10X20.png" alt="Imagen Card 14 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 14 -->
+                <div class="modal fade" id="modalFichaTecnica14" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica14Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica14Label">Ficha Tecnica - Titulo 14</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica14.jpg" alt="Ficha Tecnica 14"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 15 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0014_LAOB10X10.png" alt="Imagen Card 15" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage15">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage15" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 15</h3>
+                        <p class="card-subtitle">Subtitulo 15</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica15">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 15 -->
+                <div class="modal fade" id="modalImage15" tabindex="-1" aria-labelledby="modalImage15Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage15Label">Imagen Ampliada - Titulo 15</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0014_LAOB10X10.png" alt="Imagen Card 15 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 15 -->
+                <div class="modal fade" id="modalFichaTecnica15" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica15Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica15Label">Ficha Tecnica - Titulo 15</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica15.jpg" alt="Ficha Tecnica 15"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 16 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0015_LAOM10X10.png" alt="Imagen Card 16" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage16">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage16" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 16</h3>
+                        <p class="card-subtitle">Subtitulo 16</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica16">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 16 -->
+                <div class="modal fade" id="modalImage16" tabindex="-1" aria-labelledby="modalImage16Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage16Label">Imagen Ampliada - Titulo 16</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0015_LAOM10X10.png" alt="Imagen Card 16 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 16 -->
+                <div class="modal fade" id="modalFichaTecnica16" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica16Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica16Label">Ficha Tecnica - Titulo 16</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica16.jpg" alt="Ficha Tecnica 16"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 17 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0016_LAOB10X20.png" alt="Imagen Card 17" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage17">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage17" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 17</h3>
+                        <p class="card-subtitle">Subtitulo 17</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica17">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 17 -->
+                <div class="modal fade" id="modalImage17" tabindex="-1" aria-labelledby="modalImage17Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage17Label">Imagen Ampliada - Titulo 17</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0016_LAOB10X20.png" alt="Imagen Card 17 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 17 -->
+                <div class="modal fade" id="modalFichaTecnica17" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica17Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica17Label">Ficha Tecnica - Titulo 17</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica17.jpg" alt="Ficha Tecnica 17"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 18 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0017_LAOM10X20.png" alt="Imagen Card 18" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage18">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage18" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 18</h3>
+                        <p class="card-subtitle">Subtitulo 18</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica18">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 18 -->
+                <div class="modal fade" id="modalImage18" tabindex="-1" aria-labelledby="modalImage18Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage18Label">Imagen Ampliada - Titulo 18</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0017_LAOM10X20.png" alt="Imagen Card 18 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 18 -->
+                <div class="modal fade" id="modalFichaTecnica18" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica18Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica18Label">Ficha Tecnica - Titulo 18</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica18.jpg" alt="Ficha Tecnica 18"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 19 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0018_GAEST12.png" alt="Imagen Card 19" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage19">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage19" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 19</h3>
+                        <p class="card-subtitle">Subtitulo 19</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica19">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 19 -->
+                <div class="modal fade" id="modalImage19" tabindex="-1" aria-labelledby="modalImage19Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage19Label">Imagen Ampliada - Titulo 19</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0018_GAEST12.png" alt="Imagen Card 19 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 19 -->
+                <div class="modal fade" id="modalFichaTecnica19" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica19Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica19Label">Ficha Tecnica - Titulo 19</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica19.jpg" alt="Ficha Tecnica 19"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 20 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0019_GAESTII.png" alt="Imagen Card 20" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage20">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage20" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 20</h3>
+                        <p class="card-subtitle">Subtitulo 20</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica20">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 20 -->
+                <div class="modal fade" id="modalImage20" tabindex="-1" aria-labelledby="modalImage20Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage20Label">Imagen Ampliada - Titulo 20</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0019_GAESTII.png" alt="Imagen Card 20 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 20 -->
+                <div class="modal fade" id="modalFichaTecnica20" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica20Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica20Label">Ficha Tecnica - Titulo 20</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica20.jpg" alt="Ficha Tecnica 20"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 21 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0020_GAPM9.png" alt="Imagen Card 21" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage21">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage21" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 21</h3>
+                        <p class="card-subtitle">Subtitulo 21</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica21">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 21 -->
+                <div class="modal fade" id="modalImage21" tabindex="-1" aria-labelledby="modalImage21Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage21Label">Imagen Ampliada - Titulo 21</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0020_GAPM9.png" alt="Imagen Card 21 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 21 -->
+                <div class="modal fade" id="modalFichaTecnica21" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica21Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica21Label">Ficha Tecnica - Titulo 21</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica21.jpg" alt="Ficha Tecnica 21"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 22 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0021_GAEM.png" alt="Imagen Card 22" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage22">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage22" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 22</h3>
+                        <p class="card-subtitle">Subtitulo 22</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica22">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 22 -->
+                <div class="modal fade" id="modalImage22" tabindex="-1" aria-labelledby="modalImage22Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage22Label">Imagen Ampliada - Titulo 22</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0021_GAEM.png" alt="Imagen Card 22 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 22 -->
+                <div class="modal fade" id="modalFichaTecnica22" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica22Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica22Label">Ficha Tecnica - Titulo 22</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica22.jpg" alt="Ficha Tecnica 22"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 23 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0022_GAEST.png" alt="Imagen Card 23" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage23">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage23" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 23</h3>
+                        <p class="card-subtitle">Subtitulo 23</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica23">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 23 -->
+                <div class="modal fade" id="modalImage23" tabindex="-1" aria-labelledby="modalImage23Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage23Label">Imagen Ampliada - Titulo 23</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0022_GAEST.png" alt="Imagen Card 23 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 23 -->
+                <div class="modal fade" id="modalFichaTecnica23" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica23Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica23Label">Ficha Tecnica - Titulo 23</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica23.jpg" alt="Ficha Tecnica 23"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 24 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0023_GAEMII.png" alt="Imagen Card 24" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage24">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage24" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 24</h3>
+                        <p class="card-subtitle">Subtitulo 24</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica24">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 24 -->
+                <div class="modal fade" id="modalImage24" tabindex="-1" aria-labelledby="modalImage24Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage24Label">Imagen Ampliada - Titulo 24</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0023_GAEMII.png" alt="Imagen Card 24 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 24 -->
+                <div class="modal fade" id="modalFichaTecnica24" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica24Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica24Label">Ficha Tecnica - Titulo 24</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica24.jpg" alt="Ficha Tecnica 24"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 25 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0024_GAESTII.png" alt="Imagen Card 25" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage25">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage25" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 25</h3>
+                        <p class="card-subtitle">Subtitulo 25</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica25">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 25 -->
+                <div class="modal fade" id="modalImage25" tabindex="-1" aria-labelledby="modalImage25Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage25Label">Imagen Ampliada - Titulo 25</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0024_GAESTII.png" alt="Imagen Card 25 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 25 -->
+                <div class="modal fade" id="modalFichaTecnica25" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica25Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica25Label">Ficha Tecnica - Titulo 25</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica25.jpg" alt="Ficha Tecnica 25"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 26 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0025_GAST9.png" alt="Imagen Card 26" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage26">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage26" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 26</h3>
+                        <p class="card-subtitle">Subtitulo 26</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica26">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 26 -->
+                <div class="modal fade" id="modalImage26" tabindex="-1" aria-labelledby="modalImage26Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage26Label">Imagen Ampliada - Titulo 26</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0025_GAST9.png" alt="Imagen Card 26 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 26 -->
+                <div class="modal fade" id="modalFichaTecnica26" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica26Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica26Label">Ficha Tecnica - Titulo 26</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica26.jpg" alt="Ficha Tecnica 26"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 27 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0026_GAST12.png" alt="Imagen Card 27" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage27">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage27" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 27</h3>
+                        <p class="card-subtitle">Subtitulo 27</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica27">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 27 -->
+                <div class="modal fade" id="modalImage27" tabindex="-1" aria-labelledby="modalImage27Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage27Label">Imagen Ampliada - Titulo 27</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0026_GAST12.png" alt="Imagen Card 27 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 27 -->
+                <div class="modal fade" id="modalFichaTecnica27" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica27Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica27Label">Ficha Tecnica - Titulo 27</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica27.jpg" alt="Ficha Tecnica 27"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 28 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0027_GAMP9.png" alt="Imagen Card 28" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage28">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage28" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 28</h3>
+                        <p class="card-subtitle">Subtitulo 28</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica28">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 28 -->
+                <div class="modal fade" id="modalImage28" tabindex="-1" aria-labelledby="modalImage28Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage28Label">Imagen Ampliada - Titulo 28</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0027_GAMP9.png" alt="Imagen Card 28 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 28 -->
+                <div class="modal fade" id="modalFichaTecnica28" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica28Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica28Label">Ficha Tecnica - Titulo 28</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica28.jpg" alt="Ficha Tecnica 28"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 29 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0028_GABP9.png" alt="Imagen Card 29" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage29">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage29" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 29</h3>
+                        <p class="card-subtitle">Subtitulo 29</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica29">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 29 -->
+                <div class="modal fade" id="modalImage29" tabindex="-1" aria-labelledby="modalImage29Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage29Label">Imagen Ampliada - Titulo 29</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0028_GABP9.png" alt="Imagen Card 29 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 29 -->
+                <div class="modal fade" id="modalFichaTecnica29" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica29Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica29Label">Ficha Tecnica - Titulo 29</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica29.jpg" alt="Ficha Tecnica 29"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 30 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0029_GAM9.png" alt="Imagen Card 30" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage30">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage30" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 30</h3>
+                        <p class="card-subtitle">Subtitulo 30</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica30">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 30 -->
+                <div class="modal fade" id="modalImage30" tabindex="-1" aria-labelledby="modalImage30Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage30Label">Imagen Ampliada - Titulo 30</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0029_GAM9.png" alt="Imagen Card 30 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 30 -->
+                <div class="modal fade" id="modalFichaTecnica30" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica30Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica30Label">Ficha Tecnica - Titulo 30</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica30.jpg" alt="Ficha Tecnica 30"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 31 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0030_GAOM9.png" alt="Imagen Card 31" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage31">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage31" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 31</h3>
+                        <p class="card-subtitle">Subtitulo 31</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica31">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 31 -->
+                <div class="modal fade" id="modalImage31" tabindex="-1" aria-labelledby="modalImage31Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage31Label">Imagen Ampliada - Titulo 31</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0030_GAOM9.png" alt="Imagen Card 31 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 31 -->
+                <div class="modal fade" id="modalFichaTecnica31" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica31Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica31Label">Ficha Tecnica - Titulo 31</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica31.jpg" alt="Ficha Tecnica 31"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 32 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0031_GAOB9.png" alt="Imagen Card 32" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage32">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage32" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 32</h3>
+                        <p class="card-subtitle">Subtitulo 32</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica32">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 32 -->
+                <div class="modal fade" id="modalImage32" tabindex="-1" aria-labelledby="modalImage32Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage32Label">Imagen Ampliada - Titulo 32</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0031_GAOB9.png" alt="Imagen Card 32 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 32 -->
+                <div class="modal fade" id="modalFichaTecnica32" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica32Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica32Label">Ficha Tecnica - Titulo 32</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica32.jpg" alt="Ficha Tecnica 32"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 33 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0032_GAST12.png" alt="Imagen Card 33" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage33">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage33" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 33</h3>
+                        <p class="card-subtitle">Subtitulo 33</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica33">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 33 -->
+                <div class="modal fade" id="modalImage33" tabindex="-1" aria-labelledby="modalImage33Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage33Label">Imagen Ampliada - Titulo 33</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0032_GAST12.png" alt="Imagen Card 33 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 33 -->
+                <div class="modal fade" id="modalFichaTecnica33" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica33Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica33Label">Ficha Tecnica - Titulo 33</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica33.jpg" alt="Ficha Tecnica 33"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 34 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0033_GAOB9.png" alt="Imagen Card 34" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage34">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage34" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 34</h3>
+                        <p class="card-subtitle">Subtitulo 34</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica34">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 34 -->
+                <div class="modal fade" id="modalImage34" tabindex="-1" aria-labelledby="modalImage34Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage34Label">Imagen Ampliada - Titulo 34</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0033_GAOB9.png" alt="Imagen Card 34 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 34 -->
+                <div class="modal fade" id="modalFichaTecnica34" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica34Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica34Label">Ficha Tecnica - Titulo 34</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica34.jpg" alt="Ficha Tecnica 34"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 35 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0034_GAOM12.png" alt="Imagen Card 35" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage35">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage35" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 35</h3>
+                        <p class="card-subtitle">Subtitulo 35</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica35">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 35 -->
+                <div class="modal fade" id="modalImage35" tabindex="-1" aria-labelledby="modalImage35Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage35Label">Imagen Ampliada - Titulo 35</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0034_GAOM12.png" alt="Imagen Card 35 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 35 -->
+                <div class="modal fade" id="modalFichaTecnica35" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica35Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica35Label">Ficha Tecnica - Titulo 35</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica35.jpg" alt="Ficha Tecnica 35"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 36 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0035_GAOBP9.png" alt="Imagen Card 36" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage36">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage36" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 36</h3>
+                        <p class="card-subtitle">Subtitulo 36</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica36">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 36 -->
+                <div class="modal fade" id="modalImage36" tabindex="-1" aria-labelledby="modalImage36Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage36Label">Imagen Ampliada - Titulo 36</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0035_GAOBP9.png" alt="Imagen Card 36 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 36 -->
+                <div class="modal fade" id="modalFichaTecnica36" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica36Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica36Label">Ficha Tecnica - Titulo 36</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica36.jpg" alt="Ficha Tecnica 36"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 37 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0036_GAOMP9.png" alt="Imagen Card 37" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage37">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage37" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 37</h3>
+                        <p class="card-subtitle">Subtitulo 37</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica37">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 37 -->
+                <div class="modal fade" id="modalImage37" tabindex="-1" aria-labelledby="modalImage37Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage37Label">Imagen Ampliada - Titulo 37</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0036_GAOMP9.png" alt="Imagen Card 37 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 37 -->
+                <div class="modal fade" id="modalFichaTecnica37" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica37Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica37Label">Ficha Tecnica - Titulo 37</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica37.jpg" alt="Ficha Tecnica 37"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 38 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0037_GAOBP12.png" alt="Imagen Card 38" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage38">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage38" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 38</h3>
+                        <p class="card-subtitle">Subtitulo 38</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica38">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 38 -->
+                <div class="modal fade" id="modalImage38" tabindex="-1" aria-labelledby="modalImage38Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage38Label">Imagen Ampliada - Titulo 38</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0037_GAOBP12.png" alt="Imagen Card 38 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 38 -->
+                <div class="modal fade" id="modalFichaTecnica38" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica38Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica38Label">Ficha Tecnica - Titulo 38</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica38.jpg" alt="Ficha Tecnica 38"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 39 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0038_GAOMP12.png" alt="Imagen Card 39" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage39">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage39" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 39</h3>
+                        <p class="card-subtitle">Subtitulo 39</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica39">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 39 -->
+                <div class="modal fade" id="modalImage39" tabindex="-1" aria-labelledby="modalImage39Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage39Label">Imagen Ampliada - Titulo 39</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0038_GAOMP12.png" alt="Imagen Card 39 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 39 -->
+                <div class="modal fade" id="modalFichaTecnica39" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica39Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica39Label">Ficha Tecnica - Titulo 39</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica39.jpg" alt="Ficha Tecnica 39"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 40 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0039_GAM12.png" alt="Imagen Card 40" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage40">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage40" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 40</h3>
+                        <p class="card-subtitle">Subtitulo 40</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica40">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 40 -->
+                <div class="modal fade" id="modalImage40" tabindex="-1" aria-labelledby="modalImage40Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage40Label">Imagen Ampliada - Titulo 40</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0039_GAM12.png" alt="Imagen Card 40 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 40 -->
+                <div class="modal fade" id="modalFichaTecnica40" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica40Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica40Label">Ficha Tecnica - Titulo 40</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica40.jpg" alt="Ficha Tecnica 40"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 41 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0040_GAOMP12.png" alt="Imagen Card 41" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage41">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage41" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 41</h3>
+                        <p class="card-subtitle">Subtitulo 41</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica41">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 41 -->
+                <div class="modal fade" id="modalImage41" tabindex="-1" aria-labelledby="modalImage41Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage41Label">Imagen Ampliada - Titulo 41</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0040_GAOMP12.png" alt="Imagen Card 41 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 41 -->
+                <div class="modal fade" id="modalFichaTecnica41" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica41Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica41Label">Ficha Tecnica - Titulo 41</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica41.jpg" alt="Ficha Tecnica 41"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 42 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0041_QUADRA10X10B.png" alt="Imagen Card 42" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage42">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage42" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 42</h3>
+                        <p class="card-subtitle">Subtitulo 42</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica42">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 42 -->
+                <div class="modal fade" id="modalImage42" tabindex="-1" aria-labelledby="modalImage42Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage42Label">Imagen Ampliada - Titulo 42</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0041_QUADRA10X10B.png" alt="Imagen Card 42 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 42 -->
+                <div class="modal fade" id="modalFichaTecnica42" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica42Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica42Label">Ficha Tecnica - Titulo 42</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica42.jpg" alt="Ficha Tecnica 42"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 43 -->
+                <div class="card-tech">
+                    <div class="card-image">
+                        <img src="img/aluminio/300X300_0042_QUADRA10X10M.png" alt="Imagen Card 43" class="img-card"
+                            data-bs-toggle="modal" data-bs-target="#modalImage43">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage43" class="icon-lupa">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Titulo 43</h3>
+                        <p class="card-subtitle">Subtitulo 43</p>
+                        <div class="card-icon">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica43">
+                                <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
+                            </a>
+                            Ficha tecnica
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de la Imagen - Card 43 -->
+                <div class="modal fade" id="modalImage43" tabindex="-1" aria-labelledby="modalImage43Label"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalImage43Label">Imagen Ampliada - Titulo 43</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/aluminio/300X300_0042_QUADRA10X10M.png" alt="Imagen Card 43 Ampliada"
+                                    class="img-fluid modal-img">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal de Ficha Tecnica - Card 43 -->
+                <div class="modal fade" id="modalFichaTecnica43" tabindex="-1"
+                    aria-labelledby="modalFichaTecnica43Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalFichaTecnica43Label">Ficha Tecnica - Titulo 43</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="ficha-container">
+                                    <div class="ficha-image">
+                                        <img src="img/aluminio/fichaTecnica/fichaTecnica43.jpg" alt="Ficha Tecnica 43"
+                                            class="img-fluid">
+                                    </div>
+                                    <div class="ficha-text">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et urna a odio
+                                            consectetur consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
 
-
+                </div>
+            </div>
     </section>
-
-    
 
 
 
