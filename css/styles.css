@@ -32,6 +32,10 @@ body {
 /* ======================
        Navbar
 ======================== */
+.navbar {
+  background-color: white !important; /* Establece el fondo blanco */
+}
+
 
 .navbar-brand {
   margin-left: 20px; /* Ajusta según necesites */
