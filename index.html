@@ -4,39 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HYO</title>
+    <title>Mi Página Web</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-
-    <!-- NAVBAR -->
-    <nav class="navbar show hidden navbar-expand-lg navbar-light bg-light fixed-top">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container custom-container">
             <!-- Logo a la izquierda -->
             <a class="navbar-brand" href="#inicio">
-                <img src="img/HYO-LOGO - WEB.png" alt="Logo" class="logo-container">
+                <img src="img/HYO-LOGO - WEB.png" alt="Logo">
             </a>
-
-            <!-- Botón para offcanvas (solo se muestra en pantallas pequeñas) -->
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <!-- Botón para pantallas pequeñas -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <!-- Menú de navegación para pantallas grandes -->
-            <div class="d-none d-lg-flex w-100 justify-content-between align-items-center">
-                <ul class="navbar-nav mx-auto mb-0">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Menú centrado -->
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#inicio">INICIO</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#productos">PRODUCTOS</a>
                     </li>
-
                     <li class="nav-item">
                         <a class="nav-link" href="#empresa">EMPRESA</a>
                     </li>
@@ -44,323 +39,141 @@
                         <a class="nav-link" href="#contacto">CONTACTO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="descargas.html">DESCARGAS</a>
+                        <a class="nav-link" href="#descargas">DESCARGAS</a>
                     </li>
                 </ul>
-                <!-- Íconos de redes sociales (solo en pantallas grandes) -->
-                <div class="d-flex gap-2">
-                    <a href="#"><img src="img/FACEBOOK.png" alt="Facebook" width="30" height="30"></a>
-                    <a href="#"><img src="img/INSTAGRAM.png" alt="Instagram" width="30" height="30"></a>
-                    <a href="#"><img src="img/MAIL.png" alt="Mail" width="30" height="30"></a>
-                    <a href="#"><img src="img/LINKEDIN.png" alt="LinkedIn" width="30" height="30"></a>
-                </div>
-            </div>
-
-            <!-- Offcanvas para pantallas pequeñas (sin iconos de RRSS) -->
-            <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#inicio">INICIO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#productos">PRODUCTOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#empresa">EMPRESA</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contacto">CONTACTO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="descargas.html">DESCARGAS</a>
-                        </li>
-                    </ul>
+                <!-- Redes sociales alineados a la derecha -->
+                <div class="d-flex">
+                    <a href="#" class="social-icon"><img src="img/FACEBOOK.png" alt="Facebook" width="30" height="30"></a>
+                    <a href="#" class="social-icon"><img src="img/INSTAGRAM.png" alt="Instagram" width="30" height="30"></a>
+                    <a href="#" class="social-icon"><img src="img/MAIL.png" alt="Mail" width="30" height="30"></a>
+                    <a href="#" class="social-icon"><img src="img/LINKEDIN.png" alt="LinkedIn" width="30" height="30"></a>
                 </div>
             </div>
         </div>
     </nav>
-
-    <!-- Sección INICIO: Imagen con dimensiones máximas -->
-    <section id="inicio" class="section text-center">
+    
+    <!-- Sección INICIO con Carrusel -->
+    <section id="inicio" class="section">
         <div class="container custom-container">
-            <img src="img/img-ini.png" alt="Imagen de Inicio" class="img-inicio img-fluid">
-        </div>
-        <div class="text-container container custom-container text-center mt-4">
-            <h1 class="custom-title">FABRICANTES Y DISTRIBUIDORES A NIVEL NACIONAL</h1>
-            <p class="custom-subtitle">
-                DE PERFILES Y LISTELES DE ACERO Y ALUMINIO, PISOS Y REVESTIMIENTOS NACIONALES E IMPORTADOS
-            </p>
+            <!-- Carrusel -->
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/1carrusel.png" class="d-block w-100" alt="Imagen 1" style="max-height: 660px; object-fit: cover;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/2carrusel.png" class="d-block w-100" alt="Imagen 2" style="max-height: 660px; object-fit: cover;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/3carrusel.png" class="d-block w-100" alt="Imagen 3" style="max-height: 660px; object-fit: cover;">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            
+            <!-- Título y subtítulo debajo del carrusel -->
+            <h1 >FABRICANTES Y DISTRIBUIDORES A NIVEL NACIONAL</h1>
+            <p >DE PERFILES Y LISTELES DE ACERO Y ALUMINIO, PISOS Y REVESIMIENTOS NACIONALES E IMPORTADOS</p>
         </div>
     </section>
 
-    <!-- Sección Productos -->
-    <section id="productos" class="py-5">
-        <div class="full-width-bg">
-            <div class="container custom-container">
-                <div class="text-center mb-4">
-                    <h2 class="custom-title-prod">UNA AMPLIA GAMA DE PRODUCTOS</h2>
-                    <p class="custom-subtitle-prod">ALGO RELACIONADO A LA CALIDAD Y EL SERVICIO</p>
+<!-- Sección PRODUCTOS -->
+<section id="productos" class="section">
+    <div class="container custom-container">
+        <h2 class="custom-title-prod">UNA AMPLIA GAMA DE PRODUCTOS</h2>
+        <p class="custom-subtitle-prod">ALGO RELACIONADO A LA CALIDAD Y EL SERVICIO</p>
+
+        <!-- Contenedor de las tarjetas -->
+        <div class="product-cards-container">
+            <!-- Card 1 -->
+            <div class="product-card">
+                <img src="img/Card1.webp" class="card-img-top" alt="Producto 1">
+                <div class="card-body">
+                    <h5 class="card-title">Producto 1</h5>
+                    <p class="card-text">Descripción breve del producto 1.</p>
                 </div>
-                <!-- En pantallas grandes se distribuyen con justify-content-lg-between y en móviles se centran -->
-                <div class="row gx-0 justify-content-center justify-content-lg-between">
-                    <!-- Card 1 -->
-                    <div class="col-auto d-flex card-column">
-                        <a href="Acero.html" style="text-decoration: none;">
-                            <div class="card card-custom">
-                                <img src="img/img-card.webp" class="card-img-top card-img-custom" alt="Producto 1">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">Acero</h5>
-                                    <p class="card-text">Descripción breve del producto 1.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Card 2 -->
-                    <div class="col-auto d-flex card-column">
-                        <a href="Aluminio.html" style="text-decoration: none;">
-                            <div class="card card-custom">
-                                <img src="img/img-card.webp" class="card-img-top card-img-custom" alt="Producto 2">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">Aluminio</h5>
-                                    <p class="card-text">Descripción breve del producto 2.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Card 3 -->
-                    <div class="col-auto d-flex card-column">
-                        <a href="PVC.html" style="text-decoration: none;">
-                            <div class="card card-custom">
-                                <img src="img/img-card.webp" class="card-img-top card-img-custom" alt="Producto 3">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">PVC</h5>
-                                    <p class="card-text">Descripción breve del producto 3.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Card 4 -->
-                    <div class="col-auto d-flex card-column">
-                        <a href="Pisos.html" style="text-decoration: none;">
-                            <div class="card card-custom">
-                                <img src="img/img-card.webp" class="card-img-top card-img-custom" alt="Producto 4">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">Pisos</h5>
-                                    <p class="card-text">Descripción breve del producto 4.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Card 5 -->
-                    <div class="col-auto d-flex card-column">
-                        <a href="Bachas.html" style="text-decoration: none;">
-                            <div class="card card-custom">
-                                <img src="img/img-card.webp" class="card-img-top card-img-custom" alt="Producto 5">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">Bachas</h5>
-                                    <p class="card-text">Descripción breve del producto 5.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="product-card">
+                <img src="img/Card2.webp" class="card-img-top" alt="Producto 2">
+                <div class="card-body">
+                    <h5 class="card-title">Producto 2</h5>
+                    <p class="card-text">Descripción breve del producto 2.</p>
                 </div>
-                <div class="text-center mb-4">
-                    <p class="custom-subtitle2">TEXTO RELACIONADO CON LA DISTRIBUCIÓN EN TODA LA ARGENTINA. </p>
-                    <p class="custom-subtitle2">TEXTO DE ALCANCE, ENVÍOS Y VENDEDORES EN LAS ZONAS + BENEFICIOS. </p>
-                    <p class="custom-subtitle2-prod">ESTILO DE VENTA, CONDICIONES Y AÑOS DE EXPERIENCIA. </p>
+            </div>
+            <!-- Card 3 -->
+            <div class="product-card">
+                <img src="img/Card3.webp" class="card-img-top" alt="Producto 3">
+                <div class="card-body">
+                    <h5 class="card-title">Producto 3</h5>
+                    <p class="card-text">Descripción breve del producto 3.</p>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="product-card">
+                <img src="img/Card4.webp" class="card-img-top" alt="Producto 4">
+                <div class="card-body">
+                    <h5 class="card-title">Producto 4</h5>
+                    <p class="card-text">Descripción breve del producto 4.</p>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="product-card">
+                <img src="img/Card5.webp" class="card-img-top" alt="Producto 5">
+                <div class="card-body">
+                    <h5 class="card-title">Producto 5</h5>
+                    <p class="card-text">Descripción breve del producto 5.</p>
                 </div>
             </div>
         </div>
-    </section>
+
+        <!-- 3 Párrafos debajo de las tarjetas -->
+        <div class="product-info">
+            <p class="info-text">TEXTO RELACIONADO CON LA DISTRIBUCIÓN EN TODA LA ARGENTINA</p>
+            <p class="info-text">TEXTO DE ALCANCE, ENVÍOS Y VENDEDORES EN LAS ZONAS + BENEFICIOS.</p>
+            <p class="info-text"></p>
+        </div>
+    </div>
+</section>
+
+
 
     <!-- Sección EMPRESA -->
-    <section id="empresa" class="section py-5">
+    <section id="empresa" class="section">
         <div class="container custom-container">
-            <!-- Título y descripción -->
-            <div class="text-center mb-4">
-                <h2 class="custom-title">+10 AÑOS ACOMPAÑANDO A NUESTROS CLIENTES</h2>
-                <p class="custom-subtitle">Somos una empresa dedicada a la fabricación y comercialización de Perfiles y Accesorios para la construcción. Contamos con una amplia variedad de productos y atención personalizada al Cliente</p>
-            </div>
+            <h2 class="custom-title">UNA AMPLIA GAMA DE PRODUCTOS</h2>
+            <p class="custom-subtitle">ALGO RELACIONADO A LA CALIDAD Y EL SERVICIO</p>
+        </div>
+    </section>
 
-            <!-- Contenedor principal con 3 divs -->
-            <div class="empresa-flex">
-                <!-- Div 1: Contiene imagen 1 y 2 (apiladas verticalmente) -->
-                <div class="div-imagen1-2">
-                    <div class="custom-img placeholder-img1"></div>
-                    <div class="custom-img placeholder-img2"></div>
-                </div>
-
-                <!-- Div 2: Contenedor de imagen 3 (centrado) -->
-                <div class="div-imagen3">
-                    <div class="custom-img custom-img-new"></div>
-                </div>
-
-                <!-- Div 3: Contenedor de imagen 4 -->
-                <div class="div-imagen4">
-                    <div class="custom-img custom-img-extra"></div>
-                </div>
-            </div>
+    <!-- Sección CONTACTO -->
+    <section id="contacto" class="section">
+        <div class="container custom-container">
+            <h2 class="custom-title">Contáctenos</h2>
+            <p class="custom-subtitle">Estamos aquí para ayudarte. Contáctanos para más información.</p>
         </div>
     </section>
 
 
 
-    <!-- Sección Contacto -->
-    <section id="contacto" class="py-5">
-        <div class="full-width-bg">
-            <div class="container custom-container">
-                <!-- Título y descripción -->
-                <div class="text-center mb-4">
-                    <h2 class="custom-title-contact">NOS PONEMOS EN CONTACTO</h2>
-                </div>
-
-                <!-- Contenedor principal con 3 divs -->
-                <div class="contacto-flex">
-                    <!-- Div 1: Redes Sociales -->
-                    <div class="div-element1">
-                        <div class="custom-element placeholder-element1 redes-container">
-                            <!-- Título Redes -->
-                            <h3 class="redes-title">
-                                SEGUINOS EN NUESTRAS REDES SOCIALES
-                            </h3>
-                            <!-- Íconos de redes sociales en columna -->
-                            <div class="redes-icons">
-                                <img src="img/FACEBOOK.png" alt="Facebook" class="icon-redes">
-                                <img src="img/INSTAGRAM.png" alt="Instagram" class="icon-redes">
-                                <img src="img/MAIL.png" alt="Mail" class="icon-redes">
-                                <img src="img/LINKEDIN.png" alt="LinkedIn" class="icon-redes">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Div 2: Contenedor de imagen 3 (formulario) -->
-                    <div class="div-element2">
-                        <div class="custom-element placeholder-element2">
-                            <!-- Contenedor interno para el formulario con fondo blanco -->
-                            <div class="form-container">
-                                <!-- Título del formulario -->
-                                <h3 class="form-title">DEJANOS TUS DATOS Y NOS COMUNICAREMOS A LA BREVEDAD</h3>
-
-                                <!-- Formulario -->
-                                <form class="contact-form">
-                                    <!-- Campo NOMBRE -->
-                                    <div class="form-row">
-                                        <label for="nombre">NOMBRE</label>
-                                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-                                    </div>
-
-                                    <!-- Campo APELLIDO -->
-                                    <div class="form-row">
-                                        <label for="apellido">APELLIDO</label>
-                                        <input type="text" id="apellido" name="apellido" placeholder="Tu apellido"
-                                            required>
-                                    </div>
-
-                                    <!-- Campo: ¿CÓMO QUERÉS QUE TE CONTACTEMOS? -->
-                                    <div class="form-row contact-method">
-                                        <p class="contact-question">¿CÓMO QUERÉS QUE TE CONTACTEMOS?</p>
-                                        <div class="contact-options">
-                                            <label>
-                                                <input type="radio" name="contacto" value="whatsapp" required>
-                                                <span class="option-circle"></span>
-                                                <span class="option-text">Whatsapp</span>
-                                            </label>
-                                            <label>
-                                                <input type="radio" name="contacto" value="telefono">
-                                                <span class="option-circle"></span>
-                                                <span class="option-text">Teléfono</span>
-                                            </label>
-                                            <label>
-                                                <input type="radio" name="contacto" value="email">
-                                                <span class="option-circle"></span>
-                                                <span class="option-text">Email</span>
-                                            </label>
-                                        </div>
-                                    </div>
-
-
-                                    <!-- Campo CELULAR -->
-                                    <div class="form-row">
-                                        <label for="celular">CELULAR</label>
-                                        <input type="tel" id="celular" name="celular" placeholder="Tu celular" required>
-                                    </div>
-
-                                    <!-- Campo EMAIL -->
-                                    <div class="form-row">
-                                        <label for="email">EMAIL</label>
-                                        <input type="email" id="email" name="email" placeholder="Tu email" required>
-                                    </div>
-
-                                    <!-- Campo PROVINCIA -->
-                                    <div class="form-row">
-                                        <label for="provincia">PROVINCIA</label>
-                                        <input type="text" id="provincia" name="provincia" placeholder="Tu provincia"
-                                            required>
-                                    </div>
-
-                                    <!-- Campo CIUDAD -->
-                                    <div class="form-row">
-                                        <label for="ciudad">CIUDAD</label>
-                                        <input type="text" id="ciudad" name="ciudad" placeholder="Tu ciudad" required>
-                                    </div>
-
-                                    <!-- Botón de envío -->
-                                    <div class="form-row">
-                                        <button type="submit" class="form-button">Enviar</button>
-                                    </div>
-                                </form>
-
-                            </div>
-                            <!-- Nota Final -->
-                            <p class="form-note">
-                                (*) Nos tomamos muy en serio el SPAM, solo utilizamos la información brindada para
-                                realizar el contacto que nos indiques. Luego eliminamos la misma.
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <!-- Div 3: Contenedor de imagen 4 -->
-                    <div class="div-element3">
-                        <div class="custom-melement placeholder-element3">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.904825728932!2d-64.18613682365324!3d-31.41674819627013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94329902eb0b2faf%3A0x4382bb478dc6e982!2sPlaza%20San%20Mart%C3%ADn!5e0!3m2!1ses!2sar!4v1741125546420!5m2!1ses!2sar"
-                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
-
-                </div>
-    </section>
-
-
-
-
-    <!-- FOOTER  -->
+    <!-- Footer -->
     <footer class="bg-dark text-white py-3">
         <div class="container custom-container text-center">
-            <p class="mb-2">Todos los derechos reservados HYO SA</p>
-            <div class="d-flex justify-content-center gap-2">
-                <a href="#"><img src="img/ICONOS REDES-FB.png" alt="Facebook" width="30" height="30"></a>
-                <a href="#"><img src="img/ICONOS REDES-IG.png" alt="Instagram" width="30" height="30"></a>
-                <a href="#"><img src="img/ICONOS REDES-mail.png" alt="Mail" width="30" height="30"></a>
-                <a href="#"><img src="img/ICONOS REDES-IN.png" alt="LinkedIn" width="30" height="30"></a>
-            </div>
+            <p>&copy; 2025 Todos los derechos reservados</p>
         </div>
     </footer>
 
-
-
-    <!-- Bootstrap JS y nuestro script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/index.js"></script>
+    <!-- Bootstrap JS y scripts personalizados -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>

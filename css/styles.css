@@ -1,60 +1,121 @@
-/* ======================
-   Estilos Globales
-======================= */
+/* ================================
+   General
+================================== */
+
+/* Estilo general para el cuerpo */
 body {
+  font-family: "Ubuntu Regular";
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
 }
 
-@font-face {
-  font-family: "Ubuntu";
-  src: url("../fonts/Ubuntu-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Ubuntu Medium";
-  src: url("../fonts/Ubuntu-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
+/* Contenedor con un ancho máximo de 1480px para todo */
 .custom-container {
-  width: 100%;
   max-width: 1480px;
   margin: 0 auto;
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
-/* ======================
-   Transiciones suaves en cambios de resolución
-======================== */
-@media (max-width: 767.98px) {
-  .section {
-    transition: min-height 0.3s ease-in-out;
-  }
+
+/* ================================
+   Fuentes Personalizadas
+================================== */
+
+/* Fuente: Ubuntu-Bold */
+@font-face {
+  font-family: "Ubuntu Bold";
+  src: url("/fonts/Ubuntu-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
 
-/* ======================
-       Navbar
-======================== */
+/* Fuente: Ubuntu-BoldItalic */
+@font-face {
+  font-family: "Ubuntu Bold Italic";
+  src: url("/fonts/Ubuntu-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Fuente: Ubuntu-Italic */
+@font-face {
+  font-family: "Ubuntu Italic";
+  src: url("/fonts/Ubuntu-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Fuente: Ubuntu-Light */
+@font-face {
+  font-family: "Ubuntu Light";
+  src: url("/fonts/Ubuntu-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Fuente: Ubuntu-LightItalic */
+@font-face {
+  font-family: "Ubuntu Light Italic";
+  src: url("/fonts/Ubuntu-LightItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Fuente: Ubuntu-Medium */
+@font-face {
+  font-family: "Ubuntu Medium";
+  src: url("/fonts/Ubuntu-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Fuente: Ubuntu-MediumItalic */
+@font-face {
+  font-family: "Ubuntu Medium Italic";
+  src: url("/fonts/Ubuntu-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Fuente: Ubuntu-Regular */
+@font-face {
+  font-family: "Ubuntu Regular";
+  src: url("/fonts/Ubuntu-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ================================
+   Navbar
+================================== */
+
+/* Estilo del navbar */
 .navbar {
   background-color: white !important;
   transition: top 0.3s;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.navbar-brand {
+/* Estilo para el botón de menú hamburguesa (sandwich) */
+.navbar-toggler {
+  margin-right: 5px; /* Añadir margen derecho de 5px */
+}
+
+/* Estilo del logo */
+.navbar .navbar-brand img {
+  max-height: 60px;  /* Establece el máximo alto a 60px */
+  max-width: 135px;  /* Establece el máximo ancho a 135px */
+  width: auto;       /* Mantiene la relación de aspecto */
+  height: auto;      /* Mantiene la relación de aspecto */
   margin-left: 20px;
 }
 
-.logo-container {
-  width: 100%;
-  height: 100%;
-}
-
+/* Estilo de los enlaces dentro del navbar */
 .navbar .nav-link {
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
@@ -63,229 +124,224 @@ body {
   color: #000;
 }
 
-.navbar .d-flex.gap-2 {
+/* Navbar centrado y con espaciado */
+.navbar .navbar-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.navbar .d-flex {
+  gap: 8px;
   margin-right: 20px;
 }
 
-@media (max-width: 767.98px) {
-  .navbar-brand {
-    margin-left: 10px;
-  }
-  
-  .logo-container {
-    width: 90%;
-    height: 90%;
-  }
-}
 
-/* ======================
-       Secciones
-======================== */
+/* ================================
+   Secciones Generales
+================================== */
+
+/* Sección que ocupa toda la pantalla */
 .section {
   width: 100%;
-  max-width: 1480px;
+  height: 100vh;
+  padding: 0;
   margin: 0 auto;
-  height: auto;
 }
 
-@media (max-width: 767.98px) {
-  #inicio {
-    height: 50%;
-  }
-}
+/* ================================
+   Sección INICIO
+================================== */
 
-/* ======================
-     Sección INICIO
-======================== */
+/* Estilo para la sección de inicio */
 #inicio {
+  padding-left: 0;
+  padding-right: 0;
   text-align: center;
-  background-color: white;
-  padding-bottom: 20px;
-  transition: padding 0.3s ease;
 }
 
-#inicio .img-inicio {
-  width: 100%;
-  height: auto;
-}
-
-@media (min-width: 768px) {
-  #inicio {
-    height: 100vh;
-  }
-}
-
-@media (max-width: 767.98px) {
-  #inicio {
-    min-height: 50vh;
-  }
-  
-}
-
-#inicio .img-inicio {
+/* Estilo para el carrusel de la sección de inicio */
+.carousel-inner img {
   max-width: 1480px;
   max-height: 660px;
   width: 100%;
   height: auto;
+  object-fit: cover; /* Asegura que la imagen cubra el área del carrusel sin distorsionarse */
 }
 
-#inicio .text-container {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.custom-title {
-  font-family: "Ubuntu", sans-serif;
+/* Título de la sección de inicio */
+#inicio h1 {
+  font-family: "Ubuntu Bold", sans-serif; /* Usar Ubuntu-Bold */
   font-weight: bold;
-  font-size: clamp(32px, 5vw, 49px);
+  font-size: clamp(25px, 6vw, 50px); /* Ajuste de tamaño para pantallas grandes y pequeñas */
+  margin-top: 30px;
 }
 
-.custom-subtitle {
-  font-family: "Ubuntu", sans-serif;
+/* Subtítulo de la sección de inicio */
+#inicio p {
+  font-family: "Ubuntu Bold"; /* Usar Ubuntu-Bold */
   font-weight: bold;
-  font-size: clamp(20px, 3vw, 25px);
+  font-size: clamp(15px, 3vw, 25px); /* Tamaño de fuente más pequeño que el título */
+  margin-top: 10px;
 }
 
-.custom-subtitle2 {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: bold;
-  font-size: clamp(20px, 3vw, 25px);
-  margin-bottom: 0px;
-}
 
-@media (max-width: 767.98px) {
-  .custom-subtitle2 {
-    margin-bottom: 10px;
-  }
-
-  .custom-title {
-    margin-bottom: 20px
-  }
-}
-
-/* ======================
-       Sección PRODUCTOS
-======================== */
-#productos {
-  padding-top: 20px;
-  transition: padding 0.3s ease;
-  
-}
-
-@media (min-width: 1480px) {
-  #productos {
-    height: 100vh;
-    background-color: #f5f5f5;
-  }
-}
-
-@media (max-width: 1480px) {
-  #productos {
-    min-height: auto;
-  }
-}
-
-.full-width-bg {
-  background-color: #f5f5f5;
-  width: 100%;
-  height: 100%;
-}
+/* ================================
+   Sección PRODUCTOS
+================================== */
 
 #productos {
   padding-bottom: 0 !important;
-  padding-top: 0 !important;
-}
-
-#productos .text-center.mb-4 {
+  padding-top: 20px !important;
   margin-bottom: 0 !important;
 }
 
-.card.card-custom {
-  border-radius: 0 !important;
+/* Títulos y subtítulos */
+#productos h2 {
+  font-family: "Ubuntu Bold", sans-serif;
+  font-weight: bold;
+  font-size: clamp(25px, 6vw, 50px);
+  margin-top: 30px;
+  text-align: center;
 }
 
-.custom-title-prod {
-  font-family: "Ubuntu";
+#productos p {
+  font-family: "Ubuntu Bold", sans-serif;
   font-weight: bold;
-  font-size: clamp(32px, 5vw, 49px);
-  padding-top: 50px;
+  font-size: clamp(15px, 3vw, 25px);
+  margin-top: 10px;
+  text-align: center;
 }
 
-.custom-subtitle-prod {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: bold;
-  font-size: clamp(20px, 3vw, 25px);
-  margin-bottom: 20px;
+/* Contenedor de tarjetas con Flexbox */
+.product-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 5px; /* Espaciado entre tarjetas */
+  margin-top: 30px;
 }
 
-.custom-subtitle2-prod {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: bold;
-  font-size: clamp(20px, 3vw, 25px);
-  margin-bottom: 0px;
-  padding-bottom: 50px;
+/* Estilo de las tarjetas */
+.product-card {
+  flex: 1 1 19%; /* Ajuste para las tarjetas, asegurando que haya 5 en una fila */
+  border: none;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-img-top {
+  width: 100%; /* Ajusta al 100% del contenedor */
+  max-width: 281px; /* Máximo ancho de las imágenes */
+  height: 378px; /* Altura fija */
+  object-fit: cover; /* Ajusta la imagen para que cubra el área sin distorsionarla */
+}
+
+.card-body {
+  text-align: center;
+  padding: 10px;
 }
 
 .card-title {
-  font-family: "Ubuntu";
+  font-family: "Ubuntu Bold", sans-serif;
   font-weight: bold;
-  font-size: 20pt;
+  font-size: 20px;
 }
 
 .card-text {
-  font-family: "Ubuntu Medium";
-  font-size: 15pt;
+  font-family: "Ubuntu Light", sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  color: #555;
 }
 
-.card-custom {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Estilo para los párrafos debajo de las tarjetas */
+.product-info {
+  margin-top: 40px;
+  text-align: center;
 }
 
-.card-custom:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.info-text {
+  font-family: "Ubuntu Light", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 0.7;
 }
 
-.card-img-custom {
-  width: 281px;
-  height: 368px;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-  border-radius: 0px !important;
-}
+/* ================================
+   Responsividad
+================================== */
 
-.card-custom {
-  width: 281px;
-  margin: 0 auto;
-  flex: 0 0 281px;
-  margin-bottom: 20px;
-}
+/* Ajuste en pantallas pequeñas */
+@media (max-width: 768px) {
 
-/* ======================
-       Sección EMPRESA
-======================== */
-#empresa {
-  padding: 20px 0;
-  transition: padding 0.3s ease;
-}
+  #productos h2 {
+padding-left: 5px;
+padding-right: 5px;
+  }
+  
+  #productos p {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
 
-@media (min-width: 768px) {
-  #empresa {
-    height: 100vh;
+
+
+  .product-cards-container {
+    flex-direction: column; /* Coloca las tarjetas en columna */
+    gap: 20px; /* Espaciado entre tarjetas */
+  }
+
+  .product-card {
+    flex: 1 1 100%; /* Las tarjetas ocupan todo el ancho en pantallas pequeñas */
+  }
+
+  .card-img-top {
+    max-width: 281px; /* Máximo ancho de las imágenes */
+    height: 378px; /* Altura fija */
+  }
+
+  .card-title {
+    font-size: 18px; /* Ajuste del tamaño del título */
+  }
+
+  .card-text {
+    font-size: 12px; /* Ajuste del tamaño del texto */
+  }
+
+  .info-text {
+    font-size: 14px; /* Ajuste del tamaño del texto de los párrafos */
+    line-height: 1.4; /* Ajuste del interlineado */
   }
 }
 
-@media (max-width: 767.98px) {
-  #empresa {
-    min-height: auto;
+/* En pantallas grandes, las tarjetas deben alinearse en una fila de 1480px máximo */
+@media (min-width: 992px) {
+  .container.custom-container {
+    max-width: 1480px;
+    width: 100%; /* Asegura que las tarjetas se ajusten al ancho de la sección */
+  }
+
+  .product-cards-container {
+    justify-content: space-between;
+  }
+
+  .product-card {
+    flex: 0 0 19%; /* Ajuste para que las tarjetas se alineen correctamente en una fila */
   }
 }
 
-#empresa {
-  padding: 20px 0;
-}
 
+/* ================================
+   Sección EMPRESA
+================================== */
+
+/* Estilo de los elementos flex en la sección empresa */
 .empresa-flex {
   display: flex;
   flex-wrap: wrap;
@@ -293,924 +349,53 @@ body {
   gap: 20px;
 }
 
-.div-imagen1-2,
-.div-imagen3,
-.div-imagen4 {
-  flex: 1 1 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/* ================================
+   Footer
+================================== */
 
-.custom-img {
-  margin: 10px 0;
-}
-
-.placeholder-img1,
-.placeholder-img2 {
-  width: 300px;
-  height: 150px;
-  background-color: #c38585;
-}
-
-.placeholder-img2 {
-  background-color: #b3b3b3;
-}
-
-.custom-img-new {
-  width: 300px;
-  height: 216px;
-  background-color: #e0e0e0;
-}
-
-.custom-img-extra {
-  width: 260px;
-  height: 555px;
-  background-color: #dcdcdc;
-}
-
-@media (max-width: 1480px) {
-  .placeholder-img1,
-  .placeholder-img2,
-  .custom-img-new,
-  .custom-img-extra {
-    width: 90%;
-  }
-
-  .placeholder-img1,
-  .placeholder-img2 {
-    aspect-ratio: 2 / 1;
-  }
-
-  .custom-img-new {
-    aspect-ratio: 300 / 216;
-  }
-
-  .custom-img-extra {
-    aspect-ratio: 260 / 555;
-  }
-}
-
-@media (max-width: 767.98px) {
-  .empresa-flex {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-@media (min-width: 1480px) {
-  .empresa-flex {
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .div-imagen4 {
-    align-self: flex-start;
-  }
-}
-
-/* ======================
-       Sección CONTACTO
-======================== */
-#contacto {
-  padding: 0 !important;
-  transition: padding 0.3s ease;
-}
-
-
-
-@media (max-width: 767.98px) {
-  #contacto {
-    min-height: auto;
-  }
-}
-
-.custom-title-contact {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: bold;
-  font-size: clamp(32px, 5vw, 49px);
-  padding-top: 30px;
-}
-
-.redes-container {
-  background-color: transparent;
-  text-align: center;
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.redes-title {
-  margin-top: 300px;
-  margin-bottom: 20px;
-  font-family: "Ubuntu Medium", sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.redes-icons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.icon-redes {
-  width: 61px;
-  height: 61px;
-  object-fit: contain;
-}
-
-@media (max-width: 576px) {
-  .redes-title {
-    font-size: 18px;
-    margin-top: 20px;
-  }
-
-  .icon-redes {
-    width: 61px;
-    height: 61px;
-  }
-}
-
-.contacto-flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0px;
-}
-
-.custom-element {
-  margin: 0px;
-}
-
-.placeholder-element1 {
-  width: 185px;
-  height: 385px;
-}
-
-.placeholder-element2 {
-  width: 604px;
-  height: 880px;
-  margin-right: 20px;
-  margin-left: 20px;
-}
-
-.placeholder-element3 {
-  width: 597px;
-  height: 681px;
-  background-color: #dcdcdc;
-}
-
-@media (max-width: 768px) {
-  .contacto-flex {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .div-element1,
-  .div-element2,
-  .div-element3 {
-    width: 100%;
-  }
-
-  .placeholder-element1,
-  .placeholder-element2,
-  .placeholder-element3 {
-    width: 100% !important;
-    height: auto;
-  }
-
-  .placeholder-element3 {
-    width: 100%;
-    height: 350px;
-  }
-}
-
-.form-container {
-  background-color: #fff;
-  width: 100%;
-  margin: 0;
-  padding: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  border-radius: 0px;
-}
-
-.form-title {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  margin: 0 0 20px 0;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.form-row {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-row label {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-.form-row input {
-  padding: 8px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 0px;
-}
-
-.contact-method {
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-  margin-bottom: 15px;
-}
-
-.contact-question {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 15px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.contact-options {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.contact-options label {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.contact-options input[type="radio"] {
-  display: none;
-}
-
-.option-circle {
-  width: 20px;
-  height: 20px;
-  border: 2px solid #000;
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-}
-
-.contact-options input[type="radio"]:checked+.option-circle::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 10px;
-  height: 10px;
-  background-color: #000;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.form-button {
-  background-color: #0988b2;
-  color: #fff;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: bold;
-  font-size: 15px;
-  padding: 10px;
-  border: none;
-  border-radius: 0px;
-  cursor: pointer;
-}
-
-.form-button:hover {
-  background-color: #07779d;
-}
-
-.form-note {
-  font-family: "Ubuntu Light", sans-serif;
-  font-size: 15px;
-  margin-top: 20px;
-  text-align: center;
-  color: #555;
-}
-
-@media (max-width: 1479px) {
-  .form-title {
-    font-size: 18px;
-  }
-
-  .placeholder-element2 {
-
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-
-  .form-row label {
-    font-size: 18px;
-  }
-
-  .form-row input {
-    font-size: 14px;
-  }
-
-  .contact-method p,
-  .contact-method label {
-    font-size: 14px;
-  }
-
-  .form-button {
-    font-size: 18px;
-  }
-
-  .form-note {
-    font-size: 14px;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
-  .form-container {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-}
-
-/* ======================
-       Footer
-======================== */
+/* Estilo del footer */
 footer {
   background-color: #343a40;
   color: #ffffff;
   padding: 20px 0;
-}
-
-footer .container {
-  max-width: 1320px;
-  margin: 0 auto;
   text-align: center;
 }
 
-footer .d-flex {
-  justify-content: center;
-  gap: 20px;
-}
 
-footer .d-flex img {
-  width: 30px;
-  height: 30px;
-  object-fit: contain;
-}
+/* ================================
+   Responsividad
+================================== */
 
-footer .mb-2 {
-  margin-bottom: 15px;
-}
-
-/* ======================
-       Aceros
-======================== */
-#inicio-aceros .img-inicio-aceros {
-  width: 100%;
-  max-width: 1480px;
-  height: 260px;
-  object-fit: cover;
-}
-
-.icon-lupa {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: white;
-  padding: 10px;
-  font-size: 20px;
-  display: none;
-  z-index: 10;
-}
-
-.card-tech {
-  background-color: transparent !important;
-  border: none !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-image {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
-}
-
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 7px;
-}
-
-.card-image:hover .icon-lupa {
-  display: block;
-}
-
-.modal-img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-}
-
+/* Navbar en pantallas pequeñas */
 @media (max-width: 768px) {
-  .modal-img {
-    max-width: 300px;
-  }
-}
-
-.hero-text {
-  font-family: "Ubuntu Medium";
-  font-size: 15pt;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  color: #333;
-  text-align: center;
-  padding: 0 15px;
-  line-height: 1;
-}
-
-/* ======================
-       Sección Fichas Técnicas
-======================== */
-#fichas-tecnicas {
-  padding: 40px 0;
-}
-
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-@media (max-width: 1320px) {
-  .cards-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 576px) {
-  .cards-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.card-tech {
-  display: flex;
-  background: #f9f9f9;
-  padding: 15px;
-  border: 1px solid #ddd;
-  align-items: center;
-  gap: 15px;
-}
-
-.card-content {
-  flex: 1;
-}
-
-.card-title {
-  font-size: 1.25rem;
-  margin: 0;
-}
-
-.card-subtitle {
-  font-size: 1rem;
-  margin: 5px 0;
-}
-
-.card-icon {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-@media (max-width: 576px) {
-  .card-tech {
-    flex-direction: column;
-    align-items: flex-start;
+  .navbar {
+    position: static;
   }
 
-  .card-image {
-    margin-bottom: 10px;
-  }
-}
-
-/* ======================
-       Sección Fichas Técnicas - Icono personalizado
-======================== */
-.icon-ficha {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-  vertical-align: middle;
-}
-
-/* ======================
-       Pisos
-======================== */
-#inicio-pisos .img-inicio-pisos {
-  width: 100%;
-  max-width: 1320px;
-  height: 260px;
-  object-fit: cover;
-}
-
-.hero-text-pisos {
-  margin-bottom: 30px;
-  margin-top: 30px;
-  font-size: 1rem;
-  color: #333;
-  text-align: center;
-  padding: 0 15px;
-}
-
-/* ======================
-       Sección Marcas - Pisos (Placeholder)
-======================== */
-.marca-placeholder {
-  width: 310px;
-  height: 310px;
-  background-color: #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  color: #fff;
-  text-transform: uppercase;
-  border: 2px solid #999;
-}
-
-.marcas-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  justify-items: center;
-  align-items: center;
-}
-
-.marcas-text {
-  margin-top: 30px;
-  font-size: 1rem;
-  color: #333;
-  text-align: center;
-  padding: 0 15px;
-}
-
-@media (max-width: 1320px) {
-  .marcas-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .marca-placeholder {
-    width: 100%;
-  }
-}
-
-@media (max-width: 576px) {
-  .marcas-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ======================
-       Contenedor pisos  
-======================== */
-#contenedor-pisos {
-  padding: 40px 0;
-}
-
-.contenedor-pisos {
-  width: 100%;
-  max-width: 1320px;
-  min-height: 780px;
-  border: 1px solid grey;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-@media (max-width: 768px) {
-  .contenedor-pisos {
-    min-height: auto;
-    padding: 10px;
-  }
-}
-
-/* ======================
-   Elementos de la Sección Pisos
-======================== */
-.elementos-pisos {
-  text-align: left;
-}
-
-.titulo-piscinas {
-  margin-left: 75px;
-  margin-top: 30px;
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.linea-titulo {
-  margin-left: 75px;
-  width: 100%;
-  max-width: 790px;
-  height: 2pt;
-  background-color: grey;
-  margin-bottom: 20px;
-}
-
-.descripcion-piscinas {
-  margin-left: 75px;
-  margin-bottom: 30px;
-  font-size: 1rem;
-  color: #333;
-}
-
-@media (max-width: 1320px) {
-  .linea-titulo {
-    max-width: 100%;
-  }
-
-  .titulo-piscinas {
-    margin-left: 10px;
-    margin-top: 20px;
-    font-size: 2rem;
-  }
-
-  .linea-titulo {
-    margin-left: 10px;
-    max-width: 70%;
-    height: 2pt;
-    background-color: grey;
-  }
-
-  .descripcion-piscinas {
-    margin-left: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
-  }
-}
-
-.titulo-comercializados {
-  margin-left: 75px;
-  margin-top: 30px;
-  font-size: 2rem;
-}
-
-@media (max-width: 1320px) {
-  .titulo-comercializados {
-    margin-left: 10px;
-    font-size: 1.8rem;
-  }
-}
-
-/* ======================
-       Card Pisos
-======================== */
-.card-pisos {
-  width: 172px;
-  text-align: left;
-}
-
-.card-img-placeholder {
-  width: 172px;
-  height: 172px;
-  background-color: #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 1rem;
-}
-
-.card-title-pisos {
-  margin-top: 10px;
-  font-size: 1.2rem;
-  color: #333;
-}
-
-.card-text-pisos {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #333;
-  line-height: 1.4;
-}
-
-/* ======================
-   Contenedor Card e Imagen (Pisos)
-======================== */
-.card-and-extra {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.image-derecha {
-  width: 292px;
-  height: 292px;
-  background-color: #aaa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 1rem;
-  text-transform: uppercase;
-}
-
-/* ======================
-   Agrupación de Grupos de Cards
-======================== */
-.card-groups {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.left-group {
-  margin-left: 75px;
-}
-
-.right-group {
-  margin-right: 50px;
-}
-
-/* ======================
-   Responsividad para Contenedor Card e Imagen
-======================== */
-@media (max-width: 768px) {
-  .card-and-extra {
-    flex-direction: column;
-    margin-left: 10px;
-    margin-bottom: 20px;
-  }
-
-  .image-derecha {
-    width: 100%;
+  /* Secciones en dispositivos móviles */
+  .section {
     height: auto;
-    aspect-ratio: 1/1;
   }
 
-  .card-groups {
-    flex-direction: column;
-    align-items: center;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .left-group,
-  .right-group {
-    margin: 0;
-  }
-}
-
-/* ======================
-       Pisos
-======================== */
-#inicio-pisos .img-inicio-pisos {
-  width: 100%;
-  max-width: 1320px;
-  height: 260px;
-  object-fit: cover;
-}
-
-.hero-text-pisos {
-  margin-bottom: 30px;
-  margin-top: 30px;
-  font-size: 1rem;
-  color: #333;
-  text-align: center;
-  padding: 0 15px;
-}
-
-/* ======================
-       Sección Marcas - Pisos (Placeholder)
-======================== */
-.marca-placeholder {
-  width: 310px;
-  height: 310px;
-  background-color: #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  color: #fff;
-  text-transform: uppercase;
-  border: 2px solid #999;
-}
-
-.marcas-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  justify-items: center;
-  align-items: center;
-}
-
-.marcas-text {
-  margin-top: 30px;
-  font-size: 1rem;
-  color: #333;
-  text-align: center;
-  padding: 0 15px;
-}
-
-@media (max-width: 1320px) {
-  .marcas-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .marca-placeholder {
+  /* Ajuste de imagen en la sección de inicio */
+  .img-inicio {
+    height: auto;
     width: 100%;
   }
-}
 
-@media (max-width: 576px) {
-  .marcas-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ======================
-   Bloque de Texto de Consulta
-======================== */
-/* ======================
-   Sección Consulta y Catálogo
-======================== */
-.consulta-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
-  margin-left: 75px;
-  margin-right: 50px;
-}
-
-.consulta-text {
-  text-align: left;
-}
-
-.consulta-el {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin: 0;
-}
-
-.catalogo-completo {
-  font-size: 1.8rem;
-  margin: 0;
-}
-
-.imagen-consulta {
-  width: 699px;
-  height: 136px;
-  background-color: #888;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 1rem;
-  text-transform: uppercase;
-}
-
-@media (max-width: 699px) {
-  .imagen-consulta {
-    display: none;
+  /* Ajuste de títulos y subtítulos */
+  .custom-title {
+    font-size: clamp(24px, 5vw, 32px);
+    margin-top: 50px;
   }
 
-  .consulta-el {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0;
+  .custom-subtitle {
+    font-size: clamp(16px, 3vw, 20px);
+    margin-top: 50px;
   }
 
-  .catalogo-completo {
-    font-size: 1rem;
-    margin: 0;
-  }
-
-  .consulta-section {
-    justify-content: center;
-    margin: 0px;
-    margin-left: 20px;
+  /* Navbar para pantallas pequeñas */
+  .navbar-toggler {
+    display: block;
   }
 }
