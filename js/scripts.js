@@ -49,19 +49,77 @@ function scrollToSection(section) {
     });
 }
 
-// Efecto del navbar que desaparece y aparece en pantallas grandes
+// -----------------------------
+// Código para el navbar que desaparece y aparece en pantallas grandes
+
 let lastScrollTop = 0;
 const navbar = document.querySelector('.navbar');
+let hideNavbarTimeout;
+let isScrolling = false;
+let lastMouseMoveTime = 0;  // Tiempo del último movimiento del mouse
+const mouseMoveDelay = 500;  // Delay para activar el evento de mousemove
 
-window.addEventListener('scroll', function() {
-    let currentScroll = window.pageYOffset;
+// Función para ocultar el navbar
+function hideNavbar() {
+    navbar.style.transition = 'top 0.3s ease-in-out'; // Transición suave
+    navbar.style.top = "-60px"; // Ajusta según el tamaño del navbar
+}
 
-    if (currentScroll > lastScrollTop) {
-        // Scrolling down, hide navbar
-        navbar.style.top = "-60px"; // Ajusta según el tamaño del navbar
-    } else {
-        // Scrolling up, show navbar
-        navbar.style.top = "0";
+// Función para mostrar el navbar
+function showNavbar() {
+    navbar.style.transition = 'top 0.3s ease-in-out'; // Transición suave
+    navbar.style.top = "0";
+}
+
+// Función de debounce para evitar que el evento de scroll se ejecute demasiado rápido
+function debounce(func, delay) {
+    if (isScrolling) {
+        return;
     }
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    isScrolling = true;
+    setTimeout(function () {
+        func();
+        isScrolling = false;
+    }, delay);
+}
+
+// Escuchar el evento de scroll
+window.addEventListener('scroll', function () {
+    // Solo ejecutar si estamos en pantallas grandes
+    if (window.innerWidth > 768) {  // Ajusta este valor según lo que consideres "pantalla grande"
+        let currentScroll = window.pageYOffset;
+
+        // Si estamos desplazándonos hacia abajo, ocultamos el navbar inmediatamente
+        if (currentScroll > lastScrollTop) {
+            navbar.style.top = "-60px"; // Ajusta según el tamaño del navbar
+        } else {
+            // Si estamos desplazándonos hacia arriba, mostramos el navbar
+            showNavbar();
+
+            // Limpiamos el temporizador y configuramos uno nuevo para ocultar el navbar después de 3 segundos sin interacción
+            clearTimeout(hideNavbarTimeout);
+            hideNavbarTimeout = setTimeout(hideNavbar, 3000); // 3000 ms = 3 segundos
+        }
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+
+        // Llamar al debounce para manejar el evento de scroll eficientemente
+        debounce(function () { }, 100);  // Ajusta el delay según el rendimiento
+    }
+});
+
+// Detectar eventos de movimiento del mouse para resetear el temporizador de ocultar navbar
+window.addEventListener('mousemove', function (event) {
+    const currentTime = new Date().getTime();
+    
+    // Solo restablecer el temporizador si el mouse se mueve después de un retraso y está sobre el área activa
+    if (window.innerWidth > 768 && currentTime - lastMouseMoveTime > mouseMoveDelay) {
+        lastMouseMoveTime = currentTime;
+
+        // Solo activar si el mouse está cerca del navbar o sobre un área activa
+        if (event.clientY < 100 || navbar.contains(event.target)) {  // Ajusta según el área que consideres relevante
+            clearTimeout(hideNavbarTimeout);
+            showNavbar();
+            hideNavbarTimeout = setTimeout(hideNavbar, 3000);  // 3000 ms = 3 segundos
+        }
+    }
 });
