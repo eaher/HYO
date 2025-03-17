@@ -57,7 +57,7 @@ body {
 /* Fuente: Ubuntu-LightItalic */
 @font-face {
   font-family: "Ubuntu Light Italic";
-  src: url("/fonts/Ubuntu-LightItalic.ttf") format("truetype");
+  src: url("fonts/Ubuntu-LightItalic.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
@@ -65,7 +65,7 @@ body {
 /* Fuente: Ubuntu-Medium */
 @font-face {
   font-family: "Ubuntu Medium";
-  src: url("/fonts/Ubuntu-Medium.ttf") format("truetype");
+  src: url("fonts/Ubuntu-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
@@ -73,7 +73,7 @@ body {
 /* Fuente: Ubuntu-MediumItalic */
 @font-face {
   font-family: "Ubuntu Medium Italic";
-  src: url("/fonts/Ubuntu-MediumItalic.ttf") format("truetype");
+  src: url("fonts/Ubuntu-MediumItalic.ttf") format("truetype");
   font-weight: 500;
   font-style: italic;
 }
@@ -81,7 +81,7 @@ body {
 /* Fuente: Ubuntu-Regular */
 @font-face {
   font-family: "Ubuntu Regular";
-  src: url("/fonts/Ubuntu-Regular.ttf") format("truetype");
+  src: url("fonts/Ubuntu-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -341,9 +341,7 @@ padding-right: 5px;
    Sección EMPRESA
 ================================== */
 
-/* ================================
-   Sección EMPRESA
-================================== */
+
 #empresa {
   padding: 50px 0;
   text-align: center;

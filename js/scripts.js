@@ -83,23 +83,44 @@ function debounce(func, delay) {
     }, delay);
 }
 
+// Detectar la sección INICIO
+function isInInicioSection() {
+    const inicioSection = document.getElementById('inicio');
+    const scrollPosition = window.pageYOffset;
+
+        // Mostrar los valores en la consola para depuración
+        console.log('Scroll Position:', scrollPosition);
+        console.log('Inicio Section Top:', inicioSection.offsetTop);
+        console.log('Inicio Section Height:', inicioSection.offsetHeight);
+
+    // Verificar si el usuario está dentro de la sección INICIO
+    return (scrollPosition >= inicioSection.offsetTop && scrollPosition < (inicioSection.offsetTop + inicioSection.offsetHeight));
+}
+
 // Escuchar el evento de scroll
 window.addEventListener('scroll', function () {
     // Solo ejecutar si estamos en pantallas grandes
     if (window.innerWidth > 768) {  // Ajusta este valor según lo que consideres "pantalla grande"
         let currentScroll = window.pageYOffset;
 
-        // Si estamos desplazándonos hacia abajo, ocultamos el navbar inmediatamente
-        if (currentScroll > lastScrollTop) {
-            navbar.style.top = "-60px"; // Ajusta según el tamaño del navbar
-        } else {
-            // Si estamos desplazándonos hacia arriba, mostramos el navbar
+        // Si estamos en la sección INICIO, el navbar debe estar visible
+        if (isInInicioSection()) {
             showNavbar();
+        } else {
+            // Si estamos fuera de la sección INICIO, aplicamos los efectos de desaparición
+            if (currentScroll > lastScrollTop) {
+                // Desplazándose hacia abajo, ocultar navbar
+                navbar.style.top = "-60px"; // Ajusta según el tamaño del navbar
+            } else {
+                // Desplazándose hacia arriba, mostrar navbar
+                showNavbar();
 
-            // Limpiamos el temporizador y configuramos uno nuevo para ocultar el navbar después de 3 segundos sin interacción
-            clearTimeout(hideNavbarTimeout);
-            hideNavbarTimeout = setTimeout(hideNavbar, 3000); // 3000 ms = 3 segundos
+                // Limpiamos el temporizador y configuramos uno nuevo para ocultar el navbar después de 3 segundos sin interacción
+                clearTimeout(hideNavbarTimeout);
+                hideNavbarTimeout = setTimeout(hideNavbar, 3000); // 3000 ms = 3 segundos
+            }
         }
+
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 
         // Llamar al debounce para manejar el evento de scroll eficientemente
@@ -121,5 +142,12 @@ window.addEventListener('mousemove', function (event) {
             showNavbar();
             hideNavbarTimeout = setTimeout(hideNavbar, 3000);  // 3000 ms = 3 segundos
         }
+    }
+});
+
+// Asegurar que el navbar esté visible al cargar la página si el usuario está en la sección INICIO
+window.addEventListener('load', function() {
+    if (isInInicioSection()) {
+        showNavbar();  // Asegura que el navbar se muestre si está en la sección INICIO al cargar la página
     }
 });
