@@ -25,7 +25,7 @@ body {
 /* Fuente: Ubuntu-Bold */
 @font-face {
   font-family: "Ubuntu Bold";
-  src: url("/fonts/Ubuntu-Bold.ttf") format("truetype");
+  src: url("fonts/Ubuntu-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
@@ -33,7 +33,7 @@ body {
 /* Fuente: Ubuntu-BoldItalic */
 @font-face {
   font-family: "Ubuntu Bold Italic";
-  src: url("/fonts/Ubuntu-BoldItalic.ttf") format("truetype");
+  src: url("fonts/Ubuntu-BoldItalic.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
 }
@@ -41,7 +41,7 @@ body {
 /* Fuente: Ubuntu-Italic */
 @font-face {
   font-family: "Ubuntu Italic";
-  src: url("/fonts/Ubuntu-Italic.ttf") format("truetype");
+  src: url("fonts/Ubuntu-Italic.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
@@ -49,7 +49,7 @@ body {
 /* Fuente: Ubuntu-Light */
 @font-face {
   font-family: "Ubuntu Light";
-  src: url("/fonts/Ubuntu-Light.ttf") format("truetype");
+  src: url("fonts/Ubuntu-Light.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
