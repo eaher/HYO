@@ -790,7 +790,7 @@ footer {
 
   /* Secciones en dispositivos móviles */
   .section {
-    height: auto;
+    height: auto !important;
   }
 
   /* Ajuste de imagen en la sección de inicio */
