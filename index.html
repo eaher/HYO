@@ -196,8 +196,7 @@
     <!-- Sección CONTACTO -->
     <section id="contacto" class="section">
         <div class="container custom-container">
-            <h2 class="custom-title">Contáctenos</h2>
-            <p class="custom-subtitle">Estamos aquí para ayudarte. Contáctanos para más información.</p>
+            <h2 class="custom-title">NOS PONEMOS EN CONTACTO</h2>
 
             <!-- Contenedor flexible para los 3 contenedores -->
             <div class="contact-flex-container">
@@ -216,81 +215,94 @@
                     <p class="website-text">hyoperfiles.com.ar</p>
                 </div>
 
-<!-- Contenedor 2 (Formulario) -->
-<div class="contact-form-container">
-    <h3>Formulario de Contacto</h3>
-    
-    <!-- Formulario de contacto -->
-    <form id="contact-form" action="#" method="POST">
-        <!-- Campo Nombre -->
-        <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required class="form-control">
-        </div>
-        
-        <!-- Campo Apellido -->
-        <div class="form-group">
-            <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" name="apellido" required class="form-control">
-        </div>
-        
-        <!-- Campo Cómo quieres que te contactemos -->
-        <div class="form-group">
-            <label>¿Cómo quieres que te contactemos?</label>
-            <div class="contact-methods">
-                <label for="whatsapp" class="contact-option">
-                    <input type="radio" id="whatsapp" name="contact_method" value="whatsapp">
-                    WhatsApp
-                </label>
-                <label for="telefono" class="contact-option">
-                    <input type="radio" id="telefono" name="contact_method" value="telefono">
-                    Teléfono
-                </label>
-                <label for="email" class="contact-option">
-                    <input type="radio" id="email" name="contact_method" value="email">
-                    Email
-                </label>
-            </div>
-        </div>
+                <!-- Contenedor 2 (Formulario) -->
+                <div class="contact-form-container">
+                    <h3>Formulario de Contacto</h3>
 
-        <!-- Campo Celular -->
-        <div class="form-group">
-            <label for="celular">Celular</label>
-            <input type="tel" id="celular" name="celular" required class="form-control">
-        </div>
+                    <!-- Formulario de contacto -->
+                    <form id="contact-form" action="#" method="POST">
+                        <!-- Campo Nombre -->
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" required class="form-control">
+                        </div>
 
-        <!-- Campo Email -->
-        <div class="form-group">
-            <label for="email-form">Email</label>
-            <input type="email" id="email-form" name="email" required class="form-control">
-        </div>
+                        <!-- Campo Apellido -->
+                        <div class="form-group">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" name="apellido" required class="form-control">
+                        </div>
 
-        <!-- Campo Provincia -->
-        <div class="form-group">
-            <label for="provincia">Provincia</label>
-            <input type="text" id="provincia" name="provincia" required class="form-control">
-        </div>
+                        <!-- Campo Cómo quieres que te contactemos -->
+                        <div class="form-group">
+                            <label>¿Cómo quieres que te contactemos?</label>
+                            <div class="contact-methods">
+                                <label for="whatsapp" class="contact-option">
+                                    <input type="radio" id="whatsapp" name="contact_method" value="whatsapp">
+                                    WhatsApp
+                                </label>
+                                <label for="telefono" class="contact-option">
+                                    <input type="radio" id="telefono" name="contact_method" value="telefono">
+                                    Teléfono
+                                </label>
+                                <label for="email" class="contact-option">
+                                    <input type="radio" id="email" name="contact_method" value="email">
+                                    Email
+                                </label>
+                            </div>
+                        </div>
 
-        <!-- Campo Ciudad -->
-        <div class="form-group">
-            <label for="ciudad">Ciudad</label>
-            <input type="text" id="ciudad" name="ciudad" required class="form-control">
-        </div>
+                        <!-- Campo Celular -->
+                        <div class="form-group">
+                            <label for="celular">Celular</label>
+                            <input type="tel" id="celular" name="celular" required class="form-control">
+                        </div>
 
-        <!-- Botón de Enviar -->
-        <button type="submit" class="btn btn-primary">Enviar</button>
-    </form>
+                        <!-- Campo Email -->
+                        <div class="form-group">
+                            <label for="email-form">Email</label>
+                            <input type="email" id="email-form" name="email" required class="form-control">
+                        </div>
 
-    <!-- Mensaje de privacidad fuera del formulario pero dentro del contenedor -->
-    <p class="privacy-text">(*) Nos tomamos muy en serio el SPAM, solo utilizamos la información brindada para realizar el contacto que nos indiques. Luego eliminamos la misma.</p>
-</div>
+                        <!-- Campo Provincia -->
+                        <div class="form-group">
+                            <label for="provincia">Provincia</label>
+                            <input type="text" id="provincia" name="provincia" required class="form-control">
+                        </div>
+
+                        <!-- Campo Ciudad -->
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad</label>
+                            <input type="text" id="ciudad" name="ciudad" required class="form-control">
+                        </div>
+
+                        <!-- Botón de Enviar -->
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+
+                    <!-- Mensaje de privacidad fuera del formulario pero dentro del contenedor -->
+                    <p class="privacy-text">(*) Nos tomamos muy en serio el SPAM, solo utilizamos la información
+                        brindada para realizar el contacto que nos indiques. Luego eliminamos la misma.</p>
+                </div>
 
 
                 <!-- Contenedor 3 -->
                 <div class="additional-container">
-                    <h3>Otro Elemento</h3>
-                    <p>Aquí va otro elemento adicional.</p>
+                    <!-- Texto superpuesto con fondo blanco transparente -->
+                    <div class="overlay-text">
+                        <h3>ACERCATE A NUESTRA EMPRESA</h3>
+                        <p>Y VISITANOS PERSONALMENTE</p>
+                    </div>
+
+                    <!-- Agregar el iframe de Google Maps -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26270.582000425333!2d-58.38274559999999!3d-34.60864335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac630121623%3A0x53386f2ac88991a9!2sTeatro%20Col%C3%B3n!5e0!3m2!1ses!2sar!4v1742407359793!5m2!1ses!2sar"
+                        width="100%" height="800" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
+
+
+
             </div>
         </div>
     </section>

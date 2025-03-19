@@ -198,6 +198,7 @@ body {
 ================================== */
 
 #productos {
+  background-color: #f5f5f5;
   padding-bottom: 0 !important;
   padding-top: 20px !important;
   margin-bottom: 0 !important;
@@ -363,7 +364,8 @@ padding-right: 5px;
   font-family: "Ubuntu Bold", sans-serif;
   font-weight: bold;
   font-size: clamp(25px, 6vw, 50px);
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .custom-subtitle {
@@ -486,7 +488,8 @@ padding-right: 5px;
    Sección CONTACTO - Contenedor Flexible
 ================================== */
 #contacto {
-  padding-top: 30px;
+  background-color: #f5f5f5;
+  padding-top: 50px;
   padding-bottom: 30px;
   min-height: 1100px;
 }
@@ -505,9 +508,8 @@ padding-right: 5px;
   width: 243px;
   min-height: 800px;
   padding: 20px;
-  background-color: #f0f0f0; /* Color de fondo del contenedor */
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+
 }
 
 /* Título para redes sociales */
@@ -560,14 +562,62 @@ padding-right: 5px;
 
 
 
+
+/* ================================
+   Estilo para el contenedor con texto superpuesto mapa 
+================================== */
 .additional-container {
+  position: relative; /* Necesario para posicionar el texto sobre el mapa */
   width: 596px;
-  min-height: 800px;
-  padding: 20px;
-  background-color: #e8e8e8; /* Color de fondo del contenedor */
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 800px;
 }
+
+.overlay-text {
+  position: absolute; /* Posiciona el texto de forma absoluta sobre el mapa */
+  top: 0; /* Coloca el texto en la parte superior */
+  left: 0; /* Alinea el texto a la izquierda */
+  width: 100%; /* Hace que el fondo cubra todo el ancho del contenedor */
+  background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco con transparencia */
+  padding: 20px;
+  box-sizing: border-box; /* Incluye el padding dentro del ancho total */
+  text-align: center; /* Centra el texto dentro del contenedor */
+  border-bottom: 2px solid #ddd; /* Línea de separación sutil debajo del texto */
+}
+
+.overlay-text h3, .overlay-text p {
+  color: #000; /* Color negro para el texto */
+  font-family: "Ubuntu Bold", sans-serif;
+}
+
+.overlay-text h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.overlay-text p {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+/* Agregar sombra al texto para mejorar la legibilidad */
+.overlay-text h3, .overlay-text p {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* ================================
+   Responsividad para pantallas pequeñas mapa
+================================== */
+@media (max-width: 768px) {
+  .overlay-text h3 {
+    font-size: 20px;
+  }
+
+  .overlay-text p {
+    font-size: 16px;
+  }
+}
+
+
 
 /* ================================
  Responsividad
@@ -594,8 +644,7 @@ padding-right: 5px;
   height: 800px;
   padding: 20px;
   background-color: #fff;  /* Fondo blanco para el formulario */
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
   max-width: 100%; /* Asegura que el contenedor no se desborde */
   box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
 }
