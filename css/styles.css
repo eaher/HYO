@@ -93,12 +93,26 @@ body {
 /* Estilo del navbar */
 .navbar {
   background-color: white !important;
-  transition: top 0.3s ease-in-out;
-  position: fixed;
+  position: fixed; /* Fijo en la parte superior */
   width: 100%;
   z-index: 1000;
   top: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: top 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Estilo para el navbar cuando se vuelve sticky */
+.navbar-sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Ajuste para ocultar el navbar cuando desaparezca */
+.navbar {
+  top: 0;
+  transition: top 0.3s ease-in-out;
 }
 
 /* Estilo para el botón de menú hamburguesa (sandwich) */
