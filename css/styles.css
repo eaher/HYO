@@ -178,7 +178,7 @@ body {
   padding-left: 0;
   padding-right: 0;
   text-align: center;
-  min-height: 1000px;
+  min-height: 100vh;
 }
 
 /* Estilo para el carrusel de la sección de inicio */
