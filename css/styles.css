@@ -206,6 +206,19 @@ body {
   margin-top: 10px;
 }
 
+@media (max-width: 768px) {
+/* Título de la sección de inicio */
+#inicio h1 {
+
+  margin-top: 50px;
+}
+
+/* Subtítulo de la sección de inicio */
+#inicio p {
+
+  margin-top: 40px;
+}
+  }
 
 /* ================================
    Sección PRODUCTOS
@@ -234,6 +247,15 @@ body {
   font-size: clamp(15px, 3vw, 25px);
   margin-top: 10px;
   text-align: center;
+}
+/* Asegúrate de que el título dentro de las cards no tenga estilo de enlace */
+.product-card-link {
+  text-decoration: none; /* Elimina el subrayado */
+  color: inherit; /* El color del texto será el mismo que el de su contenedor */
+}
+
+.product-card .card-title {
+  color: inherit; /* Mantiene el color original del texto sin cambio al ser parte de un enlace */
 }
 
 /* Contenedor de tarjetas con Flexbox */
@@ -437,20 +459,16 @@ padding-right: 5px;
 
 /* Especificación de los tamaños exactos de las imágenes */
 .empresa-left .empresa-img:first-child img {
-  width: 485px;
-  height: 168px;
+  width: 500px;
+  height: 339px;
   min-width: 300px; /* Ancho mínimo de 300px */
 }
 
-.empresa-left .empresa-img:nth-child(2) img {
-  width: 485px;
-  height: 168px;
-  min-width: 300px; /* Ancho mínimo de 300px */
-}
+
 
 .empresa-middle .empresa-img img {
   width: 300px;
-  height: 216px;
+  min-height: 222px;
   min-width: 300px; /* Ancho mínimo de 300px */
 }
 
@@ -523,6 +541,7 @@ padding-right: 5px;
   min-height: 800px;
   padding: 20px;
   background-color: transparent;
+  margin-top: 100px;
 
 }
 
@@ -629,6 +648,17 @@ padding-right: 5px;
   .overlay-text p {
     font-size: 16px;
   }
+  .contact-left-container {
+    width: 243px;
+    min-height: 800px;
+    padding: 20px;
+    background-color: transparent;
+
+  
+  }
+
+
+
 }
 
 
@@ -817,19 +847,9 @@ footer {
 }
 
 /* ======================
-       Aceros -Aluminio - PVC 
+       PRODUCTOS ESTO APLICA PARA TODAS LAS PAGES DE PRODUCTOS 
 ======================== */
-
-.section-materiales {
-  width: 100%;
-  max-width: 1480px;
-  margin: 0 auto;
-  height: auto;
-}
-
-
-
-#inicio-materiales .img-inicio-aceros {
+#inicio-aceros .img-inicio-aceros {
   width: 100%;
   max-width: 1480px;
   height: 260px;
@@ -840,7 +860,7 @@ footer {
   position: absolute;
   top: 10px;
   right: 10px;
-  color: white;
+  color: black;
   padding: 10px;
   font-size: 20px;
   display: none;
@@ -858,13 +878,17 @@ footer {
   width: 200px;
   height: 200px;
   overflow: hidden;
+  background-color: #ededed;
+  border-radius: 10%;
 }
 
 .card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 7px;
+  border-radius: 10%;
+  border:  solid ;
+ 
 }
 
 .card-image:hover .icon-lupa {
@@ -875,6 +899,7 @@ footer {
   width: 100%;
   max-width: 400px;
   height: auto;
+  background-color: #ededed;
 }
 
 @media (max-width: 768px) {
@@ -894,6 +919,7 @@ footer {
   line-height: 1;
 }
 
+
 /* ======================
        Sección Fichas Técnicas
 ======================== */
@@ -911,7 +937,7 @@ footer {
   max-width: 1480px; /* Asegura que el máximo ancho no exceda el contenedor principal */
 }
 
-@media (max-width: 1320px) {
+@media (max-width: 1480px) {
   .cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -981,4 +1007,279 @@ footer {
   margin: 0 auto;
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+/* ======================
+       Pisos
+======================== */
+
+
+.section-pisos {
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.section-marcas-pisos{
+
+  width: 100%;
+  max-width: 1480px;
+  margin: 0 auto;
+  height: auto;
+
+}
+
+#inicio-pisos .img-inicio-pisos {
+  width: 100%;
+  max-width: 1320px;
+  height: 260px;
+  object-fit: cover;
+}
+
+.hero-text-pisos {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  padding: 0 15px;
+}
+
+/* ======================
+       Sección Marcas - Pisos (Placeholder)
+======================== */
+.marca-placeholder {
+  width: 310px;
+  height: 310px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+  border: 2px solid #999;
+}
+
+.marcas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.marcas-text {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  padding: 0 15px;
+}
+
+@media (max-width: 1320px) {
+  .marcas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .marca-placeholder {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .marcas-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======================
+       Contenedor pisos  
+======================== */
+#contenedor-pisos {
+  padding: 40px 0;
+}
+
+.contenedor-pisos {
+  width: 100%;
+  max-width: 1480px;
+  min-height: 780px;
+  border: 1px solid grey;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .contenedor-pisos {
+    min-height: auto;
+    padding: 10px;
+  }
+}
+
+/* ======================
+   Elementos de la Sección Pisos
+======================== */
+.elementos-pisos {
+  text-align: left;
+}
+
+.titulo-piscinas {
+  margin-left: 75px;
+  margin-top: 30px;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.linea-titulo {
+  margin-left: 75px;
+  width: 100%;
+  max-width: 790px;
+  height: 2pt;
+  background-color: grey;
+  margin-bottom: 20px;
+}
+
+.descripcion-piscinas {
+  margin-left: 75px;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  color: #333;
+}
+
+@media (max-width: 1320px) {
+  .linea-titulo {
+    max-width: 100%;
+  }
+
+  .titulo-piscinas {
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 2rem;
+  }
+
+  .linea-titulo {
+    margin-left: 10px;
+    max-width: 70%;
+    height: 2pt;
+    background-color: grey;
+  }
+
+  .descripcion-piscinas {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+}
+
+.titulo-comercializados {
+  margin-left: 75px;
+  margin-top: 30px;
+  font-size: 2rem;
+}
+
+@media (max-width: 1320px) {
+  .titulo-comercializados {
+    margin-left: 10px;
+    font-size: 1.8rem;
+  }
+}
+
+/* ======================
+       Card Pisos
+======================== */
+.card-pisos {
+  width: 172px;
+  text-align: left;
+}
+
+.card-img-placeholder {
+  width: 172px;
+  height: 172px;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.card-title-pisos {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.card-text-pisos {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* ======================
+   Contenedor Card e Imagen (Pisos)
+======================== */
+.card-and-extra {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.image-derecha {
+  width: 292px;
+  height: 292px;
+  background-color: #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+/* ======================
+   Agrupación de Grupos de Cards
+======================== */
+.card-groups {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.left-group {
+  margin-left: 75px;
+}
+
+.right-group {
+  margin-right: 50px;
+}
+
+/* ======================
+   Responsividad para Contenedor Card e Imagen
+======================== */
+@media (max-width: 768px) {
+  .card-and-extra {
+    flex-direction: column;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+
+  .image-derecha {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .card-groups {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .left-group,
+  .right-group {
+    margin: 0;
+  }
 }
