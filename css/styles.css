@@ -229,6 +229,7 @@ body {
   padding-bottom: 0 !important;
   padding-top: 20px !important;
   margin-bottom: 0 !important;
+  height: auto;
   min-height: 1000px;
 }
 
@@ -393,7 +394,9 @@ padding-right: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
   min-height: 100vh; /* Asegura que la sección tenga al menos el alto de la pantalla */
+  
 }
 
 .custom-title {
@@ -881,8 +884,7 @@ footer {
   height: 100%;
   object-fit: cover;
   border-radius: 10%;
-  border:  solid ;
- 
+  border: #c4c2c2 solid 1px ;
 }
 
 .card-image:hover .icon-lupa {
