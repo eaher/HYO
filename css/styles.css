@@ -214,6 +214,16 @@ body {
 
   margin-top: 40px;
 }
+
+#inicio {
+height: auto !important;
+}
+
+.section {
+  height: auto !important; /* En vez de 100vh */
+
+}
+
   }
 
 /* ================================
@@ -587,9 +597,10 @@ body {
   }
   .contact-left-container {
     width: 243px;
-    min-height: 800px;
+    min-height: auto !important;
     padding: 20px;
     background-color: transparent;
+    margin: 0;
  
   }
 }
@@ -734,8 +745,9 @@ input[type="text"], input[type="email"], input[type="tel"] {
 footer {
   background-color: #343a40;
   color: #ffffff;
-  padding: 20px 0;
+ margin-bottom: 10px;
   text-align: center;
+  height: auto;
 }
 
 
