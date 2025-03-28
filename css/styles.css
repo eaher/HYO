@@ -772,7 +772,7 @@ input[type="tel"] {
   .additional-container {
       width: 100%;
       margin-bottom: 10px;
-      height: 70vh;
+      height: 80vh;
   }
 
   .privacy-wrapper{
@@ -872,6 +872,7 @@ input[type="tel"] {
   }
   .contact-form-container .btn {
       width: 100%;
+      margin-top: 1.5rem;
       padding: 5px;
       background-color: #3eb2ae;
       color: white;
