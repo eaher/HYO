@@ -775,7 +775,9 @@ input[type="tel"] {
       height: 70vh;
   }
 
-
+  .privacy-wrapper{
+    padding-top: 50px;
+  }
 
 #contacto.section.contacto-section{
   padding-bottom: 0;
@@ -786,6 +788,7 @@ input[type="tel"] {
 }
   .contact-form-container{
       width: 300px;
+
   }
 
   .contact-methods {
