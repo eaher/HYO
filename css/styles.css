@@ -787,7 +787,7 @@ input[type="tel"] {
   padding-bottom: 0;
 }
   .contact-form-container{
-      width: 300px;
+      width: 100vw;
 
   }
 
