@@ -1,24 +1,39 @@
-/* ================================
-   General
-================================== */
 
-/* Estilo general para el cuerpo */
+/* General */
+
 body {
-  font-family: "Ubuntu Regular";
+  font-family: "Ubuntu Regular", Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Contenedor con un ancho máximo de 1480px para todo */
 .custom-container {
-  padding-left: 1rem; /* o 16px */
-  padding-right: 1rem;
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 1rem;
+  padding-top: 0;
 }
 
+.section {
+  width: 77vw;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 
+}
+
+@media (max-width: 768px) {
+  .section {
+      width: 100%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      min-height: auto;
+  }
+}
 
 /* ================================
-   Fuentes Personalizadas
+ Fuentes Personalizadas
 ================================== */
 
 /* Fuente: Ubuntu-Bold */
@@ -85,19 +100,22 @@ body {
   font-style: normal;
 }
 
+
 /* ================================
-   Navbar
+ Navbar
 ================================== */
 
 /* Estilo del navbar */
 .navbar {
   background-color: white !important;
-  position: fixed; /* Fijo en la parte superior */
+  position: fixed;
+  /* Fijo en la parte superior */
   width: 100%;
   z-index: 1000;
   top: 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: top 0.3s ease-in-out; /* Transición suave */
+  transition: top 0.3s ease-in-out;
+  /* Transición suave */
 }
 
 /* Estilo para el navbar cuando se vuelve sticky */
@@ -116,16 +134,17 @@ body {
 
 /* Estilo para el botón de menú hamburguesa (sandwich) */
 .navbar-toggler {
-  margin-right: 5px; /* Añadir margen derecho de 5px */
+  margin-right: 5px;
+  /* Añadir margen derecho de 5px */
 }
 
 /* Estilo del logo */
 .navbar .navbar-brand img {
-  max-height: 60px;  /* Establece el máximo alto a 60px */
-  max-width: 135px;  /* Establece el máximo ancho a 135px */
-  width: auto;       /* Mantiene la relación de aspecto */
-  height: auto;      /* Mantiene la relación de aspecto */
-  margin-left: 20px;
+  max-height:50px;
+  max-width: 120px;
+  width: auto;
+  height: auto;
+  margin-left: 13vw;
 }
 
 /* Estilo de los enlaces dentro del navbar */
@@ -144,10 +163,7 @@ body {
   width: 100%;
 }
 
-.navbar .d-flex {
-  gap: 8px;
-  margin-right: 20px;
-}
+
 
 .social-icon {
   width: 30px;
@@ -155,639 +171,728 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-/* ================================
-   Secciones Generales
-================================== */
 
-/* Sección que ocupa toda la pantalla */
-.section {
-  height: auto; /* En vez de 100vh */
-  min-height: 100vh;
+}
+
+.navbar .d-flex {
+  gap: 8px;
+  margin-right: 14vw;
 }
 
 /* ================================
-   Sección INICIO
+ INICIO
 ================================== */
 
-/* Estilo para la sección de inicio */
-#inicio {
-  padding-left: 0;
-  padding-right: 0;
-  text-align: center;
-  min-height: 100vh;
+
+/* Carrusel */
+#inicio .carousel {
+  max-height: 68vh;
+  overflow: hidden;
 }
 
-/* Estilo para el carrusel de la sección de inicio */
-.carousel-inner img {
-  width: 100%;
-  height: auto;
+#inicio .carousel img {
   object-fit: cover;
-  max-height: none; /* Quitar el límite para que se adapte al contenido */
+  width: 100%;
+  height: 68vh;
 }
 
-/* Título de la sección de inicio */
 #inicio h1 {
-  font-family: "Ubuntu Bold", sans-serif; /* Usar Ubuntu-Bold */
+  font-family: "Ubuntu Bold", sans-serif;
   font-weight: bold;
-  font-size: clamp(25px, 6vw, 50px); /* Ajuste de tamaño para pantallas grandes y pequeñas */
-  margin-top: 30px;
+  font-size: clamp(25px, 2.5vw, 50px);
+  margin-top: 1rem;
+  text-align: center;
 }
 
-/* Subtítulo de la sección de inicio */
 #inicio p {
-  font-family: "Ubuntu Bold"; /* Usar Ubuntu-Bold */
+  font-family: "Ubuntu Bold";
   font-weight: bold;
-  font-size: clamp(15px, 3vw, 25px); /* Tamaño de fuente más pequeño que el título */
-  margin-top: 10px;
+  font-size: clamp(15px, 1.4vw, 25px);
+  margin-top: 0.5rem;
+  margin-bottom: 4rem;
+  text-align: center;
 }
 
+
+
+
+
+/* ================================
+Responsivas Nav + Inicio
+================================== */
 @media (max-width: 768px) {
-/* Título de la sección de inicio */
-#inicio h1 {
 
-  margin-top: 50px;
-}
+  #inicio .carousel {
+      height: auto;
+      max-height: none;
+    }
 
-/* Subtítulo de la sección de inicio */
-#inicio p {
+    #inicio .carousel img {
+      height: auto;
+      max-height: 55vh; /* o el valor que te resulte cómodo */
+      object-fit: contain; /* ✅ muestra la imagen entera sin recortar */
+    }
+  #inicio h1 {
+      font-family: "Ubuntu Bold", sans-serif;
+      font-weight: bold;
+      font-size: clamp(15px, 6vw, 30px);
+      margin-top: 1rem;
+      text-align: center;
+  }
 
-  margin-top: 40px;
-}
+  #inicio p {
+      font-family: "Ubuntu Bold";
+      font-weight: bold;
+      font-size: clamp(10px, 3vw, 20px);
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      text-align: center;
+  }
 
-#inicio {
-height: auto !important;
-}
+  .navbar .navbar-brand img {
 
-.section {
-  height: auto !important; /* En vez de 100vh */
-
-}
+      margin-left: 1rem;
 
   }
 
-/* ================================
-   Sección PRODUCTOS
-================================== */
 
-#productos {
+
+
+
+
+}
+
+
+/*================================
+Sección PRODUCTOS
+==================================*/
+
+.productos-bg {
   background-color: #f5f5f5;
-  padding-bottom: 0 !important;
-  padding-top: 20px !important;
-  margin-bottom: 0 !important;
-  height: auto;
-  min-height: 1000px;
+  padding-top: 5px;
+  padding-bottom: 60px;
+  margin-bottom: 0;
+
 }
 
 /* Títulos y subtítulos */
-#productos h2 {
+#productos h2,
+.custom-title-prod {
   font-family: "Ubuntu Bold", sans-serif;
   font-weight: bold;
-  font-size: clamp(25px, 6vw, 50px);
-  margin-top: 30px;
+  font-size: clamp(25px, 2.5vw, 50px);
+  margin-top: clamp(20px, 1.5vh, 50px);
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+#productos p,
+.custom-subtitle-prod {
+  font-family: "Ubuntu Bold";
+  font-weight: bold;
+  font-size: clamp(15px, 1.4vw, 25px);
+  margin-top: clamp(10px, 1.2vw, 50px);
+  margin-bottom: 1rem;
   text-align: center;
 }
 
-#productos p {
-  font-family: "Ubuntu Bold", sans-serif;
-  font-weight: bold;
-  font-size: clamp(15px, 3vw, 25px);
-  margin-top: 10px;
-  text-align: center;
-}
-/* Asegúrate de que el título dentro de las cards no tenga estilo de enlace */
-.product-card-link {
-  text-decoration: none; /* Elimina el subrayado */
-  color: inherit; /* El color del texto será el mismo que el de su contenedor */
-}
-
-.product-card .card-title {
-  color: inherit; /* Mantiene el color original del texto sin cambio al ser parte de un enlace */
-}
-
-/* Contenedor de tarjetas con Flexbox */
+/* Contenedor de tarjetas */
 .product-cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 5px; /* Espaciado entre tarjetas */
-  margin-top: 30px;
+  gap: 10px;
+  margin-top: 1.5rem;
 }
 
-/* Estilo de las tarjetas */
+.product-card-link {
+  display: flex;
+  flex: 1 1 calc(20% - 10px);
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+}
+
 .product-card {
-  flex: 1 1 19%; /* Ajuste para las tarjetas, asegurando que haya 5 en una fila */
-  border: none;
-  box-shadow: none;
+  width: 100%;
+  max-width: 281px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: none;
+  box-shadow: none;
 }
 
 .card-img-top {
-  width: 100%; /* Ajusta al 100% del contenedor */
-  max-width: 281px; /* Máximo ancho de las imágenes */
-  height: 378px; /* Altura fija */
-  object-fit: cover; /* Ajusta la imagen para que cubra el área sin distorsionarla */
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  max-width: 281px;
+  max-height: 378px;
 }
 
+/* Cuerpo */
 .card-body {
   text-align: center;
-  padding: 10px;
+  padding: 0px;
 }
 
 .card-title {
-  font-family: "Ubuntu Bold"!important;
+  font-family: "Ubuntu Bold" !important;
   font-weight: bold;
-  font-size: 20px !important;
+  font-size: clamp(16px, 1.5vw, 20px) !important;
+  overflow-wrap: break-word;
+  margin-top: 0.3rem;
 }
 
 .card-text {
   font-family: "Ubuntu Light" !important;
   font-weight: normal;
-  font-size: 15px !important;
+  font-size: clamp(13px, 1vw, 15px) !important;
   color: #555;
+  overflow-wrap: break-word;
+  max-width: 260px;
+  line-height: 1.2;
+  margin-bottom: 0px !important;
 }
 
-/* Estilo para los párrafos debajo de las tarjetas */
+/* Párrafos finales */
 .product-info {
-  margin-top: 40px;
+  margin-top: 0.2rem;
   text-align: center;
 }
 
 .info-text {
   font-family: "Ubuntu Light", sans-serif;
   font-weight: normal;
-  font-size: 16px;
+  font-size: clamp(14px, 1.5vw, 16px);
   color: #333;
   margin-bottom: 15px;
-  line-height: 0.7;
+  line-height: 0.4;
+  overflow-wrap: break-word;
 }
 
+/* Mejora visual en pantallas de alta resolución */
+@media (min-resolution: 144dpi) {
+  .card-img-top {
+      aspect-ratio: auto;
+      height: auto;
+  }
+
+  .product-card {
+      min-width: 240px;
+  }
 
 
+  .product-info {
+      margin-top: 2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
 
-/* ================================
-   Sección EMPRESA
-================================== */
+  .info-text {
+      font-size: 15px;
+      /* Tamaño legible */
+      line-height: 1.4;
+      /* Buena separación entre líneas */
+      margin-bottom: 1.2rem;
+      /* Aire entre párrafos */
+  }
+}
 
-
+/*================================
+Sección EMPRESA
+==================================*/
 #empresa {
-  padding: 50px 0;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
   height: auto;
-  min-height: 100vh; /* Asegura que la sección tenga al menos el alto de la pantalla */
-  
 }
 
 .custom-title {
   font-family: "Ubuntu Bold", sans-serif;
   font-weight: bold;
-  font-size: clamp(25px, 6vw, 50px);
-  margin-bottom: 30px;
+  font-size: clamp(25px, 2.6vw, 50px);
+  margin-bottom: clamp(20px, 2vh, 40px);
   text-align: center;
+  overflow-wrap: break-word;
 }
 
 .custom-subtitle {
   font-family: "Ubuntu Regular", sans-serif;
-  font-size: clamp(15px, 3vw, 25px);
+  font-size: clamp(15px, 1.4vw, 25px);
   color: #555;
-  margin-bottom: 40px;
+  margin-bottom: clamp(20px, 2vh, 50px);
+  overflow-wrap: break-word;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Contenedor flexible para las imágenes */
+/* Contenedor de imágenes */
 .empresa-flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
-  margin-top: 40px;
-  align-items: center; /* Centra las imágenes verticalmente */
-  height: 100%; /* Asegura que las imágenes se centren verticalmente */
+  margin-top: 2rem;
+  align-items: center;
 }
 
-/* Columna izquierda (Imagen 1 y 2) */
 .empresa-left {
-  flex: 1 1 48%; /* Ocupa el 48% del ancho */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centra las imágenes verticalmente */
-}
-
-/* Columna central (Imagen 3) */
-.empresa-middle {
-  flex: 1 1 24%; /* Ocupa el 24% del ancho */
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Centra la imagen verticalmente */
-}
-
-/* Columna derecha (Imagen 4) */
-.empresa-right {
-  flex: 1 1 24%; /* Ocupa el 24% del ancho */
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Centra la imagen verticalmente */
-}
-
-/* Estilo de cada imagen */
-.empresa-img {
-  margin-bottom: 20px;
-}
-
-.empresa-img img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-/* Especificación de los tamaños exactos de las imágenes */
-.empresa-left .empresa-img:first-child img {
-  width: 500px;
-  height: 339px;
-  min-width: 300px; /* Ancho mínimo de 300px */
-}
-
-
-
-.empresa-middle .empresa-img img {
-  width: 300px;
-  min-height: 222px;
-  min-width: 300px; /* Ancho mínimo de 300px */
-}
-
-.empresa-right .empresa-img img {
-  width: 260px;
-  height: 555px;
-  min-width: 260px; /* Sin cambios en pantallas pequeñas */
-}
-
-/* Responsividad: Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-  .empresa-flex {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .empresa-left, .empresa-middle, .empresa-right {
-    flex: 1 1 100%; /* Las columnas ocupan el 100% del ancho en pantallas pequeñas */
-  }
-
-  .empresa-img img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  /* Ajustes específicos para imágenes */
-  .empresa-left .empresa-img:first-child img,
-  .empresa-left .empresa-img:nth-child(2) img {
-    width: 100%; /* Se ajusta al ancho del contenedor */
-    min-width: 300px;
-    height: auto;
-  }
-
-  .empresa-middle .empresa-img img {
-    width: 100%;
-    min-width: 300px;
-    height: auto;
-  }
-
-  .empresa-right .empresa-img img {
-    width: 100%;
-    min-width: 260px;
-    height: auto;
-  }
-}
-
-/* ================================
-   Sección CONTACTO - Contenedor Flexible
-================================== */
-#contacto {
-  background-color: #f5f5f5;
-  padding-top: 10px;
-  padding-bottom: 30px;
-  min-height: 900px;
-}
-
-.contact-flex-container {
-  display: flex;
-  justify-content: space-between; /* Alinea los tres contenedores en una fila */
-  gap: 20px; /* Espaciado entre los tres contenedores */
-  align-items: flex-start;
-}
-
-/*===========================
- Estilo para el contenedor de redes sociales
- ================================= */
-.contact-left-container {
-  width: 243px;
-  min-height: 700px;
-  padding: 20px;
-  background-color: transparent;
-  margin-top: 100px;
-
-}
-
-/* Título para redes sociales */
-.social-title {
-  font-family: "Ubuntu Bold", sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Estilo para los iconos de redes sociales */
-.social-icons {
-  display: flex;
-  flex-direction: column;  /* Apilamos los iconos verticalmente */
-  gap: 15px;  /* Espaciado entre iconos */
-  justify-content: center;
-  align-items: center;  /* Centra los iconos */
-}
-
-.social-icon-contact {
-  width: 90px;
-  height: 90px;
+  flex: 1 1 30%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.social-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+.empresa-middle {
+  flex: 1 1 38%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.social-icon:hover img {
+.empresa-right {
+  flex: 1 1 22%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/* Imagen individual */
+.empresa-img img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  object-fit: cover;
+
+}
+
+/* Imagen izquierda más grande */
+.empresa-left .empresa-img img {
+  max-width: 380px;
+  /* antes estaba en 280px aprox */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/* Imagen izquierda más grande */
+.empresa-middle .empresa-img img {
+  max-width: 20vw;
+  /* antes estaba en 280px aprox */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+.empresa-right .empresa-img img {
+  max-height: 70vh;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* ================================
+   Responsive
+================================ */
+@media (max-width: 992px) {
+
+  #empresa {
+      padding-top: 1.5rem;
+  }
+
+  .empresa-left,
+  .empresa-middle,
+  .empresa-right {
+      flex: 1 1 100%;
+  }
+
+  .empresa-img img {
+      max-width: 90%;
+      height: auto;
+  }
+
+  /* Corregimos solo la imagen del medio */
+  .empresa-middle .empresa-img img {
+      max-width: 90vw;
+      object-fit: contain;
+  }
+}
+
+
+
+/* ================================
+ Sección CONTACTO (Diseño general)
+================================ */
+#contacto {
+  background-color: #f5f5f5;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  min-height: 100vh;
+}
+
+#contacto .custom-title {
+  font-family: "Ubuntu Bold", sans-serif;
+  font-size: clamp(25px, 2.5vw, 50px);
+  text-align: center;
+  margin-bottom: clamp(10px, 2vh, 50px);
+  color: #000; /* o el color que quieras usar */
+}
+
+
+
+.contacto-bg {
+  background-color: #f5f5f5;
+}
+
+/* Contenedor flexible general */
+.contact-flex-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* ================================
+   Redes Sociales (Columna izquierda)
+================================ */
+.contact-left-container {
+  flex: 1 1 20%;
+  min-width: 12vw;
+  padding: 20px;
+  margin-top: 6vh;
+}
+
+.social-title {
+  font-family: "Ubuntu Bold", sans-serif;
+  font-weight: bold;
+  font-size: clamp(16px, 1.4vw, 20px);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-icon-contact img {
+  width: clamp(30px, 10vw, 90px);
+  height: clamp(30px, 10vh, 90px);
+  object-fit: contain;
+}
+
+.social-icon-contac:hover img {
   transform: scale(1.1);
   opacity: 0.8;
 }
 
-/* Estilo para el texto de la página web */
 .website-text {
   font-family: "Ubuntu Regular", sans-serif;
-  font-size: 16px;
-  font-weight: normal;
+  font-size: clamp(14px, 1.2vw, 16px);
   color: #000;
   text-align: center;
   margin-top: 20px;
 }
 
+/* ================================
+ Formulario de Contacto
+================================ */
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 45%;
+  min-width: 15vw;
+
+}
+
+.contact-form-container {
+  width: 100%;
+  padding: 20px;
+  padding-top: 1rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  height: 88vh;
+}
+
+.contact-form-container h3,
+label,
+.contact-option {
+  font-family: "Ubuntu Regular", sans-serif;
+}
+
+.contact-form-container h3 {
+  font-family: "Ubuntu Bold", sans-serif;
+  font-size: clamp(10px, 1vw, 20px);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 1vh;
+}
+
+label {
+  font-size: clamp(10px, 0.9vw, 16px);
+  margin-bottom: 5px;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 0.9vh;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: clamp(10px, 0.9vw, 14px);
+}
 
 
+.contact-methods {
+  display: flex;
+  gap: 15px;
+  margin-top: 1vh;
+}
+
+.contact-option input {
+  margin-right: 6px;
+}
+
+.contact-option {
+  font-size: clamp(10px, 0.9vw, 15px);
+}
+
+.contact-form-container .btn {
+  width: 100%;
+  padding: 5px;
+  background-color: #3eb2ae;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: clamp(10px, 0.9vw, 16px);
+  cursor: pointer;
+}
+
+.contact-form-container .btn:hover {
+  background-color: #3eb2ae;
+}
+
+.privacy-wrapper {
+  width: 100%;
+  padding-top: 10px;
+}
+
+.privacy-text {
+  font-size: clamp(10px, 1vw, 12px);
+  color: #777;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 100%;
+}
 
 /* ================================
-   Estilo para el contenedor con texto superpuesto mapa 
-================================== */
+ Mapa
+================================ */
+
 .additional-container {
-  position: relative; /* Necesario para posicionar el texto sobre el mapa */
-  width: 596px;
-  height: 700px;
+  flex: 1 1 30%;
+  min-width: 15vw;
+  width: 100%;
+  position: relative;
+  height: 88vh;
+  box-sizing: border-box;
+}
+.additional-container iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  border: none;
 }
 
 .overlay-text {
-  position: absolute; /* Posiciona el texto de forma absoluta sobre el mapa */
-  top: 0; /* Coloca el texto en la parte superior */
-  left: 0; /* Alinea el texto a la izquierda */
-  width: 100%; /* Hace que el fondo cubra todo el ancho del contenedor */
-  background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco con transparencia */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 20px;
-  box-sizing: border-box; /* Incluye el padding dentro del ancho total */
-  text-align: center; /* Centra el texto dentro del contenedor */
-  border-bottom: 2px solid #ddd; /* Línea de separación sutil debajo del texto */
-}
-
-.overlay-text h3, .overlay-text p {
-  color: #000; /* Color negro para el texto */
-  font-family: "Ubuntu Bold", sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  border-bottom: 2px solid #ddd;
 }
 
 .overlay-text h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
+  font-size: clamp(10px, 1.2vw, 22px);
+  font-family: "Ubuntu Bold", sans-serif;
+  color: #000;
 
-.overlay-text p {
-  font-size: 18px;
-  margin-top: 0;
 }
-
-/* Agregar sombra al texto para mejorar la legibilidad */
-.overlay-text h3, .overlay-text p {
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
-
 /* ================================
-   Responsividad para pantallas pequeñas mapa
-================================== */
+ Media Query (Mobile < 768px)
+================================ */
 @media (max-width: 768px) {
-  .overlay-text h3 {
-    font-size: 20px;
+  .contact-form-container {
+      width: 100%;
+      padding: 20px;
+      padding-top: 1rem;
+      background-color: #fff;
+      box-sizing: border-box;
+      height: 88vh;
   }
 
-  .overlay-text p {
-    font-size: 16px;
+  .social-icon-contact img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
   }
-  .contact-left-container {
-    width: 243px;
-    min-height: auto !important;
-    padding: 20px;
-    background-color: transparent;
-    margin: 0;
- 
-  }
-}
 
-/* ================================
- Responsividad
-================================== */
-@media (max-width: 768px) {
   .contact-flex-container {
       flex-direction: column;
       align-items: center;
   }
 
+  .form-wrapper,
   .contact-left-container,
   .contact-form-container,
   .additional-container {
-      width: 100%; /* Los tres contenedores ocuparán el 100% del ancho en pantallas pequeñas */
-      margin-bottom: 20px;
-  }
-}
-
-/* ================================
-   Contenedor del Formulario
-================================== */
-.contact-form-container {
-  width: 602px;
-  height: 750px;
-  padding: 20px;
-  background-color: #fff;  /* Fondo blanco para el formulario */
-
-  max-width: 100%; /* Asegura que el contenedor no se desborde */
-  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
-}
-
-/* Título del formulario */
-.contact-form-container h3 {
-  font-family: "Ubuntu Bold", sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-/* Estilo general de los campos del formulario */
-.form-group {
-  margin-bottom: 10px;
-}
-
-label {
-  font-family: "Ubuntu Regular", sans-serif;
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 8px;
-  display: block;
-}
-
-input[type="text"], input[type="email"], input[type="tel"] {
-  width: 100%;
-  padding: 12px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  font-size: 14px;
-}
-
-.contact-methods {
-  display: flex;
-  gap: 20px;
-  margin-top: 10px;
-}
-
-.contact-option input {
-  margin-right: 8px;
-}
-
-.contact-option {
-  font-family: "Ubuntu Regular", sans-serif;
-  font-size: 16px;
-}
-
-/* Botón de enviar */
-.contact-form-container .btn {
-  width: 100%;
-  padding: 5px;
-  background-color: #0e56f6;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-.contact-form-container .btn:hover {
-  background-color: #004aad;
-}
-
-/* Estilo para el mensaje de privacidad */
-.privacy-text {
-  font-size: 12px;
-  color: #777;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 50px;
-}
-
-/* Responsividad: Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-  /* Contenedor del formulario */
-  .contact-form-container {
-      width: 100%;  /* Asegura que el formulario ocupe todo el ancho */
-      height: auto; /* Ajusta la altura para evitar el desbordamiento */
-      padding: 15px; /* Reducir padding para pantallas pequeñas */
+      width: 100%;
+      margin-bottom: 10px;
+      height: 70vh;
   }
 
-  /* Ajustes de los campos */
-  .form-group {
-      margin-bottom: 15px;  /* Reducir el margen entre los campos */
-  }
 
-  input[type="text"], input[type="email"], input[type="tel"] {
-      font-size: 14px;  /* Asegura que el texto se ajuste en pantallas pequeñas */
+
+#contacto.section.contacto-section{
+  padding-bottom: 0;
+}
+
+.container.custom-container{
+  padding-bottom: 0;
+}
+  .contact-form-container{
+      width: 300px;
   }
 
   .contact-methods {
-      flex-direction: column;  /* Apilar las opciones de contacto de forma vertical */
-      gap: 10px; /* Reducir el espacio entre opciones */
-  }
-
-  .contact-option {
-      font-size: 14px;  /* Reducir el tamaño de fuente para opciones */
+      flex-direction: column;
+      gap: 10px;
   }
 
   .privacy-text {
-      font-size: 10px;  /* Reducir tamaño del texto de privacidad */
+      font-size: 10px;
   }
-}
 
+  .additional-container {
+      height: auto;
+  }
+
+  .additional-container iframe {
+      min-height: 300px;
+  }
+
+
+
+}
 
 /* ================================
-   Footer
-================================== */
+ Media Query (> 1360px)
+================================ */
 
-/* Estilo del footer */
-footer {
-  background-color: #343a40;
-  color: #ffffff;
- margin-bottom: 10px;
-  text-align: center;
-  height: auto;
+@media (min-width: 1361px){
+
+  #contacto .custom-title {
+      font-family: "Ubuntu Bold", sans-serif;
+      font-size: clamp(25px, 2.5vw, 50px);
+      text-align: center;
+      margin-bottom: clamp(15px, 3vh, 50px);
+      margin-top: clamp(15px, 2.5vh, 50px);
+      color: #000; /* o el color que quieras usar */
+  }
+
+
+  .form-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1 1 45%;
+      min-width: 15vw;
+      
+  }
+
+  .contact-form-container h3 {
+      font-family: "Ubuntu Bold", sans-serif;
+      font-size: clamp(15px, 2vw, 20px);
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .overlay-text h3 {
+      font-size: clamp(15px, 2vw, 20px);
+      font-family: "Ubuntu Bold", sans-serif;
+      color: #000;
+
+  }
+  
+  .contact-form-container {
+      width: 100%;
+      padding: 20px;
+      padding-top: 1rem;
+      background-color: #fff;
+      box-sizing: border-box;
+      height: 75vh;
+  }
+
+
+  .additional-container {
+      flex: 1 1 30%;
+      min-width: 15vw;
+      width: 100%;
+      position: relative;
+      height: 75vh;
+      box-sizing: border-box;
+      padding-top: 1re;
+  }
+  .contact-form-container .btn {
+      width: 100%;
+      padding: 5px;
+      background-color: #3eb2ae;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: clamp(10px, 1vw, 16px);
+      cursor: pointer;
+  }
+
+  .form-group {
+      margin-bottom: 1vh;
+  }
+  
+  label {
+      font-size: clamp(10px, 0.9vw, 16px);
+      margin-bottom: 5px;
+      display: block;
+  }
 }
 
 
-/* ================================
-   Responsividad
-================================== */
 
-/* Navbar en pantallas pequeñas */
-@media (max-width: 768px) {
-  .navbar {
-    position: static;
-  }
 
-  /* Secciones en dispositivos móviles */
-  .section {
-    height: auto !important;
-  }
 
-  /* Ajuste de imagen en la sección de inicio */
-  .img-inicio {
-    height: auto;
-    width: 100%;
-  }
-
-  /* Ajuste de títulos y subtítulos */
-  .custom-title {
-    font-size: clamp(24px, 5vw, 32px);
-    margin-top: 50px;
-  }
-
-  .custom-subtitle {
-    font-size: clamp(16px, 3vw, 20px);
-    margin-top: 50px;
-  }
-
-  /* Navbar para pantallas pequeñas */
-  .navbar-toggler {
-    display: block;
-  }
-}
 
 /* ======================
        PRODUCTOS ESTO APLICA PARA TODAS LAS PAGES DE PRODUCTOS 
@@ -830,7 +935,7 @@ footer {
   height: 100%;
   object-fit: cover;
   border-radius: 10%;
-  border: #c4c2c2 solid 1px ;
+  border: #c4c2c2 solid 1px;
 }
 
 .card-image:hover .icon-lupa {
@@ -868,15 +973,18 @@ footer {
 #fichas-tecnicas {
   padding: 40px 0;
   display: flex;
-  justify-content: center; /* Centra la grid horizontalmente */
+  justify-content: center;
+  /* Centra la grid horizontalmente */
 }
 
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  width: 100%; /* Asegura que la grid ocupe todo el ancho del contenedor */
-  max-width: 1480px; /* Asegura que el máximo ancho no exceda el contenedor principal */
+  width: 100%;
+  /* Asegura que la grid ocupe todo el ancho del contenedor */
+  max-width: 1480px;
+  /* Asegura que el máximo ancho no exceda el contenedor principal */
 }
 
 @media (max-width: 1480px) {
@@ -898,8 +1006,10 @@ footer {
   border: 1px solid #ddd;
   align-items: center;
   gap: 15px;
-  max-width: 430px; /* Limita el ancho de cada tarjeta */
-  margin: 0 auto; /* Centra cada tarjeta dentro de su contenedor */
+  max-width: 430px;
+  /* Limita el ancho de cada tarjeta */
+  margin: 0 auto;
+  /* Centra cada tarjeta dentro de su contenedor */
 }
 
 .card-content {
@@ -963,7 +1073,7 @@ footer {
   height: auto;
 }
 
-.section-marcas-pisos{
+.section-marcas-pisos {
 
   width: 100%;
   max-width: 1480px;
@@ -1226,68 +1336,3 @@ footer {
   }
 }
 
-
-
-/* ================================
-   Responsividad
-================================== */
-
-/* Ajuste en pantallas pequeñas */
-@media (max-width: 768px) {
-
-  #productos h2 {
-padding-left: 5px;
-padding-right: 5px;
-  }
-  
-  #productos p {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  
-
-
-
-  .product-cards-container {
-    flex-direction: column; /* Coloca las tarjetas en columna */
-    gap: 20px; /* Espaciado entre tarjetas */
-  }
-
-  .product-card {
-    flex: 1 1 100%; /* Las tarjetas ocupan todo el ancho en pantallas pequeñas */
-  }
-
-  .card-img-top {
-    max-width: 281px; /* Máximo ancho de las imágenes */
-    height: 378px; /* Altura fija */
-  }
-
-  .card-title {
-    font-size: 18px; /* Ajuste del tamaño del título */
-  }
-
-  .card-text {
-    font-size: 12px; /* Ajuste del tamaño del texto */
-  }
-
-  .info-text {
-    font-size: 14px; /* Ajuste del tamaño del texto de los párrafos */
-    line-height: 1.4; /* Ajuste del interlineado */
-  }
-}
-
-/* En pantallas grandes, las tarjetas deben alinearse en una fila de 1480px máximo */
-@media (min-width: 992px) {
-  .container.custom-container {
-    max-width: 1480px;
-    width: 100%; /* Asegura que las tarjetas se ajusten al ancho de la sección */
-  }
-
-  .product-cards-container {
-    justify-content: space-between;
-  }
-
-  .product-card {
-    flex: 0 0 19%; /* Ajuste para que las tarjetas se alineen correctamente en una fila */
-  }
-}
