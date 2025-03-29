@@ -907,7 +907,7 @@ PRODUCTOS
 #inicio-productos .img-inicio-productos {
   width: 100%;
   max-width: 77vw;
-  height: 30vh;
+  height: 30%;
   object-fit: cover;
 }
 
@@ -1050,6 +1050,15 @@ Grid de cards
 
 /* Responsivo móvil */
 @media (max-width: 768px) {
+  
+  .img-inicio-productos {
+    max-width: 100vw;
+    height: auto;
+  }
+  #inicio-productos.section {
+    min-height: 70vh;
+    padding-bottom: 1rem;
+  }
   .cards-grid {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -1070,6 +1079,8 @@ Grid de cards
     height: auto;
     aspect-ratio: 1/1;
   }
+
+
 }
 
 
