@@ -772,7 +772,7 @@ input[type="tel"] {
   .additional-container {
       width: 100%;
       margin-bottom: 10px;
-      height: 91vh;
+      height: 9vh;
   }
 
   .privacy-wrapper{
@@ -899,15 +899,40 @@ input[type="tel"] {
 
 
 /* ======================
-       PRODUCTOS ESTO APLICA PARA TODAS LAS PAGES DE PRODUCTOS 
+PRODUCTOS
 ======================== */
-#inicio-aceros .img-inicio-aceros {
+
+
+
+#inicio-productos .img-inicio-productos {
   width: 100%;
-  max-width: 1480px;
-  height: 260px;
+  max-width: 77vw;
+  height: 30vh;
   object-fit: cover;
 }
 
+#inicio-productos.section {
+  min-height: 30vh;
+  padding-bottom: 2rem;
+}
+
+#fichas-tecnicas{
+padding-top: 2rem;
+}
+
+
+.hero-text {
+  font-family: "Ubuntu Medium";
+  font-size: clamp(12px, 1.3vw, 50px) !important;
+  margin: 30px 0;
+  color: #333;
+  text-align: center;
+  padding: 0 15px;
+  line-height: 1.5;
+}
+
+
+/* Icono lupa */
 .icon-lupa {
   position: absolute;
   top: 10px;
@@ -919,10 +944,16 @@ input[type="tel"] {
   z-index: 10;
 }
 
+/* Card */
 .card-tech {
-  background-color: transparent !important;
-  border: none !important;
+
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  max-width: 430px;
+  padding: 15px;
+  margin: 0 auto;
 }
 
 .card-image {
@@ -946,76 +977,6 @@ input[type="tel"] {
   display: block;
 }
 
-.modal-img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  background-color: #ededed;
-}
-
-@media (max-width: 768px) {
-  .modal-img {
-    max-width: 300px;
-  }
-}
-
-.hero-text {
-  font-family: "Ubuntu Medium";
-  font-size: 15pt;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  color: #333;
-  text-align: center;
-  padding: 0 15px;
-  line-height: 1;
-}
-
-
-/* ======================
-       Sección Fichas Técnicas
-======================== */
-#fichas-tecnicas {
-  padding: 40px 0;
-  display: flex;
-  justify-content: center;
-  /* Centra la grid horizontalmente */
-}
-
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  width: 100%;
-  /* Asegura que la grid ocupe todo el ancho del contenedor */
-  max-width: 1480px;
-  /* Asegura que el máximo ancho no exceda el contenedor principal */
-}
-
-@media (max-width: 1480px) {
-  .cards-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 576px) {
-  .cards-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.card-tech {
-  display: flex;
-  background: #f9f9f9;
-  padding: 15px;
-  border: 1px solid #ddd;
-  align-items: center;
-  gap: 15px;
-  max-width: 430px;
-  /* Limita el ancho de cada tarjeta */
-  margin: 0 auto;
-  /* Centra cada tarjeta dentro de su contenedor */
-}
-
 .card-content {
   flex: 1;
   max-width: 200px;
@@ -1036,20 +997,6 @@ input[type="tel"] {
   color: #555;
 }
 
-@media (max-width: 576px) {
-  .card-tech {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .card-image {
-    margin-bottom: 10px;
-  }
-}
-
-/* ======================
-       Sección Fichas Técnicas - Icono personalizado
-======================== */
 .icon-ficha {
   width: 20px;
   height: 20px;
@@ -1057,13 +1004,86 @@ input[type="tel"] {
   vertical-align: middle;
 }
 
-/* Contenedor con un ancho máximo de 1480px para todo */
-.custom-container {
-  max-width: 1480px;
-  margin: 0 auto;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+/* Modal imagen */
+.modal-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  background-color: #ededed;
 }
+
+
+/* ======================
+Grid de cards
+======================== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 77vw;
+  margin: 0 auto;
+  padding-left: 1vw;
+}
+
+
+.card-content {
+  flex: 1;
+  max-width: 200px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.card-subtitle {
+  font-size: 1vw;
+  margin: 5px 0;
+}
+
+.card-icon {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+/* Responsivo tablet */
+@media (max-width: 992px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Responsivo móvil */
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .card-tech {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-content {
+    max-width: 60%;
+  }
+
+  .card-image {
+    width: 60%;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+}
+
+
+
+
+
 
 /* ======================
        Pisos

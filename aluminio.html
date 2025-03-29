@@ -15,51 +15,48 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container custom-container">
-            <!-- Logo a la izquierda -->
-            <a class="navbar-brand" href="#inicio">
-                <img src="img/HYO-LOGO - WEB.png" alt="Logo">
-            </a>
-            <!-- Botón para pantallas pequeñas -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- Menú centrado -->
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">INICIO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#productos">PRODUCTOS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#empresa">EMPRESA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#contacto">CONTACTO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#descargas">DESCARGAS</a>
-                    </li>
-                </ul>
-                <!-- Redes sociales alineados a la derecha -->
-                <div class="d-flex">
-                    <a href="#" class="social-icon"><img src="img/FACEBOOK.png" alt="Facebook" width="30"
-                            height="30"></a>
-                    <a href="#" class="social-icon"><img src="img/INSTAGRAM.png" alt="Instagram" width="30"
-                            height="30"></a>
-                    <a href="#" class="social-icon"><img src="img/MAIL.png" alt="Mail" width="30" height="30"></a>
-                    <a href="#" class="social-icon"><img src="img/LINKEDIN.png" alt="LinkedIn" width="30"
-                            height="30"></a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Sección INICIO para la página Acero -->
-    <section id="inicio-materiales" class="section-materiales text-center">
+      <div class="container-fluid px-3">
+          <!-- Logo a la izquierda -->
+          <a class="navbar-brand" href="#inicio">
+              <img src="img/HYO-LOGO - WEB.png" alt="Logo">
+          </a>
+          <!-- Botón para pantallas pequeñas -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <!-- Menú centrado -->
+              <ul class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="index.html#inicio">INICIO</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="index.html#productos">PRODUCTOS</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="index.html#empresa">EMPRESA</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="index.html#contacto">CONTACTO</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#descargas">DESCARGAS</a>
+                  </li>
+              </ul>
+              <!-- Redes sociales alineados a la derecha -->
+              <div class="d-flex ">
+                  <a href="#" class="social-icon"><img src="img/FACEBOOK.png" alt="Facebook" width="30"
+                          height="30"></a>
+                  <a href="#" class="social-icon"><img src="img/INSTAGRAM.png" alt="Instagram" width="30"
+                          height="30"></a>
+                  <a href="#" class="social-icon"><img src="img/MAIL.png" alt="Mail" width="30" height="30"></a>
+              </div>
+          </div>
+      </div>
+  </nav>
+    <!-- Sección INICIO-->
+    <section id="inicio-productos" class="section text-center">
         <div class="container custom-container">
             <img src="img/ALUMINIO/ALUMINIO BANNER.png" alt="Imagen de Inicio" class="img-inicio-aceros img-fluid">
             <p class="hero-text">
@@ -69,15 +66,15 @@
                 para dar cuerpo al mensaje y listo por aquí.
             </p>
         </div>
-    </section>>
+    </section>
 
     <!-- Sección Fichas Técnicas -->
-    <section id="fichas-tecnicas" class="section-acero">
+    <div class="section-bg productos-bg"> 
+    <section id="fichas-tecnicas" class="section">
         <div class="container custom-container">
             <div class="cards-grid">
 
-
-              <!-- Card 1 -->
+<!-- Card 1 -->
 <div class="card-tech">
   <div class="card-image">
     <img src="img/ALUMINIO/PRODUCTOS/1_300X300_0029_GAM9.png" alt="Imagen Card 1" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage1">
@@ -1965,15 +1962,10 @@
   </div>
 </div>
 
-
-
-
-
-
-
             </div>
         </div>
     </section>
+  </div>
     <!-- FOOTER -->
     <footer class="bg-dark text-white py-3">
         <div class="container custom-container text-center">
