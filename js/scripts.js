@@ -68,8 +68,9 @@ function isInInicioSection() {
 
 // Función para ocultar el navbar
 function hideNavbar() {
+    if (!isLargeScreen()) return; //en móviles no se oculta
     navbar.style.transition = 'top 0.3s ease-in-out';
-    navbar.style.top = `-${navbarHeight}px`; // Ajusta según la altura del navbar
+    navbar.style.top = `-${navbarHeight}px`;
 }
 
 // Función para mostrar el navbar
@@ -80,30 +81,39 @@ function showNavbar() {
 
 // Función para manejar el mousemove
 function resetNavbarTimeout() {
+    if (!isLargeScreen()) return; // 👈 en móviles no reinicia ocultamiento
     const currentTime = new Date().getTime();
     if (currentTime - lastMouseMoveTime > mouseMoveDelay) {
         clearTimeout(hideNavbarTimeout);
         showNavbar();
         lastMouseMoveTime = currentTime;
-        hideNavbarTimeout = setTimeout(hideNavbar, 3000); // 3000 ms = 3 segundos
+        hideNavbarTimeout = setTimeout(hideNavbar, 3000);
     }
 }
 
+
 // Evento de desplazamiento (scroll)
 window.addEventListener('scroll', function () {
+    if (!isLargeScreen()) {
+        showNavbar(); // 👈 En móviles, siempre mostrar el navbar
+        return;       // 👈 Salimos del scroll para que no se ejecute el resto
+    }
+
     if (isInInicioSection()) {
         showNavbar(); // Navbar visible en INICIO
     } else {
         if (window.pageYOffset > lastScrollTop) {
-            hideNavbar(); // Desaparece el navbar al hacer scroll hacia abajo fuera de INICIO
+            hideNavbar(); // Desaparece al hacer scroll hacia abajo fuera de INICIO
         } else {
-            showNavbar(); // Aparece cuando se hace scroll hacia arriba fuera de INICIO
-            clearTimeout(hideNavbarTimeout); // Resetea el temporizador de desaparición
-            hideNavbarTimeout = setTimeout(hideNavbar, 3000); // 3 segundos de inactividad
+            showNavbar(); // Aparece cuando se hace scroll hacia arriba
+            clearTimeout(hideNavbarTimeout);
+            hideNavbarTimeout = setTimeout(hideNavbar, 3000);
         }
     }
-    lastScrollTop = window.pageYOffset <= 0 ? 0 : window.pageYOffset; // No dejar que el scroll sea negativo
+
+    lastScrollTop = window.pageYOffset <= 0 ? 0 : window.pageYOffset;
 });
+
 
 // Detectar movimiento del mouse para resetear el temporizador
 window.addEventListener('mousemove', function (event) {
