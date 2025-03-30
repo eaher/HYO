@@ -339,12 +339,12 @@ Sección PRODUCTOS
   font-weight: bold;
   font-size: clamp(10px, 1.1vw, 20px) !important;
   overflow-wrap: break-word;
-  margin-top: 0.3rem;
+  margin-top: 0.6rem;
 }
 
 .card-text {
-  font-family: "Ubuntu Light" !important;
-  font-weight: normal;
+  font-family: "Ubuntu Bold" !important;
+  font-weight: bold;
   font-size: clamp(13px, 1vw, 15px) !important;
   color: #555;
   overflow-wrap: break-word;
@@ -420,14 +420,16 @@ Sección EMPRESA
 }
 
 .custom-subtitle {
-  font-family: "Ubuntu Regular", sans-serif;
+  font-family: "Ubuntu Bold";
   font-size: clamp(15px, 1.4vw, 25px);
-  color: #555;
+  color: #0c0c0c;
   margin-bottom: clamp(20px, 2vh, 50px);
   overflow-wrap: break-word;
-  max-width: 1000px;
+  max-width: 900px;
+  margin-top: clamp(10px, 6vh, 50px);
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.2;
 }
 
 /* Contenedor de imágenes */
