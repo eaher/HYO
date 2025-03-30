@@ -208,15 +208,19 @@
     </section>
 
     <!-- Sección CONTACTO adaptada al diseño del proyecto -->
-    <div class="section-bg contacto-bg"> 
+    <div class="section-bg contacto-bg">
         <section id="contacto" class="section contacto-section">
             <div class="container custom-container">
                 <h2 class="custom-title">NOS PONEMOS EN CONTACTO</h2>
-    
+
                 <div class="contact-flex-container">
                     <!-- Redes Sociales -->
                     <div class="contact-left-container">
-                        <h2 class="social-title">SEGUINOS EN NUESTRAS REDES SOCIALES</h2>
+                        <div class="social-title-group">
+                            <p class="social-title-line1">SEGUINOS</p>
+                            <p class="social-title-line2">EN NUESTRAS</p>
+                            <p class="social-title-line3">REDES SOCIALES</p>
+                        </div>
                         <div class="social-icons">
                             <a href="#" class="social-icon-contact"><img src="img/FACEBOOK.png" alt="Facebook"></a>
                             <a href="#" class="social-icon-contact"><img src="img/INSTAGRAM.png" alt="Instagram"></a>
@@ -227,61 +231,63 @@
 
 
                     <div class="form-wrapper">
-                    <!-- Formulario -->
-                    <div class="contact-form-container">
-                        <h3>DEJANOS TUS DATOS Y NOS COMUNICAREMOS A LA BREVEDAD</h3>
-                        <form id="contact-form" action="#" method="POST">
-                            <div class="form-group">
-                                <label for="nombre">Nombre</label>
-                                <input type="text" id="nombre" name="nombre" required class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="apellido">Apellido</label>
-                                <input type="text" id="apellido" name="apellido" required class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label>¿Cómo quieres que te contactemos?</label>
-                                <div class="contact-methods">
-                                    <label for="whatsapp" class="contact-option">
-                                        <input type="radio" id="whatsapp" name="contact_method" value="whatsapp"> WhatsApp
-                                    </label>
-                                    <label for="telefono" class="contact-option">
-                                        <input type="radio" id="telefono" name="contact_method" value="telefono"> Teléfono
-                                    </label>
-                                    <label for="email" class="contact-option">
-                                        <input type="radio" id="email" name="contact_method" value="email"> Email
-                                    </label>
+                        <!-- Formulario -->
+                        <div class="contact-form-container">
+                            <h3>DEJANOS TUS DATOS Y NOS COMUNICAREMOS A LA BREVEDAD</h3>
+                            <form id="contact-form" action="#" method="POST">
+                                <div class="form-group">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" id="nombre" name="nombre" required class="form-control">
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="celular">Celular</label>
-                                <input type="tel" id="celular" name="celular" required class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="email-form">Email</label>
-                                <input type="email" id="email-form" name="email" required class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="provincia">Provincia</label>
-                                <input type="text" id="provincia" name="provincia" required class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="ciudad">Ciudad</label>
-                                <input type="text" id="ciudad" name="ciudad" required class="form-control">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Enviar</button>
-                        </form>
+                                <div class="form-group">
+                                    <label for="apellido">Apellido</label>
+                                    <input type="text" id="apellido" name="apellido" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label>¿Cómo quieres que te contactemos?</label>
+                                    <div class="contact-methods">
+                                        <label for="whatsapp" class="contact-option">
+                                            <input type="radio" id="whatsapp" name="contact_method" value="whatsapp">
+                                            WhatsApp
+                                        </label>
+                                        <label for="telefono" class="contact-option">
+                                            <input type="radio" id="telefono" name="contact_method" value="telefono">
+                                            Teléfono
+                                        </label>
+                                        <label for="email" class="contact-option">
+                                            <input type="radio" id="email" name="contact_method" value="email"> Email
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="celular">Celular</label>
+                                    <input type="tel" id="celular" name="celular" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email-form">Email</label>
+                                    <input type="email" id="email-form" name="email" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="provincia">Provincia</label>
+                                    <input type="text" id="provincia" name="provincia" required class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="ciudad">Ciudad</label>
+                                    <input type="text" id="ciudad" name="ciudad" required class="form-control">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </form>
+
+                        </div>
+                        <div class="privacy-wrapper">
+                            <p class="privacy-text">
+                                (*) Nos tomamos muy en serio el SPAM, solo utilizamos la información
+                                brindada para realizar el contacto que nos indiques. Luego eliminamos la misma.
+                            </p>
+                        </div>
 
                     </div>
-                    <div class="privacy-wrapper">
-                        <p class="privacy-text">
-                            (*) Nos tomamos muy en serio el SPAM, solo utilizamos la información
-                            brindada para realizar el contacto que nos indiques. Luego eliminamos la misma.
-                        </p>
-                    </div>
 
-                </div>
-    
                     <!-- Mapa -->
                     <div class="additional-container">
                         <div class="overlay-text">
@@ -297,7 +303,7 @@
             </div>
         </section>
     </div>
-    
+
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-3">
