@@ -387,7 +387,7 @@ Sección PRODUCTOS
       padding-left: 1rem;
       padding-right: 1rem;
   }
-
+  
   .info-text {
       font-size: 15px;
       /* Tamaño legible */
@@ -395,6 +395,25 @@ Sección PRODUCTOS
       /* Buena separación entre líneas */
       margin-bottom: 1.2rem;
       /* Aire entre párrafos */
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .product-card-link {
+    flex: 1 1 calc(33.333% - 10px); /* 3 por fila */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card-link {
+    flex: 1 1 calc(50% - 10px); /* 2 por fila */
+  }
+}
+
+@media (max-width: 576px) {
+  .product-card-link {
+    flex: 1 1 100%; /* 1 por fila */
   }
 }
 
