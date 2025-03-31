@@ -1,5 +1,25 @@
 // ==========================
 // Scroll automático entre secciones al hacer scroll
+if (window.location.pathname.endsWith('/') || window.location.pathname.endsWith('/index.html')) {
+    document.addEventListener('wheel', function(event) {
+        if (event.deltaY > 0) {
+            // Desplazar hacia abajo
+            let nextSection = getNextSection();
+            if (nextSection) {
+                scrollToSection(nextSection);
+            }
+        } else {
+            // Desplazar hacia arriba
+            let prevSection = getPrevSection();
+            if (prevSection) {
+                scrollToSection(prevSection);
+            }
+        }
+    });
+}
+
+
+
 document.addEventListener('wheel', function(event) {
     if (event.deltaY > 0) {
         // Desplazar hacia abajo
@@ -93,6 +113,10 @@ function resetNavbarTimeout() {
 
 
 // Evento de desplazamiento (scroll)
+
+
+
+
 window.addEventListener('scroll', function () {
     if (!isLargeScreen()) {
         showNavbar(); // 👈 En móviles, siempre mostrar el navbar
