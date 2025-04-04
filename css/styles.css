@@ -1145,7 +1145,9 @@ Grid de cards
   max-width: 77vw;
   margin: 0 auto;
   padding-left: 1vw;
+  position: relative;
 }
+
 
 
 .card-title {
@@ -1180,12 +1182,12 @@ Grid de cards
     width: 100%;
     height: auto;
     max-width: 100vw;
-    padding-top: 60px;
   }
 
   #inicio-productos {
     min-height: auto;
     padding-bottom: 1rem;
+    padding-top: 60px;
   }
 
   #inicio-productos.section {
