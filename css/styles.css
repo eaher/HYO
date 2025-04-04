@@ -352,7 +352,7 @@ Sección PRODUCTOS
 .card-title-prod {
   font-family: "Ubuntu Bold" !important;
   font-weight: bold;
-  font-size: clamp(10px, 1.3vw, 50px) !important;
+  font-size: clamp(15px, 2vw, 25px) !important;
   overflow-wrap: break-word;
   margin-top: 0.6rem;
   margin-bottom: 0px;
@@ -1181,8 +1181,6 @@ Grid de cards
     height: auto;
     max-width: 100vw;
     padding-top: 60px;
- 
-
   }
 
   #inicio-productos {
@@ -1218,6 +1216,18 @@ Grid de cards
 
 }
 
+@media (max-width: 768px) {
+  #inicio-productos {
+
+    padding-bottom: 1rem;
+  }
+
+  .img-inicio-productos {
+    width: 100%;
+    height: auto;
+    max-width: 100vw;
+  }
+}
 
 
 
