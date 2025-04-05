@@ -1554,3 +1554,137 @@ Grid de cards
     text-align: center;
   }
 }
+
+
+/* ============================
+   Estilos específicos para BACHAS
+============================ */
+
+/* Inicio Bachas */
+.bachas-inicio {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem; /* espacio para navbar */
+  padding-bottom: 2rem; /* menor separación abajo */
+}
+
+/* Contenedor general de las secciones de bachas */
+.bachas-contenedor {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: 3rem;
+  border: 1px solid grey; /* ✅ Esto se mantiene */
+}
+
+
+/* Grid de cards */
+.bachas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  max-width: 77vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Card individual */
+.bachas-card {
+  background-color: #fff;
+  border: none; /* ✅ quitamos el borde */
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.bachas-card:hover {
+  transform: translateY(-5px);
+}
+
+.bachas-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Contenido interno de la card */
+.bachas-card-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.bachas-title {
+  font-family: "Ubuntu Bold";
+  font-size: clamp(16px, 1.3vw, 20px);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.bachas-description {
+  font-family: "Ubuntu Regular";
+  font-size: clamp(13px, 1vw, 16px);
+  color: #777;
+  margin-bottom: 0;
+}
+
+/* Icono lupa */
+.bachas-icon-lupa {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 0.6rem;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.bachas-icon-lupa:hover {
+  background-color: #ddd;
+}
+
+/* Responsive: Mobile */
+@media (max-width: 992px) {
+  .bachas-grid {
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .bachas-grid {
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .bachas-title {
+    font-size: 1rem;
+  }
+
+  .bachas-description {
+    font-size: 0.9rem;
+  }
+
+  .bachas-card-content {
+    padding: 0.8rem;
+  }
+
+  .bachas-icon-lupa {
+    padding: 0.4rem;
+    font-size: 16px;
+  }
+}

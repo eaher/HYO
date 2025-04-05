@@ -2,31 +2,27 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-  <title>Mi Página Web</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <title>Bachas Mármol y Simil Piedra</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/59c276f275.js" crossorigin="anonymous"></script>
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid px-3">
-      <!-- Logo a la izquierda -->
       <a class="navbar-brand" href="#inicio">
         <img src="img/HYO-LOGO - WEB.png" alt="Logo">
       </a>
-      <!-- Botón para pantallas pequeñas -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- Menú centrado -->
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
             <a class="nav-link" href="index.html#inicio">INICIO</a>
@@ -44,8 +40,7 @@
             <a class="nav-link" href="#descargas">DESCARGAS</a>
           </li>
         </ul>
-        <!-- Redes sociales alineados a la derecha -->
-        <div class="d-flex ">
+        <div class="d-flex">
           <a href="#" class="social-icon"><img src="img/FACEBOOK.png" alt="Facebook" width="30" height="30"></a>
           <a href="#" class="social-icon"><img src="img/INSTAGRAM.png" alt="Instagram" width="30" height="30"></a>
           <a href="#" class="social-icon"><img src="img/MAIL.png" alt="Mail" width="30" height="30"></a>
@@ -53,1054 +48,72 @@
       </div>
     </div>
   </nav>
-  <!-- Sección INICIO-->
-  <section id="inicio-productos" class="section text-center">
+
+  <!-- INICIO -->
+  <section id="inicio" class="bachas-inicio">
     <div class="container custom-container">
-      <img src="img/ALUMINIO/ALUMINIO BANNER.png" alt="Imagen de Inicio" class="img-inicio-productos img-fluid">
+      <img src="img/ALUMINIO/ALUMINIO BANNER.png" alt="Imagen de Inicio" class="img-inicio-productos img-fluid" />
       <p class="hero-text">
         Todos nuestros productos son fabricados con aluminio importado de alta calidad, estando presentes en
-        <br>
-        cada parte del proceso mantenemos altos estandares de calidad y terminaciones. <br> Un poco más de texto
-        para dar cuerpo al mensaje y listo por aquí.
+        cada parte del proceso mantenemos altos estandares de calidad y terminaciones.
+        <br />
+        Un poco más de texto para dar cuerpo al mensaje y listo por aquí.
       </p>
     </div>
   </section>
 
-  <!-- Sección Fichas Técnicas -->
-  <div class="section-bg productos-bg">
-    <section id="fichas-tecnicas" class="section">
+  <!-- Bachas Mármol -->
+  <section class="section text-center bachas-section">
+    <div class="bachas-contenedor">
+      <div class="elementos-pisos">
+        <h1 class="titulo-piscinas">BACHAS MÁRMOL</h1>
+        <div class="linea-titulo"></div>
+        <p class="descripcion-piscinas">Elegancia y resistencia para tus espacios.</p>
+      </div>
       <div class="container custom-container">
-        <div class="cards-grid">
+        <div class="bachas-grid" id="cards-bachas-marmol"></div>
+      </div>
 
-
-<!-- Card 1 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/1_300X300_0013_1_REDONDA-CHICA.png" alt="Imagen Card 1" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage1">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage1" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 1</h3>
-    <p class="card-subtitle">Subtitulo 1</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica1">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 1 -->
-<div class="modal fade" id="modalImage1" tabindex="-1" aria-labelledby="modalImage1Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/1_300X300_0013_1_REDONDA-CHICA.png" alt="Imagen Card 1 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 1 -->
-<div class="modal fade" id="modalFichaTecnica1" tabindex="-1" aria-labelledby="modalFichaTecnica1Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//1-FICHAS TECNICAS - ALUM-01.webp" alt="Ficha Tecnica 1" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Card 2 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/2_300X300_0012_2_REDONDA-CON-ESCALON.png" alt="Imagen Card 2" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage2">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage2" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 2</h3>
-    <p class="card-subtitle">Subtitulo 2</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica2">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 2 -->
-<div class="modal fade" id="modalImage2" tabindex="-1" aria-labelledby="modalImage2Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/2_300X300_0012_2_REDONDA-CON-ESCALON.png" alt="Imagen Card 2 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 2 -->
-<div class="modal fade" id="modalFichaTecnica2" tabindex="-1" aria-labelledby="modalFichaTecnica2Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//2-FICHAS TECNICAS - ALUM-02.webp" alt="Ficha Tecnica 2" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Card 3 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/3_300X300_0011_3_CUENCO-STONE.png" alt="Imagen Card 3" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage3">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage3" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 3</h3>
-    <p class="card-subtitle">Subtitulo 3</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica3">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 3 -->
-<div class="modal fade" id="modalImage3" tabindex="-1" aria-labelledby="modalImage3Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/3_300X300_0011_3_CUENCO-STONE.png" alt="Imagen Card 3 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 3 -->
-<div class="modal fade" id="modalFichaTecnica3" tabindex="-1" aria-labelledby="modalFichaTecnica3Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//3-FICHAS TECNICAS - ALUM-03.webp" alt="Ficha Tecnica 3" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Card 4 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/4_300X300_0010_4_CUENCO-TRAVERTINO.png" alt="Imagen Card 4" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage4">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage4" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 4</h3>
-    <p class="card-subtitle">Subtitulo 4</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica4">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 4 -->
-<div class="modal fade" id="modalImage4" tabindex="-1" aria-labelledby="modalImage4Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/4_300X300_0010_4_CUENCO-TRAVERTINO.png" alt="Imagen Card 4 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 4 -->
-<div class="modal fade" id="modalFichaTecnica4" tabindex="-1" aria-labelledby="modalFichaTecnica4Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//4-FICHAS TECNICAS - ALUM-04.webp" alt="Ficha Tecnica 4" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Card 5 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/5_300X300_0009_5_OVAL-STONE.png" alt="Imagen Card 5" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage5">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage5" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 5</h3>
-    <p class="card-subtitle">Subtitulo 5</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica5">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 5 -->
-<div class="modal fade" id="modalImage5" tabindex="-1" aria-labelledby="modalImage5Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/5_300X300_0009_5_OVAL-STONE.png" alt="Imagen Card 5 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 5 -->
-<div class="modal fade" id="modalFichaTecnica5" tabindex="-1" aria-labelledby="modalFichaTecnica5Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//5-FICHAS TECNICAS - ALUM-05.webp" alt="Ficha Tecnica 5" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Card 6 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/6_300X300_0008_6_REDONDA-TRAVERTINO.png" alt="Imagen Card 6" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage6">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage6" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 6</h3>
-    <p class="card-subtitle">Subtitulo 6</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica6">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 6 -->
-<div class="modal fade" id="modalImage6" tabindex="-1" aria-labelledby="modalImage6Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/6_300X300_0008_6_REDONDA-TRAVERTINO.png" alt="Imagen Card 6 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 6 -->
-<div class="modal fade" id="modalFichaTecnica6" tabindex="-1" aria-labelledby="modalFichaTecnica6Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//6-FICHAS TECNICAS - ALUM-06.webp" alt="Ficha Tecnica 6" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Card 7 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/7_300X300_0007_7_CIRCULAR-STONE.png" alt="Imagen Card 7" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage7">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage7" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 7</h3>
-    <p class="card-subtitle">Subtitulo 7</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica7">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 7 -->
-<div class="modal fade" id="modalImage7" tabindex="-1" aria-labelledby="modalImage7Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/7_300X300_0007_7_CIRCULAR-STONE.png" alt="Imagen Card 7 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 7 -->
-<div class="modal fade" id="modalFichaTecnica7" tabindex="-1" aria-labelledby="modalFichaTecnica7Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//7-FICHAS TECNICAS - ALUM-07.webp" alt="Ficha Tecnica 7" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Card 8 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/8_300X300_0006_8_PIRAMIDAL-TRAVERTINO.png" alt="Imagen Card 8" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage8">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage8" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 8</h3>
-    <p class="card-subtitle">Subtitulo 8</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica8">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 8 -->
-<div class="modal fade" id="modalImage8" tabindex="-1" aria-labelledby="modalImage8Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/8_300X300_0006_8_PIRAMIDAL-TRAVERTINO.png" alt="Imagen Card 8 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 8 -->
-<div class="modal fade" id="modalFichaTecnica8" tabindex="-1" aria-labelledby="modalFichaTecnica8Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//8-FICHAS TECNICAS - ALUM-08.webp" alt="Ficha Tecnica 8" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Card 9 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/9_300X300_0005_9_RECTANGULAR-TRAVERTINO.png" alt="Imagen Card 9" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage9">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage9" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 9</h3>
-    <p class="card-subtitle">Subtitulo 9</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica9">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 9 -->
-<div class="modal fade" id="modalImage9" tabindex="-1" aria-labelledby="modalImage9Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/9_300X300_0005_9_RECTANGULAR-TRAVERTINO.png" alt="Imagen Card 9 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 9 -->
-<div class="modal fade" id="modalFichaTecnica9" tabindex="-1" aria-labelledby="modalFichaTecnica9Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//9-FICHAS TECNICAS - ALUM-09.webp" alt="Ficha Tecnica 9" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Card 10 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/10_300X300_0004_10_RECTANGULAR-STONE.png" alt="Imagen Card 10" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage10">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage10" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 10</h3>
-    <p class="card-subtitle">Subtitulo 10</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica10">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 10 -->
-<div class="modal fade" id="modalImage10" tabindex="-1" aria-labelledby="modalImage10Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/10_300X300_0004_10_RECTANGULAR-STONE.png" alt="Imagen Card 10 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 10 -->
-<div class="modal fade" id="modalFichaTecnica10" tabindex="-1" aria-labelledby="modalFichaTecnica10Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//10-FICHAS TECNICAS - ALUM-10.webp" alt="Ficha Tecnica 10" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Card 11 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/11_300X300_0003_11_RECTANGULAR-CON-ESCALON.png" alt="Imagen Card 11" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage11">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage11" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 11</h3>
-    <p class="card-subtitle">Subtitulo 11</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica11">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 11 -->
-<div class="modal fade" id="modalImage11" tabindex="-1" aria-labelledby="modalImage11Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/11_300X300_0003_11_RECTANGULAR-CON-ESCALON.png" alt="Imagen Card 11 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 11 -->
-<div class="modal fade" id="modalFichaTecnica11" tabindex="-1" aria-labelledby="modalFichaTecnica11Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//11-FICHAS TECNICAS - ALUM-11.webp" alt="Ficha Tecnica 11" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Card 12 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/12_300X300_0002_12_OVEL-PLANET.png" alt="Imagen Card 12" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage12">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage12" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 12</h3>
-    <p class="card-subtitle">Subtitulo 12</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica12">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 12 -->
-<div class="modal fade" id="modalImage12" tabindex="-1" aria-labelledby="modalImage12Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/12_300X300_0002_12_OVEL-PLANET.png" alt="Imagen Card 12 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 12 -->
-<div class="modal fade" id="modalFichaTecnica12" tabindex="-1" aria-labelledby="modalFichaTecnica12Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//12-FICHAS TECNICAS - ALUM-12.webp" alt="Ficha Tecnica 12" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Card 13 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/13_300X300_0001_13_CUENCO-33-CON-VENECITAS-2.png" alt="Imagen Card 13" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage13">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage13" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 13</h3>
-    <p class="card-subtitle">Subtitulo 13</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica13">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 13 -->
-<div class="modal fade" id="modalImage13" tabindex="-1" aria-labelledby="modalImage13Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/13_300X300_0001_13_CUENCO-33-CON-VENECITAS-2.png" alt="Imagen Card 13 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 13 -->
-<div class="modal fade" id="modalFichaTecnica13" tabindex="-1" aria-labelledby="modalFichaTecnica13Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//13-FICHAS TECNICAS - ALUM-13.webp" alt="Ficha Tecnica 13" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Card 14 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/14_300X300_0000_14_CUENCO-33-CON-VENECITAS.png" alt="Imagen Card 14" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage14">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage14" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 14</h3>
-    <p class="card-subtitle">Subtitulo 14</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica14">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 14 -->
-<div class="modal fade" id="modalImage14" tabindex="-1" aria-labelledby="modalImage14Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS SIMIL PIEDRA/14_300X300_0000_14_CUENCO-33-CON-VENECITAS.png" alt="Imagen Card 14 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 14 -->
-<div class="modal fade" id="modalFichaTecnica14" tabindex="-1" aria-labelledby="modalFichaTecnica14Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//14-FICHAS TECNICAS - ALUM-14.webp" alt="Ficha Tecnica 14" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- Card 1 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS MARMOL/1_REDONDA TRAVERTINO.png" alt="Imagen Card 1" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage1">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage1" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 1</h3>
-    <p class="card-subtitle">Subtitulo 1</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica1">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 1 -->
-<div class="modal fade" id="modalImage1" tabindex="-1" aria-labelledby="modalImage1Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS MARMOL/1_REDONDA TRAVERTINO.png" alt="Imagen Card 1 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 1 -->
-<div class="modal fade" id="modalFichaTecnica1" tabindex="-1" aria-labelledby="modalFichaTecnica1Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//1-FICHAS TECNICAS - ALUM-01.webp" alt="Ficha Tecnica 1" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Card 2 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS MARMOL/2_CUENCO CHICO.png" alt="Imagen Card 2" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage2">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage2" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 2</h3>
-    <p class="card-subtitle">Subtitulo 2</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica2">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 2 -->
-<div class="modal fade" id="modalImage2" tabindex="-1" aria-labelledby="modalImage2Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS MARMOL/2_CUENCO CHICO.png" alt="Imagen Card 2 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 2 -->
-<div class="modal fade" id="modalFichaTecnica2" tabindex="-1" aria-labelledby="modalFichaTecnica2Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//2-FICHAS TECNICAS - ALUM-02.webp" alt="Ficha Tecnica 2" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Card 3 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS MARMOL/3_TULIPAN TRAVERTINO.png" alt="Imagen Card 3" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage3">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage3" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 3</h3>
-    <p class="card-subtitle">Subtitulo 3</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica3">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 3 -->
-<div class="modal fade" id="modalImage3" tabindex="-1" aria-labelledby="modalImage3Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS MARMOL/3_TULIPAN TRAVERTINO.png" alt="Imagen Card 3 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 3 -->
-<div class="modal fade" id="modalFichaTecnica3" tabindex="-1" aria-labelledby="modalFichaTecnica3Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//3-FICHAS TECNICAS - ALUM-03.webp" alt="Ficha Tecnica 3" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Card 4 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS MARMOL/4_OVAL TRAVERTINO.png" alt="Imagen Card 4" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage4">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage4" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 4</h3>
-    <p class="card-subtitle">Subtitulo 4</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica4">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 4 -->
-<div class="modal fade" id="modalImage4" tabindex="-1" aria-labelledby="modalImage4Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS MARMOL/4_OVAL TRAVERTINO.png" alt="Imagen Card 4 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 4 -->
-<div class="modal fade" id="modalFichaTecnica4" tabindex="-1" aria-labelledby="modalFichaTecnica4Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//4-FICHAS TECNICAS - ALUM-04.webp" alt="Ficha Tecnica 4" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Card 5 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS MARMOL/5_PIRAMIDAL TRAVERTINO.png" alt="Imagen Card 5" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage5">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage5" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 5</h3>
-    <p class="card-subtitle">Subtitulo 5</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica5">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 5 -->
-<div class="modal fade" id="modalImage5" tabindex="-1" aria-labelledby="modalImage5Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS MARMOL/5_PIRAMIDAL TRAVERTINO.png" alt="Imagen Card 5 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 5 -->
-<div class="modal fade" id="modalFichaTecnica5" tabindex="-1" aria-labelledby="modalFichaTecnica5Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//5-FICHAS TECNICAS - ALUM-05.webp" alt="Ficha Tecnica 5" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Card 6 -->
-<div class="card-tech">
-  <div class="card-image">
-    <img src="img/BACHAS/PRODUCTOS/BACHAS MARMOL/6_RECTANGULAR ESCALON CON LONJA.png" alt="Imagen Card 6" class="img-card" data-bs-toggle="modal" data-bs-target="#modalImage6">
-    <a href="#" data-bs-toggle="modal" data-bs-target="#modalImage6" class="icon-lupa">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </a>
-  </div>
-  <div class="card-content">
-    <h3 class="card-title-prod ">Titulo 6</h3>
-    <p class="card-subtitle">Subtitulo 6</p>
-    <div class="card-icon">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#modalFichaTecnica6">
-        <img src="img/file.png" alt="Ficha tecnica icon" class="icon-ficha">
-      </a>
-      Ficha tecnica
-    </div>
-  </div>
-</div>
-<!-- Modal de la Imagen - Card 6 -->
-<div class="modal fade" id="modalImage6" tabindex="-1" aria-labelledby="modalImage6Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/PRODUCTOS/BACHAS MARMOL/6_RECTANGULAR ESCALON CON LONJA.png" alt="Imagen Card 6 Ampliada" class="img-fluid modal-img">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Modal de Ficha Tecnica - Card 6 -->
-<div class="modal fade" id="modalFichaTecnica6" tabindex="-1" aria-labelledby="modalFichaTecnica6Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      </div>
-      <div class="modal-body">
-        <img src="img/BACHAS/FICHA//6-FICHAS TECNICAS - ALUM-06.webp" alt="Ficha Tecnica 6" class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+      <div class="consulta-section">
+        <div class="consulta-contenido">
+          <div class="consulta-texto">
+            <p class="consulta-el">CONSULTA EL</p>
+            <p class="catalogo-completo">CATÁLOGO COMPLETO</p>
+          </div>
+          <div class="imagen-consulta">
+            <img src="img/CERAMICAS/BANNER CERAMICA.png" alt="Catálogo completo" />
+          </div>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
+
+  <!-- Bachas Simil Piedra -->
+  <section class="section text-center bachas-section">
+    <div class="bachas-contenedor">
+      <div class="elementos-pisos">
+        <h1 class="titulo-piscinas">BACHAS SIMIL PIEDRA</h1>
+        <div class="linea-titulo"></div>
+        <p class="descripcion-piscinas">Diseño natural, robustez garantizada.</p>
+      </div>
+      <div class="container custom-container">
+        <div class="bachas-grid" id="cards-bachas-simil-piedra"></div>
+      </div>
+
+      <div class="consulta-section">
+        <div class="consulta-contenido">
+          <div class="consulta-texto">
+            <p class="consulta-el">CONSULTA EL</p>
+            <p class="catalogo-completo">CATÁLOGO COMPLETO</p>
+          </div>
+          <div class="imagen-consulta">
+            <img src="img/CERAMICAS/BANNER CERAMICA.png" alt="Catálogo completo" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="bg-dark text-white py-3">
     <div class="container custom-container text-center">
@@ -1109,15 +122,13 @@
         <a href="#"><img src="img/ICONOS REDES SOCIALES/ICONOS REDES-FB.png" alt="Facebook" width="30" height="30"></a>
         <a href="#"><img src="img/ICONOS REDES SOCIALES/ICONOS REDES-IG.png" alt="Instagram" width="30" height="30"></a>
         <a href="#"><img src="img/ICONOS REDES SOCIALES/ICONOS REDES-mail.png" alt="Mail" width="30" height="30"></a>
-
       </div>
     </div>
   </footer>
-  <!-- Bootstrap JS y scripts personalizados -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="js/scripts.js"></script>
-
+  <script src="js/productos-data.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>
