@@ -1722,6 +1722,20 @@ Grid de cards
     font-size: 16px;
   }
 }
+
+.linea-cat{
+ margin: 0 auto;
+  width: 100%;
+  max-width: 95%;
+  height: 2pt;
+  background-color: grey;
+  margin-bottom: 20px;
+
+}
+
+
+
+
 /* ===============================
  INICIO GENERAL (ACERO, PVC, etc.)
 ================================== */
