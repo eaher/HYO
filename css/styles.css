@@ -198,20 +198,18 @@ body {
 }
 
 /* ================================
- INICIO INDEX - Carrusel + Título
-================================ */
+ INICIO
+================================== */
 
-/* Contenedor general de la sección inicio */
-#inicio {
-  width: 100vw;
-  margin: 0;
+.inicio-full {
+  width: 77vw;
+  margin: 0 auto;
   padding: 0;
   overflow: hidden;
-  background-color: #fff;
 }
 
-/* Container interno del bootstrap */
-#inicio .custom-container {
+/* Quitamos el límite del container para esta sección específica */
+.inicio-full .custom-container {
   width: 100%;
   max-width: 100%;
   padding: 0;
@@ -220,91 +218,86 @@ body {
 
 /* Carrusel */
 #inicio .carousel {
-  width: 100%;
-  height: 100vh;
-  max-height: 100vh;
+  max-height: 68vh;
   overflow: hidden;
 }
 
 #inicio .carousel img {
-  width: 100%;
-  height: 100vh;
   object-fit: cover;
+  width: 100%;
+  height: 68vh;
   display: block;
 }
 
-/* Flechas de navegación del carrusel */
-#inicio .carousel-control-prev,
-#inicio .carousel-control-next {
-  width: auto;
-}
-
-#inicio .carousel-control-prev-icon,
-#inicio .carousel-control-next-icon {
-  background-size: 100%, 100%;
-  background-repeat: no-repeat;
-}
-
-/* Título y subtítulo */
+/* Títulos */
 #inicio h1 {
   font-family: "Ubuntu Bold", sans-serif;
   font-weight: bold;
-  font-size: clamp(25px, 3vw, 50px);
+  font-size: clamp(25px, 2.5vw, 50px);
   margin-top: 1rem;
   text-align: center;
-  color: #000;
 }
 
 #inicio p {
   font-family: "Ubuntu Bold";
   font-weight: bold;
-  font-size: clamp(15px, 2vw, 25px);
+  font-size: clamp(15px, 1.4vw, 25px);
   margin-top: 0.5rem;
   margin-bottom: 4rem;
   text-align: center;
-  color: #000;
 }
-
-
-
-
-
-
 /* ================================
-Responsivas Nav + Inicio
-================================== */
+   Responsive Móviles
+================================ */
 @media (max-width: 768px) {
+  #inicio {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
 
+  /* ✅ Container a 100vw */
+  .inicio-full .custom-container {
+    width: 100vw;
+    max-width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Carrusel sin restricciones */
   #inicio .carousel {
     height: auto;
     max-height: none;
-    margin-top: 4rem;
   }
 
   #inicio .carousel img {
-    width: 100%;
+    width: 100vw; /* ✅ Esto es clave */
     height: auto;
-    max-height: 65vh;
-    object-fit: contain; /* ✅ para que no corte la imagen */
+    max-height: none;
+    object-fit: cover;
+    display: block;
   }
 
   #inicio h1 {
+    font-family: "Ubuntu Bold", sans-serif;
+    font-weight: bold;
     font-size: clamp(15px, 6vw, 30px);
     margin-top: 1rem;
+    text-align: center;
   }
 
   #inicio p {
-    font-size: clamp(10px, 4vw, 18px);
+    font-family: "Ubuntu Bold";
+    font-weight: bold;
+    font-size: clamp(10px, 3vw, 20px);
     margin-top: 1rem;
     margin-bottom: 2rem;
+    text-align: center;
   }
 
   .navbar .navbar-brand img {
-
-      margin-left: 1rem;
-
+    margin-left: 1rem;
   }
-
 }
 
 
@@ -1755,25 +1748,23 @@ Grid de cards
   object-fit: cover;
 }
 
-/* Texto descriptivo */
 .seccion-inicio-general .hero-text {
+  width: 77vw; /* ✅ Ocupa el 100% del ancho del contenedor */
+  max-width: 77vw; /* ✅ Para que no se pase nunca */
   font-family: "Ubuntu Medium";
   font-size: clamp(12px, 1.3vw, 50px);
-  margin: 30px 0;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   color: #333;
   text-align: center;
-  padding: 0 15px;
   line-height: 1.5;
+  padding: 0; /* Quitamos padding lateral para que se alinee perfecto */
 }
 
-/* Versión Desktop */
 @media (min-width: 992px) {
   .seccion-inicio-general .imagen-inicio-seccion img {
-    width: 100%;
-    max-width: 77vw; /* ✅ mantenemos tu ancho deseado */
-    margin: 0 auto; /* ✅ centrado automático */
-    display: block;
+    max-width: 77vw;
+    margin: 0 auto;
   }
 }
-
-
