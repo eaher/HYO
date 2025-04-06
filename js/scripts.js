@@ -174,24 +174,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // =========================
-  // Ajuste dinámico padding-top para móvil en sección INICIO
-  // =========================
-  function ajustarPaddingInicioMobile() {
-    const navbar = document.querySelector('.navbar');
-    const inicio = document.getElementById('inicio');
-
-    if (navbar && inicio && window.innerWidth <= 768) {
-      const navbarHeight = navbar.offsetHeight;
-      inicio.style.paddingTop = `${navbarHeight}px`;
-    }
-  }
-
-  window.addEventListener('load', ajustarPaddingInicioMobile);
-  window.addEventListener('resize', ajustarPaddingInicioMobile);
-});
-
-
 // =========================
 // Scroll automático
 // =========================
