@@ -267,7 +267,6 @@ body {
   #inicio .carousel {
     height: auto;
     max-height: none;
-    margin-top: 4rem;
   }
 
   #inicio .carousel img {
@@ -338,10 +337,10 @@ Sección PRODUCTOS
 .product-cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 1.5rem;
+  justify-content: center; /* ← centramos las tarjetas */
+  gap: 20px; /* Aprovechamos y aumentamos la separación para aire */
 }
+
 
 .product-card-link {
   display: flex;
