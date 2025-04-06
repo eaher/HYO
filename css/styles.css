@@ -1147,6 +1147,30 @@ font-size: clamp(10px, 1vw, 20px) !important;
 
 
 
+/* Modal ficha técnica - ajuste para pantallas pequeñas */
+@media (max-width: 768px) {
+  .modal-ficha .modal-dialog {
+    max-width: 95vw;
+    width: 100%;
+    margin: auto;
+  }
+
+  .modal-ficha .modal-content {
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .modal-ficha .modal-body {
+    padding: 0;
+  }
+
+  .modal-ficha .modal-body img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0;
+  }
+}
 
 /* ======================
 Grid de cards
@@ -1621,9 +1645,7 @@ Grid de cards
   align-items: center;
 }
 
-.bachas-card:hover {
-  transform: translateY(-5px);
-}
+
 
 .bachas-card img {
   width: 90%;
@@ -1667,9 +1689,6 @@ Grid de cards
   z-index: 2;
 }
 
-.bachas-icon-lupa:hover {
-  background-color: #ddd;
-}
 
 /* Responsive: Tablet */
 @media (max-width: 1200px) {
