@@ -1,3 +1,19 @@
+
+// ==========================
+// Corrección de altura de viewport móvil
+// ==========================
+
+function ajustarAlturaViewport() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+window.addEventListener('load', ajustarAlturaViewport);
+window.addEventListener('resize', ajustarAlturaViewport);
+
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   // =========================
   // Inicio generación de cards
