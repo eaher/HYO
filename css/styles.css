@@ -1283,10 +1283,10 @@ Grid de cards
 }
 
 .marca-img {
-  min-width: 310px;
-  min-height: 310px;
-  width: 350px;
-  height: 350px;
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+  max-height: 350px;
   object-fit: contain;
   border: none;
 }
@@ -1305,20 +1305,27 @@ Grid de cards
 @media (max-width: 1320px) {
   .marcas-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
+
   .marca-img {
-    width: 100%;
-    height: auto;
     max-width: 280px;
-    aspect-ratio: 1/1;
+    max-height: 280px;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .marcas-grid {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .marca-img {
+    max-width: 100%;
+    height: auto;
   }
 }
+
 
 /* ======================
        Contenedor pisos /piscinas etc
@@ -1691,5 +1698,43 @@ Grid de cards
   .bachas-icon-lupa {
     padding: 0.4rem;
     font-size: 16px;
+  }
+}
+
+.seccion-inicio-general {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seccion-inicio-general .custom-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+.seccion-inicio-general .imagen-inicio-seccion img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.seccion-inicio-general .hero-text {
+  font-family: "Ubuntu Medium";
+  font-size: clamp(12px, 1.3vw, 50px);
+  margin: 30px 0;
+  color: #333;
+  text-align: center;
+  padding: 0 15px;
+  line-height: 1.5;
+}
+@media (min-width: 992px) {
+  .seccion-inicio-general .imagen-inicio-seccion img {
+    max-width: 77vw;
+    margin: 0 auto;
   }
 }
