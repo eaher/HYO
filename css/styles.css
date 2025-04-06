@@ -15,7 +15,7 @@ body {
 }
 
 .section {
-  width: 77vw;
+  width: 78vw;
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
@@ -185,7 +185,7 @@ body {
 
 .navbar .d-flex {
   gap: 8px;
-  margin-right: 14vw;
+  margin-right: 13vw;
 }
 
 
