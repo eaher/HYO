@@ -258,7 +258,7 @@ body {
 
  /* Carrusel mobile */
  #inicio-mobile {
-  padding-top: var(--navbar-height, 60px); /* Dinámico, por si cambia el tamaño del navbar */
+  padding-top: var(--navbar-height, 0px); /* Dinámico, por si cambia el tamaño del navbar */
 }
 
 
