@@ -1093,7 +1093,7 @@ font-size: clamp(10px, 1vw, 20px) !important;
 ======================== */
 .modal-imagen .modal-dialog {
   max-width: 400px; /* Cambia este valor para agrandar o achicar */
-  width: 100%;
+  width: 95%;
 }
 
 .modal-imagen .modal-content {
