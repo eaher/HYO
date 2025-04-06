@@ -8,7 +8,7 @@ body {
 }
 
 .custom-container {
-  max-width: 1480px;
+  max-width:77vw;
   margin: 0 auto;
   padding: 1rem;
   padding-top: 0;
@@ -1562,13 +1562,19 @@ Grid de cards
 
 /* Inicio Bachas */
 .bachas-inicio {
-  width: 100%;
+  width: 100%; 
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 4rem; /* espacio para navbar */
-  padding-bottom: 2rem; /* menor separación abajo */
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+
+.bachas-imagen-full img {
+  width: 85vw;
+  display: block;
 }
 
 /* Contenedor general de las secciones de bachas */
@@ -1578,31 +1584,31 @@ Grid de cards
   margin: 0 auto;
   padding: 20px;
   margin-bottom: 3rem;
-  border: 1px solid grey; /* ✅ Esto se mantiene */
+  border: 1px solid grey;
+  
 }
-
 
 /* Grid de cards */
 .bachas-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* ✅ 3 columnas fijas en escritorio */
   gap: 2rem;
   margin-top: 2rem;
   margin-bottom: 3rem;
   width: 100%;
-  max-width: 77vw;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Card individual */
 .bachas-card {
   background-color: #fff;
-  border: none; /* ✅ quitamos el borde */
+  border: none;
   border-radius: 12px;
   overflow: hidden;
   position: relative;
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bachas-card:hover {
@@ -1610,7 +1616,7 @@ Grid de cards
 }
 
 .bachas-card img {
-  width: 100%;
+  width: 90%;
   height: auto;
   display: block;
 }
@@ -1655,20 +1661,19 @@ Grid de cards
   background-color: #ddd;
 }
 
-/* Responsive: Mobile */
-@media (max-width: 992px) {
+/* Responsive: Tablet */
+@media (max-width: 1200px) {
   .bachas-grid {
+    grid-template-columns: repeat(2, 1fr); /* ✅ 2 columnas para pantallas medianas */
     gap: 1.5rem;
-    margin-top: 1.5rem;
-    margin-bottom: 2.5rem;
   }
 }
 
+/* Responsive: Mobile */
 @media (max-width: 768px) {
   .bachas-grid {
+    grid-template-columns: 1fr; /* ✅ 1 columna para mobile */
     gap: 1rem;
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
   }
 
   .bachas-title {
