@@ -1,8 +1,6 @@
-
 // ==========================
-// Corrección de altura de viewport móvil
+// Corrección de altura de viewport móvil + espacio fantasma
 // ==========================
-
 function ajustarAlturaViewport() {
   const vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -10,8 +8,15 @@ function ajustarAlturaViewport() {
 
 window.addEventListener('load', ajustarAlturaViewport);
 window.addEventListener('resize', ajustarAlturaViewport);
+window.addEventListener('orientationchange', ajustarAlturaViewport);
 
-
+// Corrección espacio fantasma inicial en móviles
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    ajustarAlturaViewport();
+    window.scrollTo(0, 0);
+  }, 100);
+});
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -169,6 +174,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // =========================
+  // Ajuste dinámico padding-top para móvil en sección INICIO
+  // =========================
+  function ajustarPaddingInicioMobile() {
+    const navbar = document.querySelector('.navbar');
+    const inicio = document.getElementById('inicio');
+
+    if (navbar && inicio && window.innerWidth <= 768) {
+      const navbarHeight = navbar.offsetHeight;
+      inicio.style.paddingTop = `${navbarHeight}px`;
+    }
+  }
+
+  window.addEventListener('load', ajustarPaddingInicioMobile);
+  window.addEventListener('resize', ajustarPaddingInicioMobile);
+});
+
+
 // =========================
 // Scroll automático
 // =========================
@@ -223,8 +246,8 @@ if (esIndex() && esEscritorio()) {
 }
 
 
-  // =========================
-  // Navbar dinámico
+   // =========================
+  // Navbar dinámico mejorado
   // =========================
 
   const navbar = document.querySelector(".navbar");
@@ -302,7 +325,8 @@ if (esIndex() && esEscritorio()) {
       makeNavbarSticky();
       if (isInInicioSection()) showNavbar();
     } else {
-      navbar.style.position = "static";
+      navbar.style.position = "fixed";
+      navbar.style.top = "0";
     }
   });
 
@@ -311,4 +335,5 @@ if (esIndex() && esEscritorio()) {
     navbar.style.top = "0";
     navbar.style.width = "100%";
   }
+
 });
