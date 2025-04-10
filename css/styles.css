@@ -1507,10 +1507,23 @@ Grid de cards
 
 .card-title-pisos {
   margin-top: 10px;
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
   font-size: 1.35rem;
   color: #333;
   font-family: 'Ubuntu Bold';
+  text-align: center;
+
+  
+}
+
+.card-subtext-pisos {
+  margin-top: 0 !important;
+  margin-bottom: 0;
+  font-size: 1rem;
+  color: #333;
+  font-family: 'Ubuntu Bold';
+  text-align: center;
+  line-height: 1;
 
   
 }
@@ -1527,8 +1540,9 @@ text-align: center;
   margin-top: 10px;
   font-size: 0.7rem;
   color: #333;
-  line-height: 1.4;
-  text-align: center;
+  line-height: 1.2;
+  text-align: justify;
+  letter-spacing: 0.03em !important;
 
 }
 
