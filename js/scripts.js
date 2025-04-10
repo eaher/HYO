@@ -53,6 +53,100 @@ document.addEventListener("DOMContentLoaded", function () {
 
   esperarDataProductos();
 
+  esperarDataProductos();
+
+// =========================
+// Consulta catálogo dinámico (Carrusel o PDF)
+// =========================
+
+const consultaBlocks = document.querySelectorAll(".consulta-contenido");
+
+const catalogData = {
+  'contenedor-piscinas': {
+      images: [
+          'img/CERAMICAS/PRODUCTOS + FICHAS/PISCINAS/CARRUSELPISCINAS/catalogo-hojas-piscinas-01.png',
+          'img/CERAMICAS/PRODUCTOS + FICHAS/PISCINAS/CARRUSELPISCINAS/catalogo-hojas-piscinas-02.png',
+          'img/CERAMICAS/PRODUCTOS + FICHAS/PISCINAS/CARRUSELPISCINAS/catalogo-hojas-piscinas-03.png',
+          'img/CERAMICAS/PRODUCTOS + FICHAS/PISCINAS/CARRUSELPISCINAS/catalogo-hojas-piscinas-04.png',
+      ],
+      pdf: 'pdf/catalogo-piscinas.pdf'
+  },
+  'contenedor-revestimientos': {
+      images: [
+          'img/CERAMICAS/CARRUSEL-REVESTIMIENTOS/imagen1.jpg',
+          'img/CERAMICAS/CARRUSEL-REVESTIMIENTOS/imagen2.jpg'
+      ],
+      pdf: 'pdf/catalogo-revestimientos.pdf'
+  },
+  'contenedor-pisos': {
+      images: [
+          'img/CERAMICAS/CARRUSEL-PISOS/imagen1.jpg',
+          'img/CERAMICAS/CARRUSEL-PISOS/imagen2.jpg'
+      ],
+      pdf: 'pdf/catalogo-pisos.pdf'
+  },
+  'contenedor-decorativos': {
+      images: [
+          'img/CERAMICAS/CARRUSEL-DECORATIVOS/imagen1.jpg',
+          'img/CERAMICAS/CARRUSEL-DECORATIVOS/imagen2.jpg'
+      ],
+      pdf: 'pdf/catalogo-decorativos.pdf'
+  }
+};
+
+consultaBlocks.forEach(block => {
+  block.addEventListener("click", function () {
+      const containerSection = block.closest("section");
+      const sectionId = containerSection ? containerSection.id : null;
+      const isMobile = window.innerWidth < 768;
+
+      console.log(`Se hizo clic en: ${sectionId}, esMobile: ${isMobile}`);
+
+      if (!sectionId || !catalogData[sectionId]) {
+          console.warn(`No se encontró configuración para: ${sectionId}`);
+          return;
+      }
+
+      if (isMobile) {
+          console.log(`Abriendo PDF: ${catalogData[sectionId].pdf}`);
+          window.location.href = catalogData[sectionId].pdf;
+      } else {
+          console.log(`Abriendo carrusel para: ${sectionId}`);
+          abrirCarruselCatalogo(catalogData[sectionId].images);
+      }
+  });
+});
+
+
+function abrirCarruselCatalogo(images) {
+  console.log("Rutas de imágenes que recibe el carrusel:", images);
+
+  const carouselInner = document.querySelector("#carouselInner");
+  if (!carouselInner) {
+    console.error("No se encontró el carrusel en el DOM.");
+    return;
+  }
+
+  carouselInner.innerHTML = ''; // Limpiar carrusel
+
+  images.forEach((imgSrc, index) => {
+    const carouselItem = document.createElement('div');
+    carouselItem.className = `carousel-item${index === 0 ? ' active' : ''}`;
+    carouselItem.innerHTML = `<img src="${imgSrc}" class="d-block w-100" alt="Imagen carrusel" loading="lazy">`;
+    carouselInner.appendChild(carouselItem);
+  });
+
+  const myModal = new bootstrap.Modal(document.getElementById('carouselModal'));
+  myModal.show();
+}
+
+
+// =========================
+// Modal imágenes / fichas técnicas
+// =========================
+
+
+
   function detectarCategoria() {
     const path = window.location.pathname.toLowerCase();
     if (path.includes("aluminio")) return "aluminio";

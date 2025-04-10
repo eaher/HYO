@@ -1345,8 +1345,25 @@ Grid de cards
   width: 100%;
   max-width: 1480px;
   margin: 0 auto;
-  height: auto;
+
 }
+
+#contenedor-decorativos{
+  margin-bottom: 6rem;
+  margin-top: 0;
+}
+
+#contenedor-piscinas{
+  margin-bottom: 5rem;
+}
+
+#contenedor-pisos-general{
+  margin-bottom: 3rem;
+}
+/* ======================
+   Espaciado secciones - Página Cerámicas
+======================== */
+
 
 .section-marcas-pisos {
   width: 100%;
@@ -1435,6 +1452,8 @@ Grid de cards
 #contenedor-pisos {
   padding: 40px 0;
 }
+
+
 
 .contenedor-pisos {
   width: 100%;
