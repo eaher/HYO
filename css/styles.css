@@ -455,6 +455,50 @@ Sección PRODUCTOS
       margin-bottom: 1.2rem;
       /* Aire entre párrafos */
   }
+
+  .card-text {
+    font-family: "Ubuntu Light" !important;
+    font-size: clamp(10px, 0.7vw, 15px) !important;
+    color: #555;
+    overflow-wrap: break-word;
+    max-width: 265px;
+    line-height: 1.1;
+    margin-bottom: 5px !important;
+    text-align: center !important;
+    margin-top: 0.3rem !important;
+    letter-spacing: 0.07em !important;
+  }
+  
+  
+  .card-text-pvc {
+    font-family: "Ubuntu Light" !important;
+    font-size: clamp(10px, 0.9vw, 15px) !important;
+    color: #555;
+    overflow-wrap: break-word;
+    max-width: 265px;
+    line-height: 1.3;
+    margin-bottom: 5px !important;
+    text-align: center !important;
+    margin-top: 0.3rem !important;
+    letter-spacing: 0.06em !important;
+  }
+  
+  .card-text-al {
+    font-family: "Ubuntu Light" !important;
+    font-size: clamp(10px, 0.7vw, 15px) !important;
+    color: #555;
+    overflow-wrap: break-word;
+    max-width: 265px;
+    line-height: 1.3;
+    margin-bottom: 5px !important;
+    text-align: center !important;
+    margin-top: 0.3rem !important;
+    letter-spacing: 0.06em !important;
+  }
+  
+
+
+
 }
 
 
