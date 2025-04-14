@@ -1658,7 +1658,7 @@ text-align: center;
   .titulo-piscinas,
   .titulo-comercializados {
     margin-left: 10px;
-    font-size: clamp(20px, 2vw, 40px);
+    font-size: clamp(10px, 2vw, 15px);
   }
   .linea-titulo {
     margin-left: 10px;
@@ -1708,6 +1708,12 @@ text-align: center;
   .card-title-pisos,
   .card-text-pisos {
     text-align: center;
+  }
+
+
+  .titulo-comercializados {
+    margin-left: 10px;
+    font-size: clamp(10px, 2vw, 15px);
   }
 }
 
