@@ -203,6 +203,7 @@ function abrirCarruselCatalogo(images) {
           <div class="card-content">
             <h3 class="card-title-prod">${producto.titulo}</h3>
             <p class="card-subtitle">${producto.subtitulo}</p>
+            <p class="card-description">${producto.descripcion}</p>
             <div class="card-icon">
               <a href="#" class="icon-ficha" data-id="${producto.id}" data-categoria="${categoria}" data-type="ficha">
                 <img src="img/file.png" alt="Ficha técnica icon" class="icon-ficha">
