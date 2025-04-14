@@ -108,12 +108,18 @@ consultaBlocks.forEach(block => {
       }
 
       if (isMobile) {
-          console.log(`Abriendo PDF: ${catalogData[sectionId].pdf}`);
-          window.location.href = catalogData[sectionId].pdf;
+        console.log(`Descargando PDF: ${catalogData[sectionId].pdf}`);
+        const link = document.createElement('a');
+        link.href = catalogData[sectionId].pdf;
+        link.download = catalogData[sectionId].nombreArchivo || catalogData[sectionId].pdf.split('/').pop();
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
       } else {
-          console.log(`Abriendo carrusel para: ${sectionId}`);
-          abrirCarruselCatalogo(catalogData[sectionId].images);
+        console.log(`Abriendo carrusel para: ${sectionId}`);
+        abrirCarruselCatalogo(catalogData[sectionId].images);
       }
+      
   });
 });
 
