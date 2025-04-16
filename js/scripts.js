@@ -184,7 +184,7 @@ function abrirCarruselCatalogo(images) {
       if (categoria.includes('bachas')) {
         card = document.createElement("div");
         card.classList.add("bachas-card");
-
+      
         card.innerHTML = `
           <img src="${producto.imgProducto}" alt="${producto.titulo}" loading="lazy" data-id="${producto.id}" data-categoria="${categoria}">
           <a href="#" class="bachas-icon-lupa" data-id="${producto.id}" data-categoria="${categoria}" data-type="image">
@@ -192,10 +192,11 @@ function abrirCarruselCatalogo(images) {
           </a>
           <div class="bachas-card-content">
             <h3 class="bachas-title">${producto.titulo}</h3>
-            <p class="bachas-description">${producto.subtitulo}</p>
+            <p class="bachas-medida">Medida: ${producto.subtitulo}</p>
+            <p class="bachas-codigo">${producto.descripcion}</p>
           </div>
         `;
-      } else {
+      }else {
         card = document.createElement("div");
         card.classList.add("card-tech");
 
