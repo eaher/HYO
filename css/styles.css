@@ -2522,7 +2522,7 @@ main.contenido-descargas {
 
 .marca-titulo-descargas {
   font-family: "Ubuntu Bold", sans-serif;
-  font-size: clamp(18px, 1.5vw, 25px);
+  font-size: clamp(18px, 1.5vw, 23px);
   margin-bottom: 0.5rem;
   color: #000;
 }
