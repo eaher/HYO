@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Mi Página Web</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/59c276f275.js" crossorigin="anonymous"></script>
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid px-3">
+            <!-- Logo a la izquierda -->
+            <a class="navbar-brand" href="#inicio">
+                <img src="img/HYO-LOGO - WEB.png" alt="Logo">
+            </a>
+            <!-- Botón para pantallas pequeñas -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Menú centrado -->
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#inicio">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#productos">PRODUCTOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#empresa">EMPRESA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contacto">CONTACTO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="descargas.html">DESCARGAS</a>
+                    </li>
+                </ul>
+                <!-- Redes sociales alineados a la derecha -->
+                <div class="d-flex ">
+                    <a href="#" class="social-icon"><img src="img/FACEBOOK.png" alt="Facebook" width="30"
+                            height="30"></a>
+                    <a href="#" class="social-icon"><img src="img/INSTAGRAM.png" alt="Instagram" width="30"
+                            height="30"></a>
+                    <a href="#" class="social-icon"><img src="img/MAIL.png" alt="Mail" width="30" height="30"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Sección INICIO-->
+    <section id="inicio-general" class="inicio-general desktop-only">
+        <div class="container custom-container">
+            <div class="imagen-inicio-seccion">
+                <img src="img/PVC/PVC BANNER.png" alt="Imagen de Inicio" class="img-fluid" />
+            </div>
+            <p class="hero-text">
+                Fabricamos guardacantos de PVC que brindan una solución estética y funcional para terminaciones de revestimientos, destacándose por su resistencia a la humedad, facilidad de instalación y una apariencia moderna y duradera.
+            </p>
+        </div>
+    </section>
+    <section id="inicio-general-mobile" class="inicio-general-mobile mobile-only">
+        <div class="container-fluid p-0">
+            <div class="imagen-inicio-seccion">
+                <img src="img/ACERO/ACERO BANNER.png" alt="Imagen de Inicio" class="img-fluid w-100" />
+            </div>
+            <p class="text-center mt-3 hero-text">
+                Todos nuestros productos son fabricados con acero inoxidable de alta calidad, garantizando durabilidad y
+                diseño en cada aplicación.
+                <br> Un poco más de texto para dar cuerpo al mensaje y listo por aquí.
+            </p>
+        </div>
+    </section>
+
+    <!-- Sección Fichas Técnicas -->
+    <div class="section-bg productos-bg">
+        <section id="fichas-tecnicas" class="section">
+            <div class="container custom-container">
+                <div class="cards-grid-prod">
+
+
+
+
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+<!-- Footer -->
+<footer class="footer-hyo">
+    <div class="container custom-container text-center">
+      <p class="footer-text">© 2025 HYO SA. Todos los derechos reservados.</p>
+      <div class="footer-social-icons">
+        <a href="#"><img src="img/ICONOS REDES SOCIALES/ICONOS REDES-FB.png" alt="Facebook" width="30" height="30"></a>
+        <a href="#"><img src="img/ICONOS REDES SOCIALES/ICONOS REDES-IG.png" alt="Instagram" width="30" height="30"></a>
+        <a href="#"><img src="img/ICONOS REDES SOCIALES/ICONOS REDES-mail.png" alt="Mail" width="30" height="30"></a>
+      </div>
+    </div>
+  </footer>
+    <!-- Bootstrap JS y scripts personalizados -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/productos-data.js"></script>
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
