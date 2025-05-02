@@ -2434,6 +2434,29 @@ Grid de cards
    ESTILOS EXCLUSIVOS DESCARGAS
 ============================ */
 
+/* Mostrar solo en escritorio */
+.desktop-only-descargas {
+  display: block;
+}
+
+/* Ocultar por defecto en mobile */
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Oculta en mobile la versión de escritorio */
+  .desktop-only-descargas {
+    display: none !important;
+  }
+
+  /* Muestra solo en mobile */
+  .mobile-only {
+    display: block !important;
+  }
+}
+
+
 body.pagina-descargas {
   display: flex;
   flex-direction: column;
@@ -2506,7 +2529,7 @@ main.contenido-descargas {
 
 .marca-img-descargas {
   width: 100%;
-  max-width: 350px;
+  max-width: 320px;
   aspect-ratio: 350 / 248;
   object-fit: contain;
   height: auto;
