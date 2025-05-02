@@ -2484,14 +2484,18 @@ main.contenido-descargas {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  
 }
 
 /* Card individual */
 .marca-item-descargas {
+  flex: 1 1 calc(25% - 2rem); /* 4 columnas con el gap incluido */
+  max-width: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 
 .marca-titulo-descargas {
   font-family: "Ubuntu Bold", sans-serif;
