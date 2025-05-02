@@ -2530,7 +2530,7 @@ main.contenido-descargas {
 .marca-img-descargas {
   width: 100%;
   max-width: 320px;
-  aspect-ratio: 350 / 248;
+  aspect-ratio: 320 / 227;
   object-fit: contain;
   height: auto;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
