@@ -2483,7 +2483,7 @@ main.contenido-descargas {
 /* Título */
 .descargas-h1-descargas {
   font-family: "Ubuntu Bold", sans-serif;
-  font-size: clamp(30px, 4vw, 60px);
+  font-size: clamp(30px, 4vw, 50px);
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 1rem;
