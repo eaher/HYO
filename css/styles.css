@@ -2014,6 +2014,22 @@ Grid de cards
   /* Opcional: bordes redondeados */
 }
 
+#btn-descargar-pdf {
+  /* color de fondo */
+  background-color: #0d8a8a !important;
+  /* borde para que combine */
+  border-color:    #0d8a8a !important;
+  /* opcional: color de texto */
+  color:           #ffffff !important;
+}
+
+/* Hover / foco */
+#btn-descargar-pdf:hover,
+#btn-descargar-pdf:focus {
+  background-color: #054747 !important; /* un tono un poco más oscuro */
+  border-color:     #054747 !important;
+}
+
 
 
 

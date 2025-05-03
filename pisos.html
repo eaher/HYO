@@ -411,45 +411,58 @@
 
 
 
-<!-- Footer -->
-<footer class="footer-hyo">
-    <div class="container custom-container text-center">
-      <p class="footer-text">© 2025 HYO SA. Todos los derechos reservados.</p>
-      <div class="footer-social-icons">
-        <a href="#"><img src="img/ICONOS REDES SOCIALES/ICONOS REDES-FB.png" alt="Facebook" width="30" height="30"></a>
-        <a href="#"><img src="img/ICONOS REDES SOCIALES/ICONOS REDES-IG.png" alt="Instagram" width="30" height="30"></a>
-        <a href="#"><img src="img/ICONOS REDES SOCIALES/ICONOS REDES-mail.png" alt="Mail" width="30" height="30"></a>
-      </div>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer-hyo">
+        <div class="container custom-container text-center">
+            <p class="footer-text">© 2025 HYO SA. Todos los derechos reservados.</p>
+            <div class="footer-social-icons">
+                <a href="#"><img src="img/ICONOS REDES SOCIALES/ICONOS REDES-FB.png" alt="Facebook" width="30"
+                        height="30"></a>
+                <a href="#"><img src="img/ICONOS REDES SOCIALES/ICONOS REDES-IG.png" alt="Instagram" width="30"
+                        height="30"></a>
+                <a href="#"><img src="img/ICONOS REDES SOCIALES/ICONOS REDES-mail.png" alt="Mail" width="30"
+                        height="30"></a>
+            </div>
+        </div>
+    </footer>
     <!-- Bootstrap JS y scripts personalizados -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
 
     <!-- Modal Carrusel -->
-    <div class="modal fade" id="carouselModal" tabindex="-1" aria-labelledby="carouselModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal fade" id="carouselModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-body">
-                    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1300">
-                        <div class="carousel-inner" id="carouselInner">
-                            <!-- Las imágenes del carrusel se insertan dinámicamente -->
+                <div class="modal-body position-relative p-0">
+                    <button type="button" class="btn-close modal-close-btn" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                    <div id="carouselWrapper" class="w-100">
+                        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner" id="carouselInner">
+                                <!-- Imágenes dinámicas -->
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                                <span class="visually-hidden">Siguiente</span>
+                            </button>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Anterior</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Siguiente</span>
-                        </button>
                     </div>
+                </div>
+                <div class="modal-footer justify-content-center bg-light">
+                    <a id="btn-descargar-pdf" href="#" download class="btn btn-primary d-flex align-items-center gap-2">
+                        <i class="fa-solid fa-download"></i> Descargar catálogo
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+
 
 
 

@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  // 1) viewport unit hack
   function ajustarAlturaViewport() {
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   }
-
   window.addEventListener('load', ajustarAlturaViewport);
   window.addEventListener('resize', ajustarAlturaViewport);
   window.addEventListener('orientationchange', ajustarAlturaViewport);
 
+  // 2) scroll restoration manual
   if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
   }
-
   window.addEventListener("pageshow", (event) => {
     if (esIndex() && esEscritorio() && !window.location.hash) {
       requestAnimationFrame(() => {
@@ -22,8 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
-
-  // 🔧 Corrección: Ajuste de scroll cuando hay hash (#productos)
   window.addEventListener("load", () => {
     if (window.location.hash && esIndex() && esEscritorio()) {
       const hash = window.location.hash;
@@ -38,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // 3) inicializar cards dinámicas
   function iniciarApp() {
     const path = window.location.pathname.toLowerCase();
     if (path.includes("bachas")) {
@@ -50,10 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
       generarCardsPorCategoria(categoria, ".cards-grid-prod");
-
     }
   }
-
   function esperarDataProductos() {
     const intervalo = setInterval(() => {
       if (typeof productosPorCategoria !== "undefined") {
@@ -63,19 +60,61 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 50);
     setTimeout(() => clearInterval(intervalo), 5000);
   }
-
   esperarDataProductos();
 
+  // 4) Datos de catálogo para Piscinas, Revestimientos, Pisos y Decorativos
+  const catalogData = {
+    "contenedor-piscinas": {
+      images: [
+        "img/CERAMICAS/PRODUCTOS + FICHAS/PISCINAS/CARRUSELPISCINAS/catalogo-hojas-piscinas-01.png",
+        "img/CERAMICAS/PRODUCTOS + FICHAS/PISCINAS/CARRUSELPISCINAS/catalogo-hojas-piscinas-02.png",
+        "img/CERAMICAS/PRODUCTOS + FICHAS/PISCINAS/CARRUSELPISCINAS/catalogo-hojas-piscinas-03.png",
+        "img/CERAMICAS/PRODUCTOS + FICHAS/PISCINAS/CARRUSELPISCINAS/catalogo-hojas-piscinas-04.png"
+      ],
+      pdf: "pdf/catalogo-piscinas.pdf"
+    },
+    "contenedor-revestimientos": {
+      images: [
+        "img/CERAMICAS/PRODUCTOS + FICHAS/REVESTIMIENTOS/CARRUSELREVESTIMIENTOS/CATALOGO - HOJAS REVESTIMIENTOS-01.png",
+        "img/CERAMICAS/PRODUCTOS + FICHAS/REVESTIMIENTOS/CARRUSELREVESTIMIENTOS/CATALOGO - HOJAS REVESTIMIENTOS-02.png",
+        "img/CERAMICAS/PRODUCTOS + FICHAS/REVESTIMIENTOS/CARRUSELREVESTIMIENTOS/CATALOGO - HOJAS REVESTIMIENTOS-03png",
+        "img/CERAMICAS/PRODUCTOS + FICHAS/REVESTIMIENTOS/CARRUSELREVESTIMIENTOS/CATALOGO - HOJAS REVESTIMIENTOS-04.png",
+        "img/CERAMICAS/PRODUCTOS + FICHAS/REVESTIMIENTOS/CARRUSELREVESTIMIENTOS/CATALOGO - HOJAS REVESTIMIENTOS-05.png"
+      ],
+      pdf: "pdf/catalogo-piscinas.pdf"
+    },
+    "contenedor-pisos-general": {
+      images: [
+        "img/CERAMICAS/CATALOGOS/PISOS/CARRUSEL-PISOS/CATALOGO - HOJAS PISOS-01.png",
+        "img/CERAMICAS/CATALOGOS/PISOS/CARRUSEL-PISOS/CATALOGO - HOJAS PISOS-02.png",
+        "img/CERAMICAS/CATALOGOS/PISOS/CARRUSEL-PISOS/CATALOGO - HOJAS PISOS-03.png",
+        "img/CERAMICAS/CATALOGOS/PISOS/CARRUSEL-PISOS/CATALOGO - HOJAS PISOS-04.png",
+        "img/CERAMICAS/CATALOGOS/PISOS/CARRUSEL-PISOS/CATALOGO - HOJAS PISOS-05.png",
+        "img/CERAMICAS/CATALOGOS/PISOS/CARRUSEL-PISOS/CATALOGO - HOJAS PISOS-06.png"
+      ],
+      pdf: "pdf/catalogo-piscinas.pdf"
+    },
+    "contenedor-decorativos": {
+      images: [
+        "img/CERAMICAS/CATALOGOS/DECORATIVOS/CARRUSEL-DECORATIVOS/CATALOGO - HOJAS DECO-01.png",
+        "img/CERAMICAS/CATALOGOS/DECORATIVOS/CARRUSEL-DECORATIVOS/CATALOGO - HOJAS DECO-02.png",
+        "img/CERAMICAS/CATALOGOS/DECORATIVOS/CARRUSEL-DECORATIVOS/CATALOGO - HOJAS DECO-03.png",
+        "img/CERAMICAS/CATALOGOS/DECORATIVOS/CARRUSEL-DECORATIVOS/CATALOGO - HOJAS DECO-04.png",
+      ],
+      pdf: "pdf/catalogo-piscinas.pdf"
+    }
+  };
+
+  // 5) Listeners para "Consulta Catálogo"
   const consultaBlocks = document.querySelectorAll(".consulta-contenido");
 
+  // 5a) Mantenimiento del comportamiento actual para bachas
   consultaBlocks.forEach(block => {
     block.addEventListener("click", function () {
       const containerSection = block.closest("section");
       if (!containerSection) return;
-
       const isBachasMarmol = containerSection.querySelector("#cards-bachas-marmol");
       const isBachasSimilPiedra = containerSection.querySelector("#cards-bachas-simil-piedra");
-
       if (isBachasMarmol) {
         descargarPDF('pdf/catalogo-bachas-marmol.pdf');
       } else if (isBachasSimilPiedra) {
@@ -84,6 +123,35 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // 5b) Nuevo listener para Piscinas / Revestimientos / Pisos / Decorativos
+  consultaBlocks.forEach(block => {
+    block.addEventListener("click", () => {
+      const section = block.closest("section");
+      if (!section) return;
+      const data = catalogData[section.id];
+      if (!data) return; // no es una sección de catálogo dinámico
+
+      // a) Construir el carrusel
+      const carouselInner = document.getElementById("carouselInner");
+      carouselInner.innerHTML = "";
+      data.images.forEach((src, i) => {
+        const item = document.createElement("div");
+        item.className = "carousel-item" + (i === 0 ? " active" : "");
+        item.innerHTML = `<img src="${src}" class="d-block w-100" alt="Página ${i+1}">`;
+        carouselInner.appendChild(item);
+      });
+
+      // b) Actualizar botón de descarga
+      const btnPdf = document.getElementById("btn-descargar-pdf");
+      btnPdf.href = data.pdf;
+      btnPdf.download = data.pdf.split("/").pop();
+
+      // c) Mostrar el modal
+      new bootstrap.Modal(document.getElementById("carouselModal")).show();
+    });
+  });
+
+  // 6) Función genérica de descarga de PDF
   function descargarPDF(rutaPDF) {
     const link = document.createElement('a');
     link.href = rutaPDF;
@@ -92,6 +160,8 @@ document.addEventListener("DOMContentLoaded", function () {
     link.click();
     document.body.removeChild(link);
   }
+
+  // 7) Resto del script original: generación de cards, modales de imagen/ficha, scroll automático, navbar, etc.
 
   function detectarCategoria() {
     const path = window.location.pathname.toLowerCase();
@@ -106,12 +176,9 @@ document.addEventListener("DOMContentLoaded", function () {
   function generarCardsPorCategoria(categoria, contenedorSelector) {
     const contenedor = document.querySelector(contenedorSelector);
     if (!contenedor) return;
-
     const productos = productosPorCategoria[categoria] || [];
     if (!productos.length) return;
-
     productos.sort((a, b) => a.id - b.id);
-
     productos.forEach(producto => {
       let card;
       if (categoria.includes('bachas')) {
@@ -161,11 +228,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const productos = productosPorCategoria[categoria] || [];
     const producto = productos.find(p => p.id == id);
     if (!producto) return;
-
     if (type === "image") {
       crearModal(producto.imgProducto, "modal-imagen");
     }
-
     if (type === "ficha") {
       crearModal(producto.imgFicha, "modal-ficha", producto.descripcion);
     }
@@ -199,162 +264,98 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Helpers de scroll automático y navbar …
   function getNextSection() {
     const sections = document.querySelectorAll(".section");
     const currentScroll = window.pageYOffset;
-    return Array.from(sections).find(section => section.offsetTop > currentScroll + 10);
+    return Array.from(sections).find(s => s.offsetTop > currentScroll + 10);
   }
-
   function getPrevSection() {
     const sections = Array.from(document.querySelectorAll(".section"));
     const currentScroll = window.pageYOffset;
-    const buffer = 30;
-    let prevSection = null;
-    for (let i = 0; i < sections.length; i++) {
-      const sectionTop = sections[i].offsetTop;
-      if (sectionTop + buffer < currentScroll) {
-        prevSection = sections[i];
-      } else {
-        break;
-      }
+    let prev = null;
+    for (let s of sections) {
+      if (s.offsetTop + 30 < currentScroll) prev = s;
+      else break;
     }
-    return prevSection;
+    return prev;
   }
-
   function scrollToSection(section) {
-    const navbar = document.querySelector(".navbar");
-    const isNavbarVisible = window.getComputedStyle(navbar).top === "0px";
-    const navbarHeight = navbar?.offsetHeight || 0;
-    const scrollOffset = esEscritorio() && isNavbarVisible ? navbarHeight : 0;
-    window.scrollTo({
-      top: section.offsetTop - scrollOffset,
-      behavior: "smooth"
-    });
+    const navbarHeight = document.querySelector(".navbar")?.offsetHeight || 0;
+    window.scrollTo({ top: section.offsetTop - (esEscritorio() ? navbarHeight : 0), behavior: "smooth" });
   }
-
   if (esIndex() && esEscritorio()) {
-    let scrollTimeout;
-    document.addEventListener("wheel", function (event) {
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        const delta = event.deltaY;
-        if (delta > 0) {
-          const nextSection = getNextSection();
-          if (nextSection) scrollToSection(nextSection);
-        } else {
-          const prevSection = getPrevSection();
-          if (prevSection) scrollToSection(prevSection);
-        }
+    let timeout;
+    document.addEventListener("wheel", e => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        const delta = e.deltaY;
+        const sec = delta > 0 ? getNextSection() : getPrevSection();
+        if (sec) scrollToSection(sec);
       }, 100);
     }, { passive: true });
   }
-
   const navbar = document.querySelector(".navbar");
-  let lastScrollTop = 0;
-  let hideNavbarTimeout;
-  let lastMouseMoveTime = 0;
-  const mouseMoveDelay = 500;
-  const navbarHeight = navbar.offsetHeight;
-
-  function isInInicioSection() {
-    const inicioSection = document.getElementById("inicio");
-    if (!inicioSection) return false;
-    const scrollPosition = window.pageYOffset;
-    return scrollPosition >= inicioSection.offsetTop && scrollPosition < inicioSection.offsetTop + inicioSection.offsetHeight;
+  let lastY = 0, hideTimeout, lastMove = 0;
+  function isInInicio() {
+    const inicio = document.getElementById("inicio");
+    if (!inicio) return false;
+    const y = window.pageYOffset;
+    return y >= inicio.offsetTop && y < inicio.offsetTop + inicio.offsetHeight;
   }
-
-  function hideNavbar() {
+  function hideNav() {
     if (!esEscritorio()) return;
-    navbar.style.transition = "top 0.3s ease-in-out";
-    navbar.style.top = `-${navbarHeight}px`;
+    navbar.style.transition = "top 0.3s"; navbar.style.top = `-${navbar.offsetHeight}px`;
   }
-
-  function showNavbar() {
-    navbar.style.transition = "top 0.3s ease-in-out";
-    navbar.style.top = "0";
+  function showNav() {
+    navbar.style.transition = "top 0.3s"; navbar.style.top = "0";
   }
-
-  function resetNavbarTimeout() {
-    if (!esEscritorio()) return;
-    const currentTime = new Date().getTime();
-    if (currentTime - lastMouseMoveTime > mouseMoveDelay) {
-      clearTimeout(hideNavbarTimeout);
-      showNavbar();
-      lastMouseMoveTime = currentTime;
-      hideNavbarTimeout = setTimeout(hideNavbar, 3000);
+  window.addEventListener("scroll", () => {
+    if (!esEscritorio()) { showNav(); return; }
+    if (isInInicio()) { showNav(); }
+    else {
+      if (window.pageYOffset > lastY) hideNav();
+      else { showNav(); clearTimeout(hideTimeout); hideTimeout = setTimeout(hideNav, 3000); }
     }
-  }
-
-  window.addEventListener("scroll", function () {
-    if (!esEscritorio()) {
-      showNavbar();
-      return;
-    }
-    if (isInInicioSection()) {
-      showNavbar();
-    } else {
-      if (window.pageYOffset > lastScrollTop) {
-        hideNavbar();
-      } else {
-        showNavbar();
-        clearTimeout(hideNavbarTimeout);
-        hideNavbarTimeout = setTimeout(hideNavbar, 3000);
+    lastY = Math.max(0, window.pageYOffset);
+  });
+  window.addEventListener("mousemove", e => {
+    if (e.clientY < 100 || navbar.contains(e.target)) {
+      const now = Date.now();
+      if (now - lastMove > 500) {
+        clearTimeout(hideTimeout); showNav(); lastMove = now;
+        hideTimeout = setTimeout(hideNav, 3000);
       }
     }
-    lastScrollTop = Math.max(0, window.pageYOffset);
   });
-
-  window.addEventListener("mousemove", function (event) {
-    if (event.clientY < 100 || navbar.contains(event.target)) {
-      resetNavbarTimeout();
-    }
+  window.addEventListener("load", () => {
+    if (esEscritorio()) { navbar.style.position = "sticky"; showNav(); }
   });
-
-  window.addEventListener("load", function () {
-    if (esEscritorio()) {
-      makeNavbarSticky();
-      if (isInInicioSection()) showNavbar();
-    }
+  window.addEventListener("resize", () => {
+    if (esEscritorio()) { navbar.style.position = "sticky"; showNav(); }
+    else { navbar.style.position = "fixed"; showNav(); }
   });
-
-  window.addEventListener("resize", function () {
-    if (esEscritorio()) {
-      makeNavbarSticky();
-      if (isInInicioSection()) showNavbar();
-    } else {
-      navbar.style.position = "fixed";
-      navbar.style.top = "0";
-    }
-  });
-
-  function makeNavbarSticky() {
-    navbar.style.position = "sticky";
-    navbar.style.top = "0";
-    navbar.style.width = "100%";
-  }
 
   function esIndex() {
-    const path = window.location.pathname;
-    return path === "/" || path.endsWith("/index.html");
+    const p = window.location.pathname;
+    return p === "/" || p.endsWith("/index.html");
   }
-
   function esEscritorio() {
     return window.innerWidth > 768;
   }
 
-  // === AGREGADO: descarga desde imágenes con .descarga-pdf ===
+  // Descarga desde imágenes con .descarga-pdf
   document.querySelectorAll(".descarga-pdf").forEach(img => {
     img.style.cursor = "pointer";
-    img.addEventListener("click", function () {
+    img.addEventListener("click", () => {
       const rutaPDF = img.dataset.pdf;
       if (!rutaPDF) return;
-
-      const link = document.createElement("a");
-      link.href = rutaPDF;
-      link.download = rutaPDF.split("/").pop();
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      const a = document.createElement("a");
+      a.href = rutaPDF;
+      a.download = rutaPDF.split("/").pop();
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
     });
   });
 
