@@ -281,9 +281,22 @@ document.addEventListener("DOMContentLoaded", function () {
     return prev;
   }
   function scrollToSection(section) {
-    const navbarHeight = document.querySelector(".navbar")?.offsetHeight || 0;
-    window.scrollTo({ top: section.offsetTop - (esEscritorio() ? navbarHeight : 0), behavior: "smooth" });
+    const navbar = document.querySelector(".navbar");
+    // La navbar está visible si su top es "0px"
+    const navVisible = navbar && window.getComputedStyle(navbar).top === "0px";
+    // Si es escritorio y la navbar está visible, resto su altura; si no, resto 0
+    const offset = (esEscritorio() && navVisible) 
+      ? navbar.getBoundingClientRect().height 
+      : 0;
+  
+    window.scrollTo({
+      top: section.offsetTop - offset,
+      behavior: "smooth"
+    });
   }
+  
+
+
   if (esIndex() && esEscritorio()) {
     let timeout;
     document.addEventListener("wheel", e => {
