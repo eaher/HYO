@@ -337,9 +337,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function esIndex() {
-    const p = window.location.pathname;
-    return p === "/" || p.endsWith("/index.html");
+    const p = window.location.pathname.toLowerCase();
+    // true si NO cargamos un .html diferente de index.html
+    return !/\.html$/i.test(p) || p.endsWith("/index.html");
   }
+  
   function esEscritorio() {
     return window.innerWidth > 768;
   }
