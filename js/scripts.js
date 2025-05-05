@@ -237,32 +237,44 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function crearModal(imagen, modalClass, descripcion = "ficha") {
+    // Contenedor principal
     const modalContainer = document.createElement("div");
     modalContainer.classList.add("modal", "fade", modalClass);
     modalContainer.tabIndex = -1;
-    const esFicha = modalClass === "modal-ficha";
+  
     modalContainer.innerHTML = `
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body p-0">
-            <button type="button" class="btn-close btn-close-white modal-close-btn" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-            <img src="${imagen}" class="modal-img-full" alt="Ficha técnica">
-          </div>
-          ${esFicha ? `
-            <div class="modal-footer justify-content-center">
-              <a href="${imagen}" download="${descripcion}-ficha.png" class="btn btn-primary d-flex align-items-center gap-2">
-                <i class="fa-solid fa-download"></i> Descargar ficha
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 bg-transparent">
+        <div class="modal-body p-0 position-relative">
+          <figure class="ficha-figure">
+            <!-- Botón de cierre superpuesto -->
+            <button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Cerrar">
+              &times;
+            </button>
+            <!-- Imagen de la ficha -->
+            <img src="${imagen}" alt="Ficha técnica ${descripcion}" class="ficha-img">
+            <!-- Botón de descarga -->
+            <figcaption class="ficha-caption">
+              <a href="${imagen}" download="${descripcion}-ficha.png" class="ficha-download" aria-label="Descargar ficha">
+                <i class="fa-solid fa-download"></i>
               </a>
-            </div>` : ``}
+            </figcaption>
+          </figure>
         </div>
-      </div>`;
+      </div>
+    </div>
+  `;
+  
+  
     document.body.appendChild(modalContainer);
     const modal = new bootstrap.Modal(modalContainer);
     modal.show();
+  
     modalContainer.addEventListener("hidden.bs.modal", () => {
       modalContainer.remove();
     });
   }
+  
 
   // Helpers de scroll automático y navbar …
   function getNextSection() {

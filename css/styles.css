@@ -1226,176 +1226,128 @@ PRODUCTOS - Desktop
 
 
 
-/* ======================
- Modal Ficha Técnica (Rediseñado y corregido)
-======================== */
+/* ======= Modal Ficha Técnica Lightbox (CORREGIDO) ======= */
+
+/* Backdrop más oscuro y difuminado */
+.modal-backdrop.show {
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+}
+
+/* Contenedor del modal sin bordes, centrado y sin márgenes negros */
 .modal-ficha .modal-dialog {
-  max-width: 38vw;
-  width: 100%;
-  max-height: 80vh;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
+  max-width: 90vw;
+  margin: 0 auto;
+  pointer-events: none;
 }
 
 .modal-ficha .modal-content {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  border-radius: 10px;
-  background-color: white;
-  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  pointer-events: auto;
+  
 }
 
+/* Cuerpo sin padding extra */
 .modal-ficha .modal-body {
-  flex-grow: 1;
+  padding: 0;
   position: relative;
-  background-color: #ededed;
-  /* fondo coherente con el sitio */
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  padding: 1rem 0;
-  /* solo vertical */
 }
 
-
-.modal-img-full {
-  max-width: 100%;
-  max-height: 84vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: auto;
-  border: 2px solid #565454;
-  /* marco sutil */
-}
-
-
-
-
-/* Botón flotante moderno */
-.modal-close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 50%;
-  padding: 6px;
-  backdrop-filter: blur(4px);
-  color: #fff;
-}
-
-/* Footer: botón de descarga */
-.modal-ficha .modal-footer {
-  background-color: #ededed;
+/* Figura para semántica y centrado de la imagen */
+.ficha-figure {
+  margin: 0;
+  position: relative;
+  background: transparent;
   padding: 1rem;
-  border-top: 1px solid #ccc;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.modal-ficha .modal-footer .btn {
+/* La imagen dentro del lightbox */
+.ficha-img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 4px;
+  /* eliminamos cualquier sombra negra extra */
+  box-shadow: none;
+}
+
+/* Caption que contiene el botón de descarga */
+.ficha-caption {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+/* Botón de descarga redondo */
+.ficha-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.9);
+  color: #065959;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.ficha-download:hover {
+  transform: scale(1.1);
+}
+
+/* Botón de cerrar, siempre sobre la imagen */
+.ficha-figure .modal-close-btn {
+  position: absolute;
+  top: 0.5rem;           
+  right: 0.5rem;        
+  font-size: 1.8rem;
+  line-height: 1;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-family: "Ubuntu", sans-serif;
-  color: #fff;
-  background-color: #065959;
-  font-size: clamp(14px, 1vw, 18px);
-  padding: 0.5rem 1.2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
+  justify-content: center;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+  z-index: 10;           /* sobre la imagen */
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.modal-ficha .modal-close-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
 }
 
-.modal-ficha .modal-footer .btn:hover {
-  background-color: #044343;
-}
-
-
-@media (max-width: 768px) {
-  .modal-ficha .modal-dialog {
-    max-width: 95vw;
-    width: 100%;
-    max-height: 90vh;
-    margin: 0 auto;
+/* Ajustes para móvil */
+@media (max-width: 576px) {
+  .ficha-figure {
+    padding: 0.5rem;
   }
-
-  .modal-ficha .modal-content {
-    height: auto;
-    max-height: 90vh;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    padding: 0;
-    background-color: #ededed;
-    /* Fondo claro */
-  }
-
-  .modal-ficha .modal-body {
-    flex-grow: 1;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-color: #ededed;
-    /* Fondo claro */
-  }
-
-  .modal-img-full {
-    max-width: 100%;
-    max-height: 80vh;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    margin: auto;
-  }
-
-  .modal-close-btn {
-    top: 10px;
-    right: 10px;
-    z-index: 10;
-    padding: 6px;
-    background-color: rgba(255, 255, 255, 0.7);
-    /* Fondo translúcido claro */
-    border-radius: 50%;
-    backdrop-filter: blur(4px);
-    color: #333;
-  }
-
-  .modal-ficha .modal-footer {
-    background-color: #ededed;
-    padding: 0.8rem 1rem;
-    border-top: 1px solid #ccc;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: stretch;
-  }
-
-  .modal-ficha .modal-footer .btn {
-    width: 100%;
-    justify-content: center;
+  .ficha-download {
+    width: 2rem;
+    height: 2rem;
     font-size: 1rem;
-    padding: 0.8rem;
-    border-radius: 10px;
-    background-color: #065959;
-    color: #fff;
   }
-
-  .modal-ficha .modal-footer .btn:hover {
-    background-color: #044343;
+  .ficha-figure .modal-close-btn {
+    top: 0.3rem;
+    right: 0.3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1.4rem;
   }
 }
-
 
 
 /* ======================
