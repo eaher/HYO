@@ -1306,7 +1306,7 @@ PRODUCTOS - Desktop
 }
 
 /* Botón de cerrar, siempre sobre la imagen */
-.ficha-figure .modal-close-btn {
+.ficha-figure .modal-close-btn-ficha {
   position: absolute;
   top: 0.5rem;           
   right: 0.5rem;        
@@ -1326,7 +1326,7 @@ PRODUCTOS - Desktop
   cursor: pointer;
   transition: background 0.2s ease;
 }
-.modal-ficha .modal-close-btn:hover {
+.modal-ficha .modal-close-btn-ficha:hover {
   background: rgba(0, 0, 0, 0.8);
 }
 
@@ -1945,7 +1945,7 @@ Grid de cards
 
 
 /* ======================
-   Flechas Carrusel oscuras
+   Flechas Carrusel oscuras - CARRUSEL PISOS
 ======================== */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -1966,22 +1966,66 @@ Grid de cards
   /* Opcional: bordes redondeados */
 }
 
-#btn-descargar-pdf {
-  /* color de fondo */
-  background-color: #0d8a8a !important;
-  /* borde para que combine */
-  border-color:    #0d8a8a !important;
-  /* opcional: color de texto */
-  color:           #ffffff !important;
+
+
+#carouselModal .modal-close-btn {
+  background-image: none !important;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-/* Hover / foco */
-#btn-descargar-pdf:hover,
-#btn-descargar-pdf:focus {
-  background-color: #054747 !important; /* un tono un poco más oscuro */
-  border-color:     #054747 !important;
+#carouselModal .modal-close-btn:hover {
+  background-color: rgba(0,0,0,0.8);
 }
 
+/* Elimina el footer */
+#carouselModal .modal-footer {
+  display: none !important;
+}
+
+/* Botón de descarga sobre la imagen */
+#carouselModal .carousel-download {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.9);
+  color: #065959 !important;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  z-index: 1050;
+}
+
+#carouselModal .carousel-download:hover {
+  transform: scale(1.1);
+  background: rgba(255,255,255,1);
+}
+
+/* Asegura que la “X” permanezca encima */
+#carouselModal .modal-close-btn {
+  z-index: 1060;
+}
 
 
 
@@ -2303,7 +2347,7 @@ Grid de cards
   width: auto;
   height: auto;
   background-color: white;
-  /* Fondo blanco */
+ 
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
   pointer-events: auto;
@@ -2312,7 +2356,7 @@ Grid de cards
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  /* ⬅️ Bloqueamos scroll interno */
+
   padding: 0;
 }
 
@@ -2326,7 +2370,6 @@ Grid de cards
 
 .modal-imagen .modal-img-full {
   max-width: 90vw;
-  /* ⬅️ un poco menos para no tocar bordes */
   max-height: 90vh;
   width: auto;
   height: auto;
@@ -2525,4 +2568,7 @@ main.contenido-descargas {
     padding-top: 2rem;
   }
 }
+
+
+
 

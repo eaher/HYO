@@ -248,7 +248,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="modal-body p-0 position-relative">
           <figure class="ficha-figure">
             <!-- Botón de cierre superpuesto -->
-            <button type="button" class="modal-close-btn" data-bs-dismiss="modal" aria-label="Cerrar">
+            <button type="button" class="modal-close-btn-ficha" data-bs-dismiss="modal" aria-label="Cerrar">
               &times;
             </button>
             <!-- Imagen de la ficha -->
