@@ -71,37 +71,37 @@ document.addEventListener("DOMContentLoaded", function () {
         "img/CERAMICAS/PRODUCTOS + FICHAS/PISCINAS/CARRUSELPISCINAS/catalogo-hojas-piscinas-03.png",
         "img/CERAMICAS/PRODUCTOS + FICHAS/PISCINAS/CARRUSELPISCINAS/catalogo-hojas-piscinas-04.png"
       ],
-      pdf: "pdf/catalogo-piscinas.pdf"
+      pdf: "pdf/descargas/CATALOGO H&O - PISOS Y REVESTIMIENTOS.pdf"
     },
     "contenedor-revestimientos": {
       images: [
         "img/CERAMICAS/PRODUCTOS + FICHAS/REVESTIMIENTOS/CARRUSELREVESTIMIENTOS/CATALOGO - HOJAS REVESTIMIENTOS-01.png",
         "img/CERAMICAS/PRODUCTOS + FICHAS/REVESTIMIENTOS/CARRUSELREVESTIMIENTOS/CATALOGO - HOJAS REVESTIMIENTOS-02.png",
-        "img/CERAMICAS/PRODUCTOS + FICHAS/REVESTIMIENTOS/CARRUSELREVESTIMIENTOS/CATALOGO - HOJAS REVESTIMIENTOS-03png",
+        "img/CERAMICAS/PRODUCTOS + FICHAS/REVESTIMIENTOS/CARRUSELREVESTIMIENTOS/CATALOGO - HOJAS REVESTIMIENTOS-03.png",
         "img/CERAMICAS/PRODUCTOS + FICHAS/REVESTIMIENTOS/CARRUSELREVESTIMIENTOS/CATALOGO - HOJAS REVESTIMIENTOS-04.png",
         "img/CERAMICAS/PRODUCTOS + FICHAS/REVESTIMIENTOS/CARRUSELREVESTIMIENTOS/CATALOGO - HOJAS REVESTIMIENTOS-05.png"
       ],
-      pdf: "pdf/catalogo-piscinas.pdf"
+      pdf: "pdf/descargas/CATALOGO H&O - PISOS Y REVESTIMIENTOS.pdf"
     },
     "contenedor-pisos-general": {
       images: [
-        "img/CERAMICAS/CATALOGOS/PISOS/CARRUSEL-PISOS/CATALOGO - HOJAS PISOS-01.png",
-        "img/CERAMICAS/CATALOGOS/PISOS/CARRUSEL-PISOS/CATALOGO - HOJAS PISOS-02.png",
-        "img/CERAMICAS/CATALOGOS/PISOS/CARRUSEL-PISOS/CATALOGO - HOJAS PISOS-03.png",
-        "img/CERAMICAS/CATALOGOS/PISOS/CARRUSEL-PISOS/CATALOGO - HOJAS PISOS-04.png",
-        "img/CERAMICAS/CATALOGOS/PISOS/CARRUSEL-PISOS/CATALOGO - HOJAS PISOS-05.png",
-        "img/CERAMICAS/CATALOGOS/PISOS/CARRUSEL-PISOS/CATALOGO - HOJAS PISOS-06.png"
+        "img/CERAMICAS/PRODUCTOS + FICHAS/PISOS/CARRUSEL-PISOS/CATALOGO - HOJAS PISOS-01.png",
+        "img/CERAMICAS/PRODUCTOS + FICHAS/PISOS/CARRUSEL-PISOS/CATALOGO - HOJAS PISOS-02.png",
+        "img/CERAMICAS/PRODUCTOS + FICHAS/PISOS/CARRUSEL-PISOS/CATALOGO - HOJAS PISOS-03.png",
+        "img/CERAMICAS/PRODUCTOS + FICHAS/PISOS/CARRUSEL-PISOS/CATALOGO - HOJAS PISOS-04.png",
+        "img/CERAMICAS/PRODUCTOS + FICHAS/PISOS/CARRUSEL-PISOS/CATALOGO - HOJAS PISOS-05.png",
+        "img/CERAMICAS/PRODUCTOS + FICHAS/PISOS/CARRUSEL-PISOS/CATALOGO - HOJAS PISOS-06.png",
       ],
-      pdf: "pdf/catalogo-piscinas.pdf"
+      pdf: "pdf/descargas/CATALOGO H&O - PISOS Y REVESTIMIENTOS.pdf"
     },
     "contenedor-decorativos": {
       images: [
-        "img/CERAMICAS/CATALOGOS/DECORATIVOS/CARRUSEL-DECORATIVOS/CATALOGO - HOJAS DECO-01.png",
-        "img/CERAMICAS/CATALOGOS/DECORATIVOS/CARRUSEL-DECORATIVOS/CATALOGO - HOJAS DECO-02.png",
-        "img/CERAMICAS/CATALOGOS/DECORATIVOS/CARRUSEL-DECORATIVOS/CATALOGO - HOJAS DECO-03.png",
-        "img/CERAMICAS/CATALOGOS/DECORATIVOS/CARRUSEL-DECORATIVOS/CATALOGO - HOJAS DECO-04.png",
+        "img/CERAMICAS/PRODUCTOS + FICHAS/DECORATIVOS/CARRUSEL-DECORATIVOS/CATALOGO - HOJAS DECO-01.png",
+        "img/CERAMICAS/PRODUCTOS + FICHAS/DECORATIVOS/CARRUSEL-DECORATIVOS/CATALOGO - HOJAS DECO-02.png",
+        "img/CERAMICAS/PRODUCTOS + FICHAS/DECORATIVOS/CARRUSEL-DECORATIVOS/CATALOGO - HOJAS DECO-03.png",
+        "img/CERAMICAS/PRODUCTOS + FICHAS/DECORATIVOS/CARRUSEL-DECORATIVOS/CATALOGO - HOJAS DECO-04.png",
       ],
-      pdf: "pdf/catalogo-piscinas.pdf"
+      pdf: "pdf/descargas/CATALOGO H&O - PISOS Y REVESTIMIENTOS.pdf"
     }
   };
 
@@ -116,9 +116,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const isBachasMarmol = containerSection.querySelector("#cards-bachas-marmol");
       const isBachasSimilPiedra = containerSection.querySelector("#cards-bachas-simil-piedra");
       if (isBachasMarmol) {
-        descargarPDF('pdf/catalogo-bachas-marmol.pdf');
+        descargarPDF('pdf/descargas/CATALOGO H&O - BACHAS.pdf');
       } else if (isBachasSimilPiedra) {
-        descargarPDF('pdf/catalogo-bachas-simil-piedra.pdf');
+        descargarPDF('pdf/descargas/CATALOGO H&O - BACHAS.pdf');
       }
     });
   });
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
       data.images.forEach((src, i) => {
         const item = document.createElement("div");
         item.className = "carousel-item" + (i === 0 ? " active" : "");
-        item.innerHTML = `<img src="${src}" class="d-block w-100" alt="Página ${i+1}">`;
+        item.innerHTML = `<img src="${src}" class="d-block w-100" alt="Página ${i + 1}">`;
         carouselInner.appendChild(item);
       });
 
@@ -241,7 +241,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const modalContainer = document.createElement("div");
     modalContainer.classList.add("modal", "fade", modalClass);
     modalContainer.tabIndex = -1;
-  
+
     modalContainer.innerHTML = `
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content border-0 bg-transparent">
@@ -264,17 +264,17 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     </div>
   `;
-  
-  
+
+
     document.body.appendChild(modalContainer);
     const modal = new bootstrap.Modal(modalContainer);
     modal.show();
-  
+
     modalContainer.addEventListener("hidden.bs.modal", () => {
       modalContainer.remove();
     });
   }
-  
+
 
   // Helpers de scroll automático y navbar …
   function getNextSection() {
@@ -297,16 +297,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // La navbar está visible si su top es "0px"
     const navVisible = navbar && window.getComputedStyle(navbar).top === "0px";
     // Si es escritorio y la navbar está visible, resto su altura; si no, resto 0
-    const offset = (esEscritorio() && navVisible) 
-      ? navbar.getBoundingClientRect().height 
+    const offset = (esEscritorio() && navVisible)
+      ? navbar.getBoundingClientRect().height
       : 0;
-  
+
     window.scrollTo({
       top: section.offsetTop - offset,
       behavior: "smooth"
     });
   }
-  
+
 
 
   if (esIndex() && esEscritorio()) {
@@ -366,7 +366,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // true si NO cargamos un .html diferente de index.html
     return !/\.html$/i.test(p) || p.endsWith("/index.html");
   }
-  
+
   function esEscritorio() {
     return window.innerWidth > 768;
   }

@@ -1440,6 +1440,11 @@ Grid de cards
        Pisos
 ======================== */
 
+html.pisos-page {
+  scroll-behavior: smooth !important;
+}
+
+
 .section-pisos {
   width: 100%;
   max-width: 1480px;
@@ -1490,6 +1495,23 @@ Grid de cards
 /* ======================
    Sección Marcas - Pisos
 ======================== */
+/* Hover Marcas: escalado del enlace completo */
+.marcas-grid a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.marcas-grid a:hover {
+  transform: scale(1.05);
+}
+
+/* Brillo extra solo en la imagen */
+.marcas-grid a:hover .marca-img {
+  filter: brightness(1.1);
+  transition: filter 0.3s ease;
+}
+
+
 .marcas-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1598,8 +1620,8 @@ Grid de cards
        Card Pisos
 ======================== */
 .card-pisos {
-  width: 195px;
-  text-align: left;
+  width: 250px;
+  text-align: center;
 }
 
 .card-pisos img {
@@ -1721,7 +1743,7 @@ Grid de cards
 .card-and-extra {
   display: flex;
   align-items: flex-start;
-  gap: 70px;
+  gap: 20px;
 }
 
 /* ======================
@@ -2536,6 +2558,8 @@ main.contenido-descargas {
   font-size: clamp(18px, 1.5vw, 23px);
   margin-bottom: 0.5rem;
   color: #000;
+  min-height: 2.4rem;       
+  line-height: 1.2rem;      
 }
 
 .marca-img-descargas {

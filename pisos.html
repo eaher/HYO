@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="es" class="pisos-page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -92,10 +91,14 @@
     <section id="seccion-marcas" class="section-marcas-pisos text-center">
         <div class="container custom-container">
             <div class="marcas-grid">
-                <img src="img/CERAMICAS/PROD-DECORATIVOS-01.png" alt="Marca 1" class="marca-img">
-                <img src="img/CERAMICAS/PROD-PISCINAS-01.png" alt="Marca 2" class="marca-img">
-                <img src="img/CERAMICAS/PROD-PISOS-01.png" alt="Marca 3" class="marca-img">
-                <img src="img/CERAMICAS/PROD-REVESTIMIENTOS-01.png" alt="Marca 4" class="marca-img">
+                <a href="#contenedor-piscinas"><img src="img/CERAMICAS/PROD-PISCINAS-01.png" alt="Piscinas"
+                        class="marca-img"></a>
+                <a href="#contenedor-revestimientos"><img src="img/CERAMICAS/PROD-REVESTIMIENTOS-01.png"
+                        alt="Revestimientos" class="marca-img"></a>
+                <a href="#contenedor-pisos-general"><img src="img/CERAMICAS/PROD-PISOS-01.png" alt="Pisos"
+                        class="marca-img"></a>
+                <a href="#contenedor-decorativos"><img src="img/CERAMICAS/PROD-DECORATIVOS-01.png" alt="Decorativos"
+                        class="marca-img"></a>
             </div>
             <p class="marcas-text">
                 CERÁMICAS IMPORTADAS DE MARCAS LÍDERES, CON LA CALIDAD QUE RESPALDA CADA OPERACIÓN Y EL COMPROMISO DE
@@ -103,6 +106,7 @@
             </p>
         </div>
     </section>
+
 
 
 
@@ -431,55 +435,46 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
 
-<!-- Modal Carrusel -->
-<div class="modal fade" id="carouselModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-      <div class="modal-content border-0 bg-transparent">
-        <div class="modal-body position-relative p-0">
-  
-          <!-- Botón de cierre superpuesto -->
-          <button
-            type="button"
-            class="modal-close-btn"
-            data-bs-dismiss="modal"
-            aria-label="Cerrar"
-          >&times;</button>
-  
-          <!-- Carrusel -->
-          <div id="carouselWrapper" class="w-100">
-            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner" id="carouselInner">
-                <!-- Imágenes dinámicas -->
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                      data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-                <span class="visually-hidden">Anterior</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                      data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-                <span class="visually-hidden">Siguiente</span>
-              </button>
+    <!-- Modal Carrusel -->
+    <div class="modal fade" id="carouselModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content border-0 bg-transparent">
+                <div class="modal-body position-relative p-0">
+
+                    <!-- Botón de cierre superpuesto -->
+                    <button type="button" class="modal-close-btn" data-bs-dismiss="modal"
+                        aria-label="Cerrar">&times;</button>
+
+                    <!-- Carrusel -->
+                    <div id="carouselWrapper" class="w-100">
+                        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner" id="carouselInner">
+                                <!-- Imágenes dinámicas -->
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                                <span class="visually-hidden">Siguiente</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Botón de descarga sobre la imagen -->
+                    <a id="btn-descargar-pdf" href="#" download class="carousel-download"
+                        aria-label="Descargar catálogo">
+                        <i class="bi bi-download"></i>
+                    </a>
+
+                </div>
             </div>
-          </div>
-  
-          <!-- Botón de descarga sobre la imagen -->
-          <a
-            id="btn-descargar-pdf"
-            href="#"
-            download
-            class="carousel-download"
-            aria-label="Descargar catálogo"
-          >
-            <i class="bi bi-download"></i>
-          </a>
-  
         </div>
-      </div>
     </div>
-  </div>
-  
+
 
 
 
