@@ -183,6 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const productos = productosPorCategoria[categoria] || [];
     if (!productos.length) return;
     productos.sort((a, b) => a.id - b.id);
+    contenedor.innerHTML = ''; // Limpiar contenido previo para evitar duplicación
     productos.forEach(producto => {
       let card;
       if (categoria.includes('bachas')) {

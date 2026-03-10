@@ -1,48 +1,60 @@
 <?php
-// contacto.php
-
-// Configura tu destinatario y asunto
-$destinatario = 'tucorreo@dominio.com';
+$destinatario = 'administracion@hyoperfiles.com.ar';
 $asunto = 'Nuevo mensaje desde formulario HYO Perfiles';
+$secretKey = '6LcQgJQrAAAAAF0KtMtdANIMqawJ_d_SsIi_p1nz'; 
 
-// Función para sanitizar
 function sanitize($v) {
-    $v = trim($v);
-    $v = stripslashes($v);
-    $v = htmlspecialchars($v, ENT_QUOTES, 'UTF-8');
-    return str_replace(["\r", "\n"], '', $v);
+    return str_replace(["\r", "\n"], '', htmlspecialchars(trim($v), ENT_QUOTES, 'UTF-8'));
 }
 
-// Recogida de datos
-$nombre   = sanitize($_POST['nombre']   ?? '');
-$apellido = sanitize($_POST['apellido'] ?? '');
-$metodo   = sanitize($_POST['contact_method'] ?? '');
-$celular  = sanitize($_POST['celular']  ?? '');
-$email    = sanitize($_POST['email']    ?? '');
-$prov     = sanitize($_POST['provincia'] ?? '');
-$ciudad   = sanitize($_POST['ciudad']    ?? '');
+// Validación reCAPTCHA
+if (!isset($_POST['g-recaptcha-response'])) {
+    header('Location: error.html');
+    exit;
+}
 
-// Construcción del mensaje
+$captcha = $_POST['g-recaptcha-response'];
+$remoteip = $_SERVER['REMOTE_ADDR'];
+
+$verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$captcha&remoteip=$remoteip");
+$response = json_decode($verify);
+
+if (!$response->success) {
+    header('Location: error.html');
+    exit;
+}
+
+// Recolección y validación de campos
+$nombre     = sanitize($_POST['nombre'] ?? '');
+$apellido   = sanitize($_POST['apellido'] ?? '');
+$metodo     = sanitize($_POST['contact_method'] ?? '');
+$celular    = sanitize($_POST['celular'] ?? '');
+$email      = sanitize($_POST['email'] ?? '');
+$provincia  = sanitize($_POST['provincia'] ?? '');
+$ciudad     = sanitize($_POST['ciudad'] ?? '');
+
+if (!$nombre || !$apellido || !$metodo || !$celular || !$email || !$provincia || !$ciudad) {
+    header('Location: error.html');
+    exit;
+}
+
+// Armado del mensaje
 $mensaje = "Nuevo mensaje desde formulario:\n\n";
 $mensaje .= "Nombre: $nombre $apellido\n";
 $mensaje .= "Contacto vía: $metodo\n";
 $mensaje .= "Celular: $celular\n";
 $mensaje .= "Email: $email\n";
-$mensaje .= "Provincia: $prov\n";
+$mensaje .= "Provincia: $provincia\n";
 $mensaje .= "Ciudad: $ciudad\n";
 
-// Cabeceras
 $headers  = "From: $nombre <$email>\r\n";
 $headers .= "Reply-To: $email\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-// Intento de envío
-if ( mail($destinatario, $asunto, $mensaje, $headers) ) {
-    // Éxito: redirige a gracias.html
+if (mail($destinatario, $asunto, $mensaje, $headers)) {
     header('Location: gracias.html');
     exit;
 } else {
-    // Error: redirige a error.html
     header('Location: error.html');
     exit;
 }

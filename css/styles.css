@@ -794,6 +794,7 @@ Sección EMPRESA
   flex: 1 1 45%;
   min-width: 15vw;
 
+
 }
 
 .contact-form-container {
@@ -802,7 +803,7 @@ Sección EMPRESA
   padding-top: 1rem;
   background-color: #fff;
   box-sizing: border-box;
-  height: 88vh;
+  height: 90vh;
 }
 
 .contact-form-container h3,
@@ -864,6 +865,7 @@ input[type="tel"] {
   font-size: clamp(10px, 0.9vw, 16px);
   cursor: pointer;
   margin-top: 4px !important;
+  margin-bottom: 10px !important;
 }
 
 .contact-form-container .btn:hover {
@@ -963,6 +965,7 @@ input[type="tel"] {
     padding: 20px;
     box-sizing: border-box;
     height: auto;
+    
     /* Corrige error anterior */
   }
 
@@ -1057,7 +1060,7 @@ input[type="tel"] {
     padding-top: 1rem;
     background-color: #fff;
     box-sizing: border-box;
-    height: 75vh;
+    height: 85vh;
   }
 
 
@@ -2659,5 +2662,53 @@ main.contenido-descargas {
 }
 
 
+/* Recaptcha responsive */
+.recaptcha-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10 px;
+  height: 90px;
+
+}
+
+.recaptcha-wrapper .g-recaptcha {
+  transform: scale(1);
+  transform-origin: 0 0;
+}
+
+@media (max-width: 500px) {
+  .recaptcha-wrapper .g-recaptcha {
+    transform: scale(0.65);
+    margin-left: 105px;
+  }
+}
+
+@media (max-width: 360px) {
+  .recaptcha-wrapper .g-recaptcha {
+    transform: scale(0.75);
+  }
 
 
+}
+@media (max-width: 768px) {
+  .contact-flex-container {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .form-wrapper,
+  .contact-form-container {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  .g-recaptcha {
+    transform: scale(0.82);
+    transform-origin: 0 0;
+  }
+}
+
+.g-recaptcha {
+  margin-bottom: 1rem;
+}
